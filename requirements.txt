@@ -1,0 +1,5 @@
+playwright>=1.57.0
+dnspython>=2.4.0
+gspread>=5.0.0
+oauth2client>=4.1.3
+

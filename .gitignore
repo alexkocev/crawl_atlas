@@ -1,0 +1,15 @@
+# Credentials
+yoluko-frontdesk-3d208271a3c0.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# OS
+.DS_Store
+
+# Generated
+printed_codebase.txt
