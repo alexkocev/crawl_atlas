@@ -1,0 +1,1195 @@
+================================================================================
+EXPLORATION PRINTED CONTENT: https://avspeechpathology.com.au
+================================================================================
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 SCRAPING RESULTS (from scrape_clinic)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  url: https://avspeechpathology.com.au
+  clinic_name: Welcome to Alex V. Speech Pathology
+  email_provider: Other / Private
+  practitioner_count: 4
+  home_visits: NO
+  instagram: No
+  whatsapp: No
+  pms: Not Detected
+  booking: Not Detected
+  cms: WordPress
+  email_marketing: Not Detected
+  pixels: Google Analytics 4, Google Tag Manager, Segment
+  payments: Not Detected
+  live_chat: Not Detected
+  reviews: Not Detected
+  infra: Google Cloud
+  found_emails: ['admin@avsp.net.au', 'alex@avsp.net.au']
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 HTTP RESPONSE HEADERS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🍪 COOKIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  _GRECAPTCHA: 09AKhCRwiJ8YjyPyjVQUtA5OH-oWqMwhMcIlxDiEv_dlFCyJaiLRdhK6NsLQJhB543kD5PdKgBc2Y2uK...
+  _ga_DS3BW3FZGV: GS2.1.s1771514820$o1$g0$t1771514820$j60$l0$h0...
+  _ga: GA1.3.365297882.1771514821...
+  _gid: GA1.3.1276732456.1771514821...
+  _gat_gtag_UA_169245507_1: 1...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🌐 DNS RECORDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Domain: avspeechpathology.com.au
+
+  MX:
+    20 mx2.netregistry.net.
+    10 mx3.netregistry.net.
+
+  A:
+    35.189.43.221
+
+  AAAA:
+    Error: The DNS response does not contain an answer to the question: avspeechpathology.com.au. IN AAAA
+
+  TXT:
+    MS=ms15981504
+    MS=ms53460633
+
+  CNAME:
+    Error: The DNS response does not contain an answer to the question: avspeechpathology.com.au. IN CNAME
+
+  NS:
+    ns1.netregistry.net.
+    ns2.netregistry.net.
+    ns3.netregistry.net.
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📌 META TAGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  {"charset": "UTF-8"}
+  {"name": "viewport", "content": "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"}
+  {"name": "robots", "content": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"}
+  {"name": "description", "content": "Speech pathologist with clinics in both Brisbane &amp; Ipswich, working with children of all ages providing speech, language, literacy &amp; social skills therapy."}
+  {"property": "og:locale", "content": "en_US"}
+  {"property": "og:type", "content": "website"}
+  {"property": "og:title", "content": "Brisbane &amp; Ipswich Speech Pathologist | Alex V Speech Pathology"}
+  {"property": "og:description", "content": "Speech pathologist with clinics in both Brisbane &amp; Ipswich, working with children of all ages providing speech, language, literacy &amp; social skills therapy."}
+  {"property": "og:url", "content": "https://avspeechpathology.com.au/"}
+  {"property": "og:site_name", "content": "Alex V. Speech Pathology"}
+  {"property": "article:modified_time", "content": "2022-03-15T03:11:42+00:00"}
+  {"name": "twitter:card", "content": "summary_large_image"}
+  {"name": "twitter:label1", "content": "Est. reading time"}
+  {"name": "twitter:data1", "content": "5 minutes"}
+  {"name": "generator", "content": "Powered by WPBakery Page Builder - drag and drop page builder for WordPress."}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🔗 LINK TAGS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  {"rel": "canonical", "href": "https://avspeechpathology.com.au/"}
+  {"rel": "dns-prefetch", "href": "//www.google.com"}
+  {"rel": "dns-prefetch", "href": "//fonts.googleapis.com"}
+  {"rel": "alternate", "type": "application/rss+xml", "title": "Alex V. Speech Pathology \u00bb Feed", "href": "https://avspeechpathology.com.au/feed/"}
+  {"rel": "alternate", "type": "application/rss+xml", "title": "Alex V. Speech Pathology \u00bb Comments Feed", "href": "https://avspeechpathology.com.au/comments/feed/"}
+  {"rel": "alternate", "type": "application/rss+xml", "title": "Alex V. Speech Pathology \u00bb Home Comments Feed", "href": "https://avspeechpathology.com.au/home-extended/feed/"}
+  {"rel": "stylesheet", "id": "wp-block-library-css", "href": "https://avspeechpathology.com.au/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "contact-form-7-css", "href": "https://avspeechpathology.com.au/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.5.2", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "nectar-slider-css", "href": "https://avspeechpathology.com.au/wp-content/plugins/salient-nectar-slider/css/nectar-slider.css?ver=1.6", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "salient-social-css", "href": "https://avspeechpathology.com.au/wp-content/plugins/salient-social/css/style.css?ver=1.1", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "font-awesome-css", "href": "https://avspeechpathology.com.au/wp-content/themes/salient/css/font-awesome.min.css?ver=4.6.4", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "salient-grid-system-css", "href": "https://avspeechpathology.com.au/wp-content/themes/salient/css/grid-system.css?ver=12.1.0", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "main-styles-css", "href": "https://avspeechpathology.com.au/wp-content/themes/salient/css/style.css?ver=12.1.0", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "nectar-element-icon-list-css", "href": "https://avspeechpathology.com.au/wp-content/themes/salient/css/elements/element-icon-list.css?ver=12.1.0", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "nectar-element-recent-posts-css", "href": "https://avspeechpathology.com.au/wp-content/themes/salient/css/elements/element-recent-posts.css?ver=12.1.0", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "magnific-css", "href": "https://avspeechpathology.com.au/wp-content/themes/salient/css/plugins/magnific.css?ver=8.6.0", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "nectar_default_font_open_sans-css", "href": "https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700&amp;subset=latin%2Clatin-ext", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "responsive-css", "href": "https://avspeechpathology.com.au/wp-content/themes/salient/css/responsive.css?ver=12.1.0", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "skin-original-css", "href": "https://avspeechpathology.com.au/wp-content/themes/salient/css/skin-original.css?ver=12.1.0", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "js_composer_front-css", "href": "https://avspeechpathology.com.au/wp-content/plugins/js_composer_salient/assets/css/js_composer.min.css?ver=6.2.0", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "dynamic-css-css", "href": "https://avspeechpathology.com.au/wp-content/themes/salient/css/salient-dynamic-styles.css?ver=59360", "type": "text/css", "media": "all"}
+  {"rel": "stylesheet", "id": "redux-google-fonts-salient_redux-css", "href": "https://fonts.googleapis.com/css?family=Sofia%3A400%7CVarela+Round%3A400&amp;subset=latin&amp;ver=1599189326", "type": "text/css", "media": "all"}
+  {"rel": "https://api.w.org/", "href": "https://avspeechpathology.com.au/wp-json/"}
+  {"rel": "alternate", "title": "JSON", "type": "application/json", "href": "https://avspeechpathology.com.au/wp-json/wp/v2/pages/551"}
+  {"rel": "EditURI", "type": "application/rsd+xml", "title": "RSD", "href": "https://avspeechpathology.com.au/xmlrpc.php?rsd"}
+  {"rel": "shortlink", "href": "https://avspeechpathology.com.au/"}
+  {"rel": "alternate", "title": "oEmbed (JSON)", "type": "application/json+oembed", "href": "https://avspeechpathology.com.au/wp-json/oembed/1.0/embed?url=https%3A%2F%2Favspeechpathology.com.au%2F"}
+  {"rel": "alternate", "title": "oEmbed (XML)", "type": "text/xml+oembed", "href": "https://avspeechpathology.com.au/wp-json/oembed/1.0/embed?url=https%3A%2F%2Favspeechpathology.com.au%2F&amp;format=xml"}
+  {"rel": "stylesheet", "id": "iconsmind-css", "href": "https://avspeechpathology.com.au/wp-content/themes/salient/css/iconsmind.css?ver=7.6", "type": "text/css", "media": "all"}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📜 SCRIPT SRC URLs
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  https://www.gstatic.com/recaptcha/releases/vUgXt_KV952_-5BB2jjloYzl/recaptcha__en.js
+  https://www.google-analytics.com/analytics.js
+  https://www.googletagmanager.com/gtag/js?id=G-DS3BW3FZGV&amp;cx=c&amp;gtm=4e62h1
+  https://avspeechpathology.com.au/wp-includes/js/jquery/jquery.min.js?ver=3.7.1
+  https://avspeechpathology.com.au/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1
+  https://www.googletagmanager.com/gtag/js?id=UA-169245507-1
+  https://avspeechpathology.com.au/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3
+  https://avspeechpathology.com.au/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.3
+  https://avspeechpathology.com.au/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381
+  https://avspeechpathology.com.au/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6
+  https://avspeechpathology.com.au/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6
+  https://avspeechpathology.com.au/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14
+  https://avspeechpathology.com.au/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.3
+  https://avspeechpathology.com.au/wp-content/themes/salient/nectar/assets/functions/ajax-search/wpss-search-suggest.js
+  https://avspeechpathology.com.au/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0
+  https://avspeechpathology.com.au/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.5.2
+  https://avspeechpathology.com.au/wp-content/plugins/salient-nectar-slider/js/anime.js?ver=1.6
+  https://avspeechpathology.com.au/wp-content/plugins/salient-nectar-slider/js/nectar-slider.js?ver=1.6
+  https://avspeechpathology.com.au/wp-content/plugins/salient-social/js/salient-social.js?ver=1.1
+  https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/jquery.easing.js?ver=1.3
+  https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/jquery.mousewheel.js?ver=3.1.13
+  https://avspeechpathology.com.au/wp-content/themes/salient/js/priority.js?ver=12.1.0
+  https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/transit.js?ver=0.9.9
+  https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/waypoints.js?ver=4.0.1
+  https://avspeechpathology.com.au/wp-content/plugins/salient-portfolio/js/third-party/imagesLoaded.min.js?ver=4.1.4
+  https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/hoverintent.js?ver=1.9
+  https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/magnific.js?ver=7.0.1
+  https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/superfish.js?ver=1.4.8
+  https://avspeechpathology.com.au/wp-content/themes/salient/js/init.js?ver=12.1.0
+  https://avspeechpathology.com.au/wp-content/plugins/salient-core/js/third-party/touchswipe.min.js?ver=1.0
+  https://avspeechpathology.com.au/wp-includes/js/comment-reply.min.js?ver=6.8.3
+  https://www.google.com/recaptcha/api.js?render=6Lc6VOgZAAAAACmHbVJKGrab2tnHuoA5ReIC2owI&amp;ver=3.0
+  https://avspeechpathology.com.au/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.5.2
+  https://avspeechpathology.com.au/wp-content/plugins/js_composer_salient/assets/js/dist/js_composer_front.min.js?ver=6.2.0
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+🖼️ IFRAME SRC URLs
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lc6VOgZAAAAACmHbVJKGrab2tnHuoA5ReIC2owI&amp;co=aHR0cHM6Ly9hdnNwZWVjaHBhdGhvbG9neS5jb20uYXU6NDQz&amp;hl=en&amp;v=vUgXt_KV952_-5BB2jjloYzl&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=ixxd5rkcxl9s
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📦 JSON-LD (Structured Data)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  --- Block 1 ---
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://avspeechpathology.com.au/#website",
+      "url": "https://avspeechpathology.com.au/",
+      "name": "Alex V. Speech Pathology",
+      "description": "Brisbane &amp; Ipswich Speech Pathologist Services",
+      "potentialAction": [
+        {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://avspeechpathology.com.au/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      ],
+      "inLanguage": "en-AU"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://avspeechpathology.com.au/#webpage",
+      "url": "https://avspeechpathology.com.au/",
+      "name": "Brisbane & Ipswich Speech Pathologist | Alex V Speech Pathology",
+      "isPartOf": {
+        "@id": "https://avspeechpathology.com.au/#website"
+      },
+      "datePublished": "2013-06-26T22:56:49+00:00",
+      "dateModified": "2022-03-15T03:11:42+00:00",
+      "description": "Speech pathologist with clinics in both Brisbane & Ipswich, working with children of all ages providing speech, language, literacy & social skills therapy.",
+      "breadcrumb": {
+        "@id": "https://avspeechpathology.com.au/#breadcrumb"
+      },
+      "inLanguage": "en-AU",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "https://avspeechpathology.com.au/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://avspeechpathology.com.au/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home"
+        }
+      ]
+    }
+  ]
+}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📡 JSON API RESPONSES (XHR/Fetch)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  --- Response 1: https://www.google.com/recaptcha/api2/reload?k=6Lc6VOgZAAAAACmHbVJKGrab2tnHuoA5R ---
+)]}'
+["rresp","0cAFcWeA59r_0rSAwvvMfUXgUDYNp_pkDV9eAhddOlRh_uv_Xixjh8dAoG5j5AqHCZspYo6_-K4oQT0UWZETSByKsZ6xsOUewiVh0YsAhw2RAliThPBbJNDvzzXXSwHyBth_qOznl8MvrDDIdgbzaV3CiuKRyz5dn1bg4pO61mGUvCDs0gOJJH_yJYbHqz14CkBiPHs1wA81E56ZN21bMsBctAVEaFNk9i2x0tlYfU5Tk3IreoCp2uR2-J3r247roSmpQN6qvC6f4fSxL36_B5oI4q-dYDuzltftsvSJnm48_GsiTZOW21kGyQBs6jSCjCypFhy88-7YGdl8G_A8aLajeaL0vui2n-0m-OJmjNR8SU647ZGOI5EBLD8Czq1CEPjzNXLGBxVIom2PpNjr-0S_B8QySAEj5WtZrv6VujfSHkUCZ8EjvHjScvpGjBoqcrWSx8qWoUiemmGjOf_m6-ZLLT94F-43KZEYwHH-Ueu9Rx2aa2V2cz9G2FLTKNJ_8PiIdsAgNfh8UpIo2biqRhadY03F48Go1tMr3pu9nJEQHRpKpX2anOEoNSA00r1GHWSWi3DTJO-lThWP5RDLlTT5G7qHm7uoLZ4DuD04idb0pjxXJIlGZuzzq4st_aaErBceUZsAqCd4AHDlAdajPlYYcyCLlwLZWPe2kd_H4_j9jB2Y3-X2Wt24L1NcBjFtVDRdI9OkmqYBDViPImk7PetLgMI49d3itBphw04iWFkNzDlAWBb9BC_tLitQ9zsUwIj17LGn6G2ZL60R0DxkPqDT7CVM_0Q5ypl5EHOxyH7_PllxTk0hjz86-nSgZ1svydrSzcFX4z_rV60bFr_CeEUZK9r-fVz5dbl31YlDj9kq6Z5dyIdTHgiQTjZTem96FYt-szRqPpZr6i_taEEQppASHM7bo7WYk_TPW4ZERCoLzyWDwOuCsZ4mlGVBQCG7vTkCdGrHc55yDeO8ZUaoMwbM6N7bh9SBimElgHK0UC05VD_vpRzXAwOnGpQsXhEhd8xwLOpdBfZxlDzhX3s2tdccmzDIppT-DUI4STB6w2GVGlTmEHkttlc8Vq4zDZNbDjgeE_lxVE80kwNQ1Vl0WxVqoAqCgNYIEj8tPk6npxpTU8JzXMjvmB0QAEaPWnr9x3j6BfvPkKoQntoRtfz4kN6TQsGQfoGgMX39ECF7E0DBU0MgWpxCSLVZZGWpFUO86unVZolnwP9BSn3Mb4GYpsmqkCPyfXc8bgckXiAjBd9RUeE0osLnB6gnTOE-Z5QK__faHjxzO4jsOTxaxF96q80i0mz8KurAoZgHbkhxFpATxmRXVKj-U08JXz-acuUav95x3lIKs4CfeQdXrh6dQ3Mwu5LvXVD1A2ep1Q45Vy60aWzKgi3eOGiJnx08GF5U6MGN29-KhYWHqTsJN79e5eenlngkG3cXttjivYB2WJNhakS7gaMfmQULbXpR8WvyHxTJcW9T_aX-Ei4CFlIf5kK0lETKZ6FHWwYAW3NTnolUSr4VU8dVol96cg0tj4qqUTO-EnRqr7u4A-nwNfzNnduQK3ZA0d_7lj7wAyO82m1yLfq6Od3Q4GstVy6gAOukcpOa4gbgJBnDCi1sXo2XQJ2cLgAbvGMis7IuJJYvTLhDAcHjFfQK-DF4sltjXNQf1AKraE0WsZKZ-gRQk-wlIN1aV607MYCR4GyNCf0qnK9G0FXrvgK3Qfa_egvSKKM1K-1aylYWFy0-_sbfg7QjhtaMnGvqWRY2dKxNrDqESJKR5riCFoNYEg9bRrm-mg0D8OsZZnP5pU3Czx_S2BrOlpPUXiRVpWoPkmxGMefzt7LWiDPW6lubzWi99Rj6he89wkRuVW9MHQRlEFAjEx-7dE3q59GEiJ1P_XsWoLYwmqNvRUY7lHSkAzRP2dxn-qhYiKIlzdO2UdAnVVHYRs5kIJ68ijJWn4FR0lsdkz92L0v-8gjWXDp_DdtqI_bSElAFE...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📮 EXTRACTED CONTACT INFO
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+  Email: admin@avsp.net.au
+  Phone: 1
+3
+1
+3
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📝 PAGE TEXT (Visible Content)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Home
+About
+Services
+Autism
+Alternative & Augmentative Communication
+Assistive Communication for Children
+Childhood Apraxia of Speech (CAS)
+Language Therapy
+Literacy for Children: Reading and Spelling
+Fluency/Stuttering
+Social Skills Therapy
+Late Talkers
+FAQ
+Speech and Language Milestones
+Blog
+Contact
+ 
+Language & Social Skills
+
+Explore our full range of services
+
+LANGUAGE
+SOCIAL SKILLS
+ 
+Speech Pathologist Services
+
+Brisbane & Ipswich
+Book a Consultation Today
+
+GET IN TOUCH
+LEARN ABOUT US
+ 
+Speech & Literacy Skills
+
+Learn more about our services
+
+SPEECH
+LITERACY
+ 
+Language & Social Skills
+
+Explore our full range of services
+
+LANGUAGE
+SOCIAL SKILLS
+ 
+Speech Pathologist Services
+
+Brisbane & Ipswich
+Book a Consultation Today
+
+GET IN TOUCH
+LEARN ABOUT US
+1
+3
+1
+3
+Welcome to Alex V. Speech Pathology
+Brisbane and Ipswich Speech Pathologist Services
+
+Alex V. Speech Pathology has clinics located in Brisbane and in Ipswich. We work to build real and trusting relationships with both children and parents because we know that successful speech therapy is a team effort. We believe that by connecting with children and making the therapy fun, as well as equipping parents with information and exercises to practice at home, we can achieve our goals more effectively.
+
+Every child faces unique challenges when learning to communicate with the world around them. Some children need a little extra assistance to express themselves clearly or understand the complexities of language and social interaction.
+
+Language, especially spoken language, is the primary way we connect with the world around us. When we struggle to make that connection, it can be both isolating and frustrating. While some children do “grow out of” difficulties with speech and language, for others, the problem can persist and have a significant impact on their future academic ability, social skills, self-esteem and behaviour. The earlier a problem is identified and treated, the less likely it will cause long term issues.
+
+Speech Therapy can assist with a range of issues including:
+
+Speech difficulties including speech delay, speech disorders and motor speech disorders (including Childhood Apraxia of Speech)
+Language difficulties including language delay, language disorders, social communication
+Fluency difficulties including stuttering
+Literacy difficulties including issues with reading, writing and spelling
+Communication difficulties related to Autism, Kabuki Syndrome, Down Syndrome, Intellectual Impairment, Hearing Impairment and other acquired or genetic disorders
+
+If you have any concerns about your child’s communication skills, talk to us today. We are here to help.
+
+Contact Us
+We are committed to helping your child thrive. Our goal is to enhance the lives of our clients.
+Brisbane & Ipswich
+Speech Pathology Services:
+Childhood Apraxia of Speech (CAS)
+AVSP uses Dynamic Tactile and Temporal Cueing to treat Childhood Apraxia of Speech, which has seen improvement and success with all our patients.
+Alternative & Augmentative Communication
+Strategies to encourage children to engage in conversation using symbols, signing and technology to promote richer learning experiences.
+Assistive Communication for Children
+We use assistive communication devices to help children find new and meaningful ways to creatively express themselves and engage in conversation.
+Children with Autism
+Constructive therapy for children with Autism to assist with their speech, language, literacy and social skills development.
+Language Therapy
+Helping children with language delay and disorder with speech and interpretation.
+Late Talkers
+Assistance for toddlers who are struggling to develop language skills at the expected rate for their age.
+Literacy for Children
+Helping find the basis of your child’s literacy difficulties to build a strong foundation for developing reading, spelling and writing skills.
+Fluency / Stuttering
+We use speech restructuring techniques to treat children’s stuttering and the anxiety that comes with dilemma of speak.
+Social Skills Therapy
+Social Communication programs for children who need assistance with using their language skills in a social setting.
+Latest News & Information
+Speech Pathology Blog
+EDUCATION
+Treatment Talk: Lidcombe Program of Early Stuttering Intervention
+At Alex V. Speech Pathology, we believe it’s important to educate our clients on the treatments we offer so that they can better understand what their child is going through.…
+INSIGHTS & INFORMATION
+Stuttering vs Child’s Talk: What’s Normal?
+As we all know, young children often stumble over and repeat their words: it’s simply a part of learning how to talk. However, while they are this age, it can…
+EDUCATION
+Our Treatments: DIRFloortime®
+At Alex V. Speech Pathology, we utilise a range of different treatments in order to achieve the best result for each child. No matter what treatment plan we use, every…
+INSIGHTS & INFORMATION
+Is My Child a Late Talker?
+There’s no denying that every child develops at a different rate; whether that is physically, mentally or socially. However, something to be aware of is that there are certain milestones…
+View All Posts
+Want more information? Book an initial consultation. GET IN TOUCH
+Fresh from the blog
+Treatment Talk: Lidcombe Program of Early Stuttering Intervention
+March 31, 2021
+Stuttering vs Child’s Talk: What’s Normal?
+March 15, 2021
+Our Treatments: DIRFloortime®
+February 28, 2021
+Our Locations
+
+Brisbane Address:
+Suite 2A, 524 Milton Rd. Toowong 4066
+View Map
+
+Ipswich Address:
+T02, 95 Southern Cross Cct. Springfield Central 4300 (Springfield Doctors Medical Centre)
+View Map
+
+Our Contact Details
+
+Phone:
+07 3217 7037
+Email:
+admin@avsp.net.au
+
+Our Philosophy
+We are committed to helping your child thrive. Our goal is to enhance the lives of our clients.
+
+We pride ourselves on providing quality care using the most up-to-date methods of assessment and therapy that have been proven to achieve real and meaningful outcomes.
+
+© 2026 Alex V. Speech Pathology. Website & Digital Marketing by BeKonstructive Marketing.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📄 FULL HTML
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+<!DOCTYPE html><html lang="en-AU" class="js js_active  vc_desktop  vc_transform  vc_transform "><head>
+	
+	<meta charset="UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"><meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	
+	<!-- This site is optimized with the Yoast SEO plugin v17.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Brisbane &amp; Ipswich Speech Pathologist | Alex V Speech Pathology</title>
+	<meta name="description" content="Speech pathologist with clinics in both Brisbane &amp; Ipswich, working with children of all ages providing speech, language, literacy &amp; social skills therapy.">
+	<link rel="canonical" href="https://avspeechpathology.com.au/">
+	<meta property="og:locale" content="en_US">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Brisbane &amp; Ipswich Speech Pathologist | Alex V Speech Pathology">
+	<meta property="og:description" content="Speech pathologist with clinics in both Brisbane &amp; Ipswich, working with children of all ages providing speech, language, literacy &amp; social skills therapy.">
+	<meta property="og:url" content="https://avspeechpathology.com.au/">
+	<meta property="og:site_name" content="Alex V. Speech Pathology">
+	<meta property="article:modified_time" content="2022-03-15T03:11:42+00:00">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:label1" content="Est. reading time">
+	<meta name="twitter:data1" content="5 minutes">
+	<script type="text/javascript" async="" charset="utf-8" src="https://www.gstatic.com/recaptcha/releases/vUgXt_KV952_-5BB2jjloYzl/recaptcha__en.js" crossorigin="anonymous" integrity="sha384-NxC6EulzTzbo3gcE9JWfKqkZdjEr2DRCX4yyCMUFwnxmPb/NCKA6n3gXkA+eyQg0"></script><script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-DS3BW3FZGV&amp;cx=c&amp;gtm=4e62h1"></script><script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://avspeechpathology.com.au/#website","url":"https://avspeechpathology.com.au/","name":"Alex V. Speech Pathology","description":"Brisbane &amp; Ipswich Speech Pathologist Services","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://avspeechpathology.com.au/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-AU"},{"@type":"WebPage","@id":"https://avspeechpathology.com.au/#webpage","url":"https://avspeechpathology.com.au/","name":"Brisbane & Ipswich Speech Pathologist | Alex V Speech Pathology","isPartOf":{"@id":"https://avspeechpathology.com.au/#website"},"datePublished":"2013-06-26T22:56:49+00:00","dateModified":"2022-03-15T03:11:42+00:00","description":"Speech pathologist with clinics in both Brisbane & Ipswich, working with children of all ages providing speech, language, literacy & social skills therapy.","breadcrumb":{"@id":"https://avspeechpathology.com.au/#breadcrumb"},"inLanguage":"en-AU","potentialAction":[{"@type":"ReadAction","target":["https://avspeechpathology.com.au/"]}]},{"@type":"BreadcrumbList","@id":"https://avspeechpathology.com.au/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel="dns-prefetch" href="//www.google.com">
+<link rel="dns-prefetch" href="//fonts.googleapis.com">
+<link rel="alternate" type="application/rss+xml" title="Alex V. Speech Pathology » Feed" href="https://avspeechpathology.com.au/feed/">
+<link rel="alternate" type="application/rss+xml" title="Alex V. Speech Pathology » Comments Feed" href="https://avspeechpathology.com.au/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Alex V. Speech Pathology » Home Comments Feed" href="https://avspeechpathology.com.au/home-extended/feed/">
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/avspeechpathology.com.au\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.8.3"}};
+/*! This file is auto-generated */
+!function(s,n){var o,i,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),a=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===a[t]})}function u(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);for(var n=e.getImageData(16,16,1,1),a=0;a<n.data.length;a++)if(0!==n.data[a])return!1;return!0}function f(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\udedf")}return!1}function g(e,t,n,a){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):s.createElement("canvas"),o=r.getContext("2d",{willReadFrequently:!0}),i=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(function(e){i[e]=t(o,e,n,a)}),i}function t(e){var t=s.createElement("script");t.src=e,t.defer=!0,s.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",i=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){s.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+g.toString()+"("+[JSON.stringify(i),f.toString(),p.toString(),u.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"}),r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=function(e){c(n=e.data),r.terminate(),t(n)})}catch(e){}c(n=g(i,f,p,u))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id="wp-emoji-styles-inline-css" type="text/css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel="stylesheet" id="wp-block-library-css" href="https://avspeechpathology.com.au/wp-includes/css/dist/block-library/style.min.css?ver=6.8.3" type="text/css" media="all">
+<style id="classic-theme-styles-inline-css" type="text/css">
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id="global-styles-inline-css" type="text/css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<link rel="stylesheet" id="contact-form-7-css" href="https://avspeechpathology.com.au/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.5.2" type="text/css" media="all">
+<link rel="stylesheet" id="nectar-slider-css" href="https://avspeechpathology.com.au/wp-content/plugins/salient-nectar-slider/css/nectar-slider.css?ver=1.6" type="text/css" media="all">
+<link rel="stylesheet" id="salient-social-css" href="https://avspeechpathology.com.au/wp-content/plugins/salient-social/css/style.css?ver=1.1" type="text/css" media="all">
+<style id="salient-social-inline-css" type="text/css">
+
+  .sharing-default-minimal .nectar-love.loved,
+  body .nectar-social[data-color-override="override"].fixed > a:before, 
+  body .nectar-social[data-color-override="override"].fixed .nectar-social-inner a,
+  .sharing-default-minimal .nectar-social[data-color-override="override"] .nectar-social-inner a:hover {
+    background-color: #0397d6;
+  }
+  .nectar-social.hover .nectar-love.loved,
+  .nectar-social.hover > .nectar-love-button a:hover,
+  .nectar-social[data-color-override="override"].hover > div a:hover,
+  #single-below-header .nectar-social[data-color-override="override"].hover > div a:hover,
+  .nectar-social[data-color-override="override"].hover .share-btn:hover,
+  .sharing-default-minimal .nectar-social[data-color-override="override"] .nectar-social-inner a {
+    border-color: #0397d6;
+  }
+  #single-below-header .nectar-social.hover .nectar-love.loved i,
+  #single-below-header .nectar-social.hover[data-color-override="override"] a:hover,
+  #single-below-header .nectar-social.hover[data-color-override="override"] a:hover i,
+  #single-below-header .nectar-social.hover .nectar-love-button a:hover i,
+  .nectar-love:hover i,
+  .hover .nectar-love:hover .total_loves,
+  .nectar-love.loved i,
+  .nectar-social.hover .nectar-love.loved .total_loves,
+  .nectar-social.hover .share-btn:hover, 
+  .nectar-social[data-color-override="override"].hover .nectar-social-inner a:hover,
+  .nectar-social[data-color-override="override"].hover > div:hover span,
+  .sharing-default-minimal .nectar-social[data-color-override="override"] .nectar-social-inner a:not(:hover) i,
+  .sharing-default-minimal .nectar-social[data-color-override="override"] .nectar-social-inner a:not(:hover) {
+    color: #0397d6;
+  }
+</style>
+<link rel="stylesheet" id="font-awesome-css" href="https://avspeechpathology.com.au/wp-content/themes/salient/css/font-awesome.min.css?ver=4.6.4" type="text/css" media="all">
+<link rel="stylesheet" id="salient-grid-system-css" href="https://avspeechpathology.com.au/wp-content/themes/salient/css/grid-system.css?ver=12.1.0" type="text/css" media="all">
+<link rel="stylesheet" id="main-styles-css" href="https://avspeechpathology.com.au/wp-content/themes/salient/css/style.css?ver=12.1.0" type="text/css" media="all">
+<link rel="stylesheet" id="nectar-element-icon-list-css" href="https://avspeechpathology.com.au/wp-content/themes/salient/css/elements/element-icon-list.css?ver=12.1.0" type="text/css" media="all">
+<link rel="stylesheet" id="nectar-element-recent-posts-css" href="https://avspeechpathology.com.au/wp-content/themes/salient/css/elements/element-recent-posts.css?ver=12.1.0" type="text/css" media="all">
+<link rel="stylesheet" id="magnific-css" href="https://avspeechpathology.com.au/wp-content/themes/salient/css/plugins/magnific.css?ver=8.6.0" type="text/css" media="all">
+<link rel="stylesheet" id="nectar_default_font_open_sans-css" href="https://fonts.googleapis.com/css?family=Open+Sans%3A300%2C400%2C600%2C700&amp;subset=latin%2Clatin-ext" type="text/css" media="all">
+<link rel="stylesheet" id="responsive-css" href="https://avspeechpathology.com.au/wp-content/themes/salient/css/responsive.css?ver=12.1.0" type="text/css" media="all">
+<link rel="stylesheet" id="skin-original-css" href="https://avspeechpathology.com.au/wp-content/themes/salient/css/skin-original.css?ver=12.1.0" type="text/css" media="all">
+<link rel="stylesheet" id="js_composer_front-css" href="https://avspeechpathology.com.au/wp-content/plugins/js_composer_salient/assets/css/js_composer.min.css?ver=6.2.0" type="text/css" media="all">
+<link rel="stylesheet" id="dynamic-css-css" href="https://avspeechpathology.com.au/wp-content/themes/salient/css/salient-dynamic-styles.css?ver=59360" type="text/css" media="all">
+<style id="dynamic-css-inline-css" type="text/css">
+@media only screen and (min-width:1000px){body #ajax-content-wrap.no-scroll{min-height:calc(100vh - 106px);height:calc(100vh - 106px)!important;}}@media only screen and (min-width:1000px){#page-header-wrap.fullscreen-header,#page-header-wrap.fullscreen-header #page-header-bg,html:not(.nectar-box-roll-loaded) .nectar-box-roll > #page-header-bg.fullscreen-header,.nectar_fullscreen_zoom_recent_projects,#nectar_fullscreen_rows:not(.afterLoaded) > div{height:calc(100vh - 105px);}.wpb_row.vc_row-o-full-height.top-level,.wpb_row.vc_row-o-full-height.top-level > .col.span_12{min-height:calc(100vh - 105px);}html:not(.nectar-box-roll-loaded) .nectar-box-roll > #page-header-bg.fullscreen-header{top:106px;}.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded),.nectar-slider-wrap[data-fullscreen="true"]:not(.loaded) .swiper-container{height:calc(100vh - 104px)!important;}.admin-bar .nectar-slider-wrap[data-fullscreen="true"]:not(.loaded),.admin-bar .nectar-slider-wrap[data-fullscreen="true"]:not(.loaded) .swiper-container{height:calc(100vh - 104px - 32px)!important;}}#nectar_fullscreen_rows{background-color:;}#ajax-content-wrap .vc_row.left_padding_2pct .row_col_wrap_12{padding-left:2%;}#ajax-content-wrap .vc_row.right_padding_2pct .row_col_wrap_12{padding-right:2%;}
+</style>
+<link rel="stylesheet" id="redux-google-fonts-salient_redux-css" href="https://fonts.googleapis.com/css?family=Sofia%3A400%7CVarela+Round%3A400&amp;subset=latin&amp;ver=1599189326" type="text/css" media="all">
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://avspeechpathology.com.au/wp-json/"><link rel="alternate" title="JSON" type="application/json" href="https://avspeechpathology.com.au/wp-json/wp/v2/pages/551"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://avspeechpathology.com.au/xmlrpc.php?rsd">
+<link rel="shortlink" href="https://avspeechpathology.com.au/">
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://avspeechpathology.com.au/wp-json/oembed/1.0/embed?url=https%3A%2F%2Favspeechpathology.com.au%2F">
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://avspeechpathology.com.au/wp-json/oembed/1.0/embed?url=https%3A%2F%2Favspeechpathology.com.au%2F&amp;format=xml">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-169245507-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-169245507-1');
+</script><script type="text/javascript"> var root = document.getElementsByTagName( "html" )[0]; root.setAttribute( "class", "js" ); </script><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1641962554402{padding-right: 10% !important;}.vc_custom_1594789927588{padding-right: 10% !important;}.vc_custom_1592443339737{margin-bottom: 10px !important;}.vc_custom_1594791307081{margin-bottom: 10px !important;}</style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	
+<style></style><style type="text/css" id="highlighted-text">.nectar-highlighted-text.instance-0 em:before { background-color: #ff1053; }.nectar-highlighted-text.instance-1 em:before { background-color: #ff1053; }</style></head>
+
+
+<body class="home wp-singular page-template-default page page-id-551 wp-theme-salient original wpb-js-composer js-comp-ver-6.2.0 vc_responsive" data-footer-reveal="false" data-footer-reveal-shadow="none" data-header-format="menu-left-aligned" data-body-border="off" data-boxed-style="" data-header-breakpoint="1000" data-dropdown-style="minimal" data-cae="linear" data-cad="650" data-megamenu-width="contained" data-aie="none" data-ls="magnific" data-apte="standard" data-hhun="0" data-fancy-form-rcs="default" data-form-style="default" data-form-submit="regular" data-is="minimal" data-button-style="default" data-user-account-button="false" data-flex-cols="true" data-col-gap="default" data-header-inherit-rc="false" data-header-search="true" data-animated-anchors="true" data-ajax-transitions="false" data-full-width-header="false" data-slide-out-widget-area="true" data-slide-out-widget-area-style="slide-out-from-right" data-user-set-ocm="off" data-loading-animation="none" data-bg-header="true" data-responsive="1" data-ext-responsive="false" data-header-resize="1" data-header-color="light" data-transparent-header="false" data-cart="false" data-remove-m-parallax="" data-remove-m-video-bgs="" data-m-animate="0" data-force-header-trans-color="light" data-smooth-scrolling="0" data-permanent-transparent="false">
+	
+	<script type="text/javascript"> if(navigator.userAgent.match(/(Android|iPod|iPhone|iPad|BlackBerry|IEMobile|Opera Mini)/)) { document.body.className += " using-mobile-browser "; } </script>	
+	<div id="header-space" data-header-mobile-fixed="false" style="height: 106px;"></div> 
+	
+		
+	<div id="header-outer" data-has-menu="true" data-has-buttons="yes" data-header-button_style="default" data-using-pr-menu="false" data-mobile-fixed="false" data-ptnm="false" data-lhe="default" data-user-set-bg="#ffffff" data-format="menu-left-aligned" data-permanent-transparent="false" data-megamenu-rt="0" data-remove-fixed="0" data-header-resize="1" data-cart="false" data-transparency-option="0" data-box-shadow="large" data-shrink-num="6" data-using-secondary="0" data-using-logo="1" data-logo-height="50" data-m-logo-height="24" data-padding="28" data-full-width="false" data-condense="false">
+		
+		
+<div id="search-outer" class="nectar">
+	<div id="search">
+		<div class="container">
+			 <div id="search-box">
+				 <div class="inner-wrap">
+					 <div class="col span_12">
+						  <form role="search" action="https://avspeechpathology.com.au/" method="GET">
+															<input type="text" name="s" id="s" value="Start Typing..." data-placeholder="Start Typing...">
+															
+												</form>
+					</div><!--/span_12-->
+				</div><!--/inner-wrap-->
+			 </div><!--/search-box-->
+			 <div id="close"><a href="#">
+				<span class="icon-salient-x" aria-hidden="true"></span>				 </a></div>
+		 </div><!--/container-->
+	</div><!--/search-->
+</div><!--/search-outer-->
+
+<header id="top">
+	<div class="container">
+		<div class="row">
+			<div class="col span_3">
+				<a id="logo" href="https://avspeechpathology.com.au" data-supplied-ml-starting-dark="false" data-supplied-ml-starting="false" data-supplied-ml="false">
+					<img class="stnd default-logo dark-version" alt="Alex V. Speech Pathology" src="https://avspeechpathology.com.au/wp-content/uploads/2020/06/Alex-V-Logo.png" srcset="https://avspeechpathology.com.au/wp-content/uploads/2020/06/Alex-V-Logo.png 1x, https://avspeechpathology.com.au/wp-content/uploads/2020/06/Alex-V-Logo.png 2x"> 
+				</a>
+				
+							</div><!--/span_3-->
+			
+			<div class="col span_9 col_last">
+									<a class="mobile-search" href="#searchbox"><span class="nectar-icon icon-salient-search" aria-hidden="true"></span></a>
+										<div class="slide-out-widget-area-toggle mobile-icon slide-out-from-right" data-custom-color="false" data-icon-animation="simple-transform">
+						<div> <a href="#sidewidgetarea" aria-label="Navigation Menu" aria-expanded="false" class="closed">
+							<span aria-hidden="true"> <i class="lines-button x2"> <i class="lines"></i> </i> </span>
+						</a></div> 
+					</div>
+								
+									
+					<nav>
+						
+						<ul class="sf-menu sf-js-enabled sf-arrows">	
+							<li id="menu-item-977" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-551 current_page_item menu-item-977"><a href="https://avspeechpathology.com.au/" aria-current="page">Home</a></li>
+<li id="menu-item-1055" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1055"><a href="https://avspeechpathology.com.au/about/">About</a></li>
+<li id="menu-item-1056" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children sf-with-ul menu-item-1056"><a href="#" class="sf-with-ul">Services<span class="sf-sub-indicator"><i class="fa fa-angle-down icon-in-menu"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1023"><a href="https://avspeechpathology.com.au/autism/">Autism</a></li>
+	<li id="menu-item-1022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1022"><a href="https://avspeechpathology.com.au/alternative-and-augmentative-communication/">Alternative &amp; Augmentative Communication</a></li>
+	<li id="menu-item-1015" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1015"><a href="https://avspeechpathology.com.au/assistive-communication-for-children/">Assistive Communication for Children</a></li>
+	<li id="menu-item-1021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1021"><a href="https://avspeechpathology.com.au/childhood-apraxia-of-speech-cas/">Childhood Apraxia of Speech (CAS)</a></li>
+	<li id="menu-item-1020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1020"><a href="https://avspeechpathology.com.au/language-therapy/">Language Therapy</a></li>
+	<li id="menu-item-1014" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1014"><a href="https://avspeechpathology.com.au/literacy-for-children-reading-and-spelling/">Literacy for Children: Reading and Spelling</a></li>
+	<li id="menu-item-1018" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1018"><a href="https://avspeechpathology.com.au/fluency-stuttering/">Fluency/Stuttering</a></li>
+	<li id="menu-item-1017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1017"><a href="https://avspeechpathology.com.au/social-skills-therapy/">Social Skills Therapy</a></li>
+	<li id="menu-item-1016" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1016"><a href="https://avspeechpathology.com.au/late-talkers/">Late Talkers</a></li>
+</ul>
+</li>
+<li id="menu-item-1013" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children sf-with-ul menu-item-1013"><a href="https://avspeechpathology.com.au/faq/" class="sf-with-ul">FAQ<span class="sf-sub-indicator"><i class="fa fa-angle-down icon-in-menu"></i></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1070" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1070"><a href="https://avspeechpathology.com.au/speech-and-language-milestones/">Speech and Language Milestones</a></li>
+</ul>
+</li>
+<li id="menu-item-1097" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1097"><a href="https://avspeechpathology.com.au/blog/">Blog</a></li>
+<li id="menu-item-1080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1080"><a href="https://avspeechpathology.com.au/contact/">Contact</a></li>
+						</ul>
+						
+
+												
+					</nav>
+					
+										
+				</div><!--/span_9-->
+				
+									<div class="right-aligned-menu-items">
+						<nav>
+							<ul class="buttons sf-menu" data-user-set-ocm="off">
+								
+								<li id="search-btn"><div><a href="#searchbox"><span class="icon-salient-search" aria-hidden="true"></span></a></div> </li>								
+							</ul>
+							
+													</nav>
+					</div><!--/right-aligned-menu-items-->
+					
+									
+			</div><!--/row-->
+					</div><!--/container-->
+	</header>
+		
+	</div>
+	
+		
+	<div id="ajax-content-wrap">
+		
+		
+<div class="container-wrap" style="padding-bottom: 0px;">
+	<div class="container main-content">
+		<div class="row">
+			
+			
+		<div id="fws_69972b70d21a1" data-column-margin="default" data-midnight="dark" class="wpb_row vc_row-fluid vc_row top-level full-width-ns standard_section full-width-section first-section loaded" style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap" data-bg-animation="none" data-bg-overlay="false"><div class="inner-wrap"><div class="row-bg" style=""></div></div><div class="row-bg-overlay"></div></div><div class="row_col_wrap_12 col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone instance-0" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+			<div class="wpb_wrapper">
+				<style type="text/css">@media only screen and (min-width: 1300px) { #nectar-slider-instance-1, #nectar-slider-instance-1 .swiper-container { height: 750px; }  } @media only screen and (max-width: 1299px) { #nectar-slider-instance-1, #nectar-slider-instance-1 .swiper-container { height: 625px; }  } @media only screen and (max-width: 1000px) { #nectar-slider-instance-1, #nectar-slider-instance-1 .swiper-container { height: 535.714285714px; }  } @media only screen and (max-width: 690px) { #nectar-slider-instance-1, #nectar-slider-instance-1 .swiper-container { height: 277.777777778px; }  } </style><div data-midnight="nectar-slider" class="parallax_slider_outer element-in-view" style="height: 625px;"><div data-transition="slide" data-overall_style="classic" data-flexible-height="" data-animate-in-effect="none" data-fullscreen="false" data-button-sizing="regular" data-button-styling="btn_with_count" data-autorotate="" data-parallax="true" data-parallax-disable-mobile="" data-caption-trans="fade_in_from_bottom" data-parallax-style="bg_only" data-bg-animation="none" data-full-width="true" class="nectar-slider-wrap nectar-slider-enabled loaded nectar-parallax-enabled" id="nectar-slider-instance-1" style="left: -200px; margin-left: 0px; width: 1280px; height: 625px;"><div class="swiper-container" data-tho="auto" data-tco="auto" data-pho="auto" data-pco="auto" data-loop="true" data-height="625" data-min-height="" data-arrows="true" data-bullets="true" data-bullet_style="see_through" data-bullet_position="bottom" data-desktop-swipe="true" data-settings="" style="width: 1280px; background-color: rgb(0, 0, 0); cursor: -webkit-grab; height: 626px;"> <div class="swiper-wrapper" style="width: 6400px; height: 626px; transform: translate3d(-1280px, 0px, 0px); transition-duration: 0s;"><div class="swiper-slide" data-desktop-content-width="auto" data-tablet-content-width="auto" data-bg-alignment="center" data-color-scheme="light" data-x-pos="left" data-y-pos="middle" style="background-color: rgb(0, 0, 0); width: 1280px; height: 626px;"><div class="slide-bg-wrap"><div class="image-bg translate" style="background-image: url(&quot;https://avspeechpathology.com.au/wp-content/uploads/2020/07/BrisbaneSpeechPathologist.jpg&quot;); height: 653px; transform: translate3d(0px, 0px, 0px);"> &nbsp; </div></div><div class="container">
+						<div class="content" style="top: 240.297px;"><h2 style="opacity: 0; transform: translateZ(0px) translateY(40px);">Language &amp; Social Skills </h2><p style="opacity: 0; transform: translateZ(0px) translateY(40px);"><span>Explore our full range of services</span></p><div class="buttons" style="opacity: 0; transform: translateZ(0px) translateY(40px);"><div class="button solid_color">
+										 <a class="extra-color-2" href="https://avspeechpathology.com.au/language-therapy/">Language</a>
+										</div><div class="button solid_color">
+										<a class="extra-color-2" href="https://avspeechpathology.com.au/social-skills-therapy/">Social Skills </a>
+										</div></div></div>
+								</div><!--/container--><div class="video-texture" style="opacity: 1;">  </div></div><div class="swiper-slide swiper-slide-visible swiper-slide-active" data-desktop-content-width="auto" data-tablet-content-width="auto" data-bg-alignment="center" data-color-scheme="light" data-x-pos="left" data-y-pos="middle" style="background-color: rgb(0, 0, 0); width: 1280px; height: 626px;"><div class="slide-bg-wrap"><div class="image-bg translate" style="background-image: url(&quot;https://avspeechpathology.com.au/wp-content/uploads/2020/07/BrisbaneSpeechPathology.jpg&quot;); height: 653px; transform: translate3d(0px, 0px, 0px);"> &nbsp; </div></div><div class="container">
+						<div class="content" style="top: 224.695px;"><h2 style="opacity: 1; transform: translateY(0px) translateZ(0px);">Speech Pathologist Services</h2><p style="opacity: 1; transform: translateY(0px) translateZ(0px);"><span>Brisbane &amp; Ipswich <br>
+Book a Consultation Today</span></p><div class="buttons" style="opacity: 1; transform: translateY(0px) translateZ(0px);"><div class="button solid_color">
+										 <a class="extra-color-3" href="https://avspeechpathology.com.au/contact/">Get in Touch</a>
+										</div><div class="button solid_color">
+										<a class="extra-color-3" href="https://avspeechpathology.com.au/about/">Learn About Us</a>
+										</div></div></div>
+								</div><!--/container--><div class="video-texture" style="opacity: 1;">  </div></div> <!--/swiper-slide--><div class="swiper-slide" data-desktop-content-width="auto" data-tablet-content-width="auto" data-bg-alignment="center" data-color-scheme="light" data-x-pos="centered" data-y-pos="middle" style="background-color: rgb(0, 0, 0); width: 1280px; height: 626px;"><div class="slide-bg-wrap"><div class="image-bg translate" style="background-image: url(&quot;https://avspeechpathology.com.au/wp-content/uploads/2020/07/SpeechPathologist.jpg&quot;); height: 653px; transform: translate3d(0px, 0px, 0px);"> &nbsp; </div></div><div class="container">
+						<div class="content" style="top: 240.297px;"><h2 style="opacity: 0; transform: translateZ(0px) translateY(40px);">Speech &amp; Literacy Skills</h2><p style="opacity: 0; transform: translateZ(0px) translateY(40px);"><span>Learn more about our services</span></p><div class="buttons" style="opacity: 0; transform: translateZ(0px) translateY(40px);"><div class="button solid_color">
+										 <a class="primary-color" href="https://avspeechpathology.com.au/childhood-apraxia-of-speech-cas/">Speech</a>
+										</div><div class="button solid_color">
+										<a class="primary-color" href="https://avspeechpathology.com.au/literacy-for-children-reading-and-spelling/">Literacy</a>
+										</div></div></div>
+								</div><!--/container--><div class="video-texture active_texture" style="opacity: 1;">  </div></div> <!--/swiper-slide--><div class="swiper-slide" data-desktop-content-width="auto" data-tablet-content-width="auto" data-bg-alignment="center" data-color-scheme="light" data-x-pos="left" data-y-pos="middle" style="background-color: rgb(0, 0, 0); width: 1280px; height: 626px;"><div class="slide-bg-wrap"><div class="image-bg translate" style="background-image: url(&quot;https://avspeechpathology.com.au/wp-content/uploads/2020/07/BrisbaneSpeechPathologist.jpg&quot;); height: 653px; transform: translate3d(0px, 0px, 0px);"> &nbsp; </div></div><div class="container">
+						<div class="content" style="top: 240.297px;"><h2 style="opacity: 0; transform: translateZ(0px) translateY(40px);">Language &amp; Social Skills </h2><p style="opacity: 0; transform: translateZ(0px) translateY(40px);"><span>Explore our full range of services</span></p><div class="buttons" style="opacity: 0; transform: translateZ(0px) translateY(40px);"><div class="button solid_color">
+										 <a class="extra-color-2" href="https://avspeechpathology.com.au/language-therapy/">Language</a>
+										</div><div class="button solid_color">
+										<a class="extra-color-2" href="https://avspeechpathology.com.au/social-skills-therapy/">Social Skills </a>
+										</div></div></div>
+								</div><!--/container--><div class="video-texture" style="opacity: 1;">  </div></div> <!--/swiper-slide--><div class="swiper-slide" data-desktop-content-width="auto" data-tablet-content-width="auto" data-bg-alignment="center" data-color-scheme="light" data-x-pos="left" data-y-pos="middle" style="background-color: rgb(0, 0, 0); width: 1280px; height: 626px;"><div class="slide-bg-wrap"><div class="image-bg translate" style="background-image: url(&quot;https://avspeechpathology.com.au/wp-content/uploads/2020/07/BrisbaneSpeechPathology.jpg&quot;); height: 653px; transform: translate3d(0px, 0px, 0px);"> &nbsp; </div></div><div class="container">
+						<div class="content" style="top: 224.695px;"><h2 style="opacity: 1; transform: translateY(0px) translateZ(0px);">Speech Pathologist Services</h2><p style="opacity: 1; transform: translateY(0px) translateZ(0px);"><span>Brisbane &amp; Ipswich <br>
+Book a Consultation Today</span></p><div class="buttons" style="opacity: 1; transform: translateY(0px) translateZ(0px);"><div class="button solid_color">
+										 <a class="extra-color-3" href="https://avspeechpathology.com.au/contact/">Get in Touch</a>
+										</div><div class="button solid_color">
+										<a class="extra-color-3" href="https://avspeechpathology.com.au/about/">Learn About Us</a>
+										</div></div></div>
+								</div><!--/container--><div class="video-texture" style="opacity: 1;">  </div></div></div><a href="" class="slider-prev" style="opacity: 1;"><i class="icon-salient-left-arrow"></i> <div class="slide-count"> <span class="slide-current">1</span> <i class="icon-salient-right-line" style="transform: scale(0.5, 0.5); opacity: 0;"></i> <span class="slide-total">3</span> </div> </a>
+						<a href="" class="slider-next" style="opacity: 1;"><i class="icon-salient-right-arrow"></i> <div class="slide-count"> <span class="slide-current">1</span> <i class="icon-salient-right-line" style="transform: scale(0.5, 0.5); opacity: 0;"></i> <span class="slide-total">3</span> </div> </a><div class="container normal-container slider-pagination-wrap"><div class="slider-pagination" style="opacity: 1;"><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch ar-vis"></span><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch"></span></div></div><div class="nectar-slider-loading " style="display: none;"> <span class="loading-icon none">   </span> </div> </div> 
+					
+					</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_69972b70d5c09" data-column-margin="default" data-midnight="dark" data-top-percent="5%" data-bottom-percent="5%" class="wpb_row vc_row-fluid vc_row full-width-section standard_section " style="padding-top: calc(100vw * 0.05); padding-bottom: calc(100vw * 0.05); "><div class="row-bg-wrap" data-bg-animation="none" data-bg-overlay="false"><div class="inner-wrap"><div class="row-bg using-bg-color" style="background-color: #ffffff; "></div></div><div class="row-bg-overlay"></div></div><div class="row_col_wrap_12 col span_12 dark left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone instance-1" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+			<div class="wpb_wrapper">
+				<div id="fws_69972b70d6437" data-midnight="" data-column-margin="default" class="wpb_row vc_row-fluid vc_row inner_row standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg"></div> </div><div class="row_col_wrap_12_inner col span_12  left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col child_column no-extra-padding inherit_tablet inherit_phone instance-2" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+		<div class="wpb_wrapper">
+			<div class="nectar-split-heading" data-animation-type="default" data-animation-delay="0" data-custom-font-size="false"><div class="heading-line"> <div><h1>Welcome to Alex V. Speech Pathology</h1> </div> </div><div class="heading-line"> <div><h2>Brisbane and Ipswich Speech Pathologist Services</h2> </div> </div></div>
+		</div> 
+	</div>
+	</div> 
+</div></div><div id="fws_69972b70d66b8" data-midnight="" data-column-margin="default" class="wpb_row vc_row-fluid vc_row inner_row standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg"></div> </div><div class="row_col_wrap_12_inner col span_12  left">
+	<div class="vc_col-sm-6 wpb_column column_container vc_column_container col child_column has-animation padding-3-percent inherit_tablet inherit_phone instance-3" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="fade-in-from-bottom" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+		<div class="wpb_wrapper">
+			
+<div class="wpb_text_column wpb_content_element  vc_custom_1641962554402">
+	<div class="wpb_wrapper">
+		<p>Alex V. Speech Pathology has clinics located in Brisbane and in Ipswich. We work to build real and trusting relationships with both children and parents because we know that successful speech therapy is a team effort. We believe that by connecting with children and making the therapy fun, as well as equipping parents with information and exercises to practice at home, we can achieve our goals more effectively.</p>
+<p>Every child faces unique challenges when learning to communicate with the world around them. Some children need a little extra assistance to express themselves clearly or understand the complexities of language and social interaction.</p>
+<p>Language, especially spoken language, is the primary way we connect with the world around us. When we struggle to make that connection, it can be both isolating and frustrating. While some children do “grow out of” difficulties with speech and language, for others, the problem can persist and have a significant impact on their future academic ability, social skills, self-esteem and behaviour. The earlier a problem is identified and treated, the less likely it will cause long term issues.</p>
+	</div>
+</div>
+
+
+
+
+		</div> 
+	</div>
+	</div> 
+
+	<div class="vc_col-sm-6 wpb_column column_container vc_column_container col child_column has-animation padding-3-percent inherit_tablet inherit_phone instance-4" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="fade-in-from-bottom" data-delay="100">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+		<div class="wpb_wrapper">
+			
+<div class="wpb_text_column wpb_content_element  vc_custom_1594789927588">
+	<div class="wpb_wrapper">
+		<p><strong>Speech Therapy can assist with a range of issues including:</strong></p>
+<ul>
+<li>Speech difficulties including speech delay, speech disorders and motor speech disorders (including Childhood Apraxia of Speech)</li>
+<li>Language difficulties including language delay, language disorders, social communication</li>
+<li>Fluency difficulties including stuttering</li>
+<li>Literacy difficulties including issues with reading, writing and spelling</li>
+<li>Communication difficulties related to Autism, Kabuki Syndrome, Down Syndrome, Intellectual Impairment, Hearing Impairment and other acquired or genetic disorders</li>
+</ul>
+<p>If you have any concerns about your child’s communication skills, talk to us today. We are here to help.</p>
+	</div>
+</div>
+
+
+
+<div class="divider-wrap" data-alignment="default"><div style="height: 20px;" class="divider"></div></div><div class="nectar-cta " data-color="default" data-using-bg="false" data-style="see-through" data-display="block" data-alignment="left" data-text-color="custom"><h5 style="color: #0a0000;"> <span class="text"> </span><span class="link_wrap"><a class="link_text" href="https://avspeechpathology.com.au/contact/">Contact Us<span class="arrow"></span></a></span></h5></div>
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div><div id="fws_69972b70d6d5c" class="wpb_row vc_row-fluid full-width-section standard_section   " style="padding-top: 50px; padding-bottom: 40px; "><div class="row-bg-wrap"> <div class="row-bg  using-bg-color " style="background-color: #0397d6; "></div> </div><div class="col span_12 light ">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone instance-5" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+			<div class="wpb_wrapper">
+				
+<div class="wpb_text_column wpb_content_element ">
+	<div class="wpb_wrapper">
+		<h3 class="light" style="text-align: center;">We are committed to helping your child thrive. Our goal is to enhance the lives of our clients.</h3>
+	</div>
+</div>
+
+
+
+
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="steps" data-column-margin="default" data-midnight="light" data-top-percent="8%" data-bottom-percent="3%" class="wpb_row vc_row-fluid vc_row full-width-section vc_row-o-equal-height vc_row-flex vc_row-o-content-middle parallax_section nectar-parallax-enabled" style="padding-top: calc(100vw * 0.08); padding-bottom: calc(100vw * 0.03); "><div class="row-bg-wrap" data-bg-animation="none" data-bg-overlay="true"><div class="inner-wrap using-image"><div class="row-bg using-image translate" data-parallax-speed="fast" style="background-image: url(&quot;https://avspeechpathology.com.au/wp-content/uploads/2020/06/SpeechPathologyServices.jpg&quot;); background-position: center center; background-repeat: no-repeat; height: 1322.78px;"></div></div><div class="row-bg-overlay" style="background-color:#0a0a0a;  opacity: 0.5; "></div></div><div class="row_col_wrap_12 col span_12 light left">
+	<div class="vc_col-sm-12 vc_col-xs-12 wpb_column column_container vc_column_container col padding-2-percent inherit_tablet inherit_phone instance-6" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="top-bottom" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+			<div class="wpb_wrapper">
+				<div id="fws_69972b70d71db" data-midnight="" data-column-margin="default" class="wpb_row vc_row-fluid vc_row inner_row  vc_row-o-equal-height vc_row-flex  vc_row-o-content-middle standard_section   " style="padding-top: 0px; padding-bottom: 6%; "><div class="row-bg-wrap"> <div class="row-bg" style="height: 1322.78px;"></div> </div><div class="row_col_wrap_12_inner col span_12  left">
+	<div class="vc_col-sm-6 wpb_column column_container vc_column_container col child_column no-extra-padding inherit_tablet inherit_phone instance-7" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+		<div class="wpb_wrapper">
+			<h5 style="color: rgba(255,255,255,0.78);text-align: left" class="vc_custom_heading vc_custom_1592443339737">Brisbane &amp; Ipswich</h5><div class="nectar-highlighted-text instance-0" data-style="half_text" data-using-custom-color="true" data-animation-delay="false" data-color="#ff1053" data-color-gradient="" style="">
+<h2>Speech Pathology Services:</h2>
+</div>
+		</div> 
+	</div>
+	</div> 
+
+	<div class="vc_col-sm-6 wpb_column column_container vc_column_container col child_column no-extra-padding inherit_tablet inherit_phone instance-8" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+		<div class="wpb_wrapper">
+			
+		</div> 
+	</div>
+	</div> 
+</div></div><div class="nectar-icon-list" data-icon-color="default" data-icon-style="no-border" data-columns="default" data-direction="horizontal" data-icon-size="medium" data-animate=""><div class="nectar-icon-list-item"><div class="list-icon-holder" data-icon_type="icon"><i class="icon-default-style iconsmind-Tomato" data-color="default"></i></div><div class="content"><h4>Childhood Apraxia of Speech (CAS)</h4>AVSP uses Dynamic Tactile and Temporal Cueing to treat Childhood Apraxia of Speech, which has seen improvement and success with all our patients.</div></div><div class="nectar-icon-list-item"><div class="list-icon-holder" data-icon_type="icon"><i class="icon-default-style iconsmind-Heart" data-color="default"></i></div><div class="content"><h4>Alternative &amp; Augmentative Communication</h4>Strategies to encourage children to engage in conversation using symbols, signing and technology to promote richer learning experiences.</div></div><div class="nectar-icon-list-item"><div class="list-icon-holder" data-icon_type="icon"><i class="icon-default-style iconsmind-Hello" data-color="default"></i></div><div class="content"><h4>Assistive Communication for Children</h4>We use assistive communication devices to help children find new and meaningful ways to creatively express themselves and engage in conversation.</div></div><div class="nectar-icon-list-item"><div class="list-icon-holder" data-icon_type="icon"><i class="icon-default-style iconsmind-Cookie-Man" data-color="default"></i></div><div class="content"><h4>Children with Autism</h4>Constructive therapy for children with Autism to assist with their speech, language, literacy and social skills development.</div></div><div class="nectar-icon-list-item"><div class="list-icon-holder" data-icon_type="icon"><i class="icon-default-style iconsmind-Plant" data-color="default"></i></div><div class="content"><h4>Language Therapy</h4>Helping children with language delay and disorder with speech and interpretation.</div></div><div class="nectar-icon-list-item"><div class="list-icon-holder" data-icon_type="icon"><i class="icon-default-style iconsmind-Conference" data-color="default"></i></div><div class="content"><h4>Late Talkers</h4>Assistance for toddlers who are struggling to develop language skills at the expected rate for their age.</div></div><div class="nectar-icon-list-item"><div class="list-icon-holder" data-icon_type="icon"><i class="icon-default-style iconsmind-Penguin" data-color="default"></i></div><div class="content"><h4>Literacy for Children</h4>Helping find the basis of your child’s literacy difficulties to build a strong foundation for developing reading, spelling and writing skills.</div></div><div class="nectar-icon-list-item"><div class="list-icon-holder" data-icon_type="icon"><i class="icon-default-style iconsmind-Speach-Bubble8" data-color="default"></i></div><div class="content"><h4>Fluency / Stuttering</h4>We use speech restructuring techniques to treat children’s stuttering and the anxiety that comes with dilemma of speak.</div></div><div class="nectar-icon-list-item"><div class="list-icon-holder" data-icon_type="icon"><i class="icon-default-style iconsmind-Speach-Bubbles" data-color="default"></i></div><div class="content"><h4>Social Skills Therapy</h4>Social Communication programs for children who need assistance with using their language skills in a social setting.</div></div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+		<div id="fws_69972b70d79bb" data-column-margin="default" data-midnight="dark" data-top-percent="4%" data-bottom-percent="4%" class="wpb_row vc_row-fluid vc_row full-width-content  vc_row-o-equal-height vc_row-flex  vc_row-o-content-middle standard_section  right_padding_2pct left_padding_2pct " style="padding-top: calc(4vw); padding-bottom: calc(4vw); left: 0px; margin-left: -200px; width: 1280px; visibility: visible;"><div class="row-bg-wrap" data-bg-animation="none" data-bg-overlay="false"><div class="inner-wrap"><div class="row-bg using-bg-color" style="background-color: #0397d6; "></div></div><div class="row-bg-overlay"></div></div><div class="row_col_wrap_12 col span_12 dark center">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col no-extra-padding inherit_tablet inherit_phone instance-9" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+			<div class="wpb_wrapper">
+				<h5 style="color: rgba(255,255,255,0.78);text-align: center" class="vc_custom_heading vc_custom_1594791307081">Latest News &amp; Information</h5><div class="nectar-highlighted-text instance-1" data-style="half_text" data-using-custom-color="true" data-animation-delay="false" data-color="#ff1053" data-color-gradient="" style="">
+<h2 style="text-align: center;"><span style="color: #ffffff;">Speech Pathology Blog</span></h2>
+</div><div class="divider-wrap" data-alignment="default"><div style="height: 20px;" class="divider"></div></div>    
+    <div class="row blog-recent columns-4" data-style="classic_enhanced_alt" data-color-scheme="light" data-remove-post-date="1" data-remove-post-author="1" data-remove-post-comment-number="1" data-remove-post-nectar-love="1">
+      
+      
+      <div class="col span_3 post-2880 post type-post status-publish format-standard has-post-thumbnail category-education one-fourths clear-both">
+        
+        
+            <div class="inner-wrap post-2880 post type-post status-publish format-standard has-post-thumbnail category-education">
+
+            <a href="https://avspeechpathology.com.au/education/treatment-talk-lidcombe-program-of-early-stuttering-intervention/" class="img-link"><span class="post-featured-img" style="background-image: url(&quot;https://avspeechpathology.com.au/wp-content/uploads/2021/03/TalkTherapy.jpg&quot;);"><img fetchpriority="high" decoding="async" width="500" height="346" src="https://avspeechpathology.com.au/wp-content/uploads/2021/03/TalkTherapy.jpg" class="attachment-tall size-tall wp-post-image" alt="Talk Therapy" title="" sizes="(min-width: 1300px) 25vw, (min-width: 1000px) 33vw, (min-width: 690px) 100vw, 100vw" srcset="https://avspeechpathology.com.au/wp-content/uploads/2021/03/TalkTherapy.jpg 500w, https://avspeechpathology.com.au/wp-content/uploads/2021/03/TalkTherapy-300x208.jpg 300w"></span></a><span class="meta-category"><a class="education" href="https://avspeechpathology.com.au/category/education/">Education</a></span><a class="entire-meta-link" href="https://avspeechpathology.com.au/education/treatment-talk-lidcombe-program-of-early-stuttering-intervention/"></a>
+            <div class="article-content-wrap">
+              <div class="post-header">
+                <span class="meta"> March 31, 2021 </span> 
+                <h3 class="title">Treatment Talk: Lidcombe Program of Early Stuttering Intervention</h3>	
+              </div><!--/post-header-->
+              <div class="excerpt">
+                At Alex V. Speech Pathology, we believe it’s important to educate our clients on the treatments we offer so that they can better understand what their child is going through.…              </div>
+            </div>
+            
+            <div class="post-meta">
+              <span class="meta-author"> <a href="https://avspeechpathology.com.au/author/av-speech-pathology/"> <i class="icon-default-style icon-salient-m-user"></i> AV Speech Pathology</a> </span> 
+              
+                            
+              <div class="nectar-love-wrap">
+                <a href="#" class="nectar-love" id="nectar-love-2880" title="Love this"> <i class="icon-salient-heart-2"></i><span class="love-text">Love</span><span class="total_loves"><span class="nectar-love-count">0</span></span></a>              </div><!--/nectar-love-wrap-->	
+            </div>
+
+          </div>
+
+                
+      </div><!--/col-->
+      
+      
+      <div class="col span_3 post-2873 post type-post status-publish format-standard has-post-thumbnail category-insights-information one-fourths right-edge">
+        
+        
+            <div class="inner-wrap post-2873 post type-post status-publish format-standard has-post-thumbnail category-insights-information">
+
+            <a href="https://avspeechpathology.com.au/insights-information/stuttering-vs-childs-talk-whats-normal/" class="img-link"><span class="post-featured-img" style="background-image: url(&quot;https://avspeechpathology.com.au/wp-content/uploads/2021/03/ChildsTalk.jpg&quot;);"><img decoding="async" width="500" height="346" src="https://avspeechpathology.com.au/wp-content/uploads/2021/03/ChildsTalk.jpg" class="attachment-tall size-tall wp-post-image" alt="Childs Talk" title="" sizes="(min-width: 1300px) 25vw, (min-width: 1000px) 33vw, (min-width: 690px) 100vw, 100vw" srcset="https://avspeechpathology.com.au/wp-content/uploads/2021/03/ChildsTalk.jpg 500w, https://avspeechpathology.com.au/wp-content/uploads/2021/03/ChildsTalk-300x208.jpg 300w"></span></a><span class="meta-category"><a class="insights-information" href="https://avspeechpathology.com.au/category/insights-information/">Insights &amp; Information</a></span><a class="entire-meta-link" href="https://avspeechpathology.com.au/insights-information/stuttering-vs-childs-talk-whats-normal/"></a>
+            <div class="article-content-wrap">
+              <div class="post-header">
+                <span class="meta"> March 15, 2021 </span> 
+                <h3 class="title">Stuttering vs Child’s Talk: What’s Normal?</h3>	
+              </div><!--/post-header-->
+              <div class="excerpt">
+                As we all know, young children often stumble over and repeat their words: it’s simply a part of learning how to talk. However, while they are this age, it can…              </div>
+            </div>
+            
+            <div class="post-meta">
+              <span class="meta-author"> <a href="https://avspeechpathology.com.au/author/av-speech-pathology/"> <i class="icon-default-style icon-salient-m-user"></i> AV Speech Pathology</a> </span> 
+              
+                            
+              <div class="nectar-love-wrap">
+                <a href="#" class="nectar-love" id="nectar-love-2873" title="Love this"> <i class="icon-salient-heart-2"></i><span class="love-text">Love</span><span class="total_loves"><span class="nectar-love-count">0</span></span></a>              </div><!--/nectar-love-wrap-->	
+            </div>
+
+          </div>
+
+                
+      </div><!--/col-->
+      
+      
+      <div class="col span_3 post-2757 post type-post status-publish format-standard has-post-thumbnail category-education one-fourths clear-both">
+        
+        
+            <div class="inner-wrap post-2757 post type-post status-publish format-standard has-post-thumbnail category-education">
+
+            <a href="https://avspeechpathology.com.au/education/our-treatments-dirfloortime/" class="img-link"><span class="post-featured-img" style="background-image: url(&quot;https://avspeechpathology.com.au/wp-content/uploads/2021/02/DIRFloortime.jpg&quot;);"><img decoding="async" width="497" height="348" src="https://avspeechpathology.com.au/wp-content/uploads/2021/02/DIRFloortime.jpg" class="attachment-tall size-tall wp-post-image" alt="DIRFloortime" title="" sizes="(min-width: 1300px) 25vw, (min-width: 1000px) 33vw, (min-width: 690px) 100vw, 100vw" srcset="https://avspeechpathology.com.au/wp-content/uploads/2021/02/DIRFloortime.jpg 497w, https://avspeechpathology.com.au/wp-content/uploads/2021/02/DIRFloortime-300x210.jpg 300w"></span></a><span class="meta-category"><a class="education" href="https://avspeechpathology.com.au/category/education/">Education</a></span><a class="entire-meta-link" href="https://avspeechpathology.com.au/education/our-treatments-dirfloortime/"></a>
+            <div class="article-content-wrap">
+              <div class="post-header">
+                <span class="meta"> February 28, 2021 </span> 
+                <h3 class="title">Our Treatments: DIRFloortime®</h3>	
+              </div><!--/post-header-->
+              <div class="excerpt">
+                At Alex V. Speech Pathology, we utilise a range of different treatments in order to achieve the best result for each child. No matter what treatment plan we use, every…              </div>
+            </div>
+            
+            <div class="post-meta">
+              <span class="meta-author"> <a href="https://avspeechpathology.com.au/author/av-speech-pathology/"> <i class="icon-default-style icon-salient-m-user"></i> AV Speech Pathology</a> </span> 
+              
+                            
+              <div class="nectar-love-wrap">
+                <a href="#" class="nectar-love" id="nectar-love-2757" title="Love this"> <i class="icon-salient-heart-2"></i><span class="love-text">Love</span><span class="total_loves"><span class="nectar-love-count">0</span></span></a>              </div><!--/nectar-love-wrap-->	
+            </div>
+
+          </div>
+
+                
+      </div><!--/col-->
+      
+      
+      <div class="col span_3 post-2753 post type-post status-publish format-standard has-post-thumbnail category-insights-information one-fourths right-edge">
+        
+        
+            <div class="inner-wrap post-2753 post type-post status-publish format-standard has-post-thumbnail category-insights-information">
+
+            <a href="https://avspeechpathology.com.au/insights-information/is-my-child-a-late-talker/" class="img-link"><span class="post-featured-img" style="background-image: url(&quot;https://avspeechpathology.com.au/wp-content/uploads/2021/02/IsMyChildaLateTalker-500x351.jpg&quot;);"><img loading="lazy" decoding="async" width="500" height="351" src="https://avspeechpathology.com.au/wp-content/uploads/2021/02/IsMyChildaLateTalker-500x351.jpg" class="attachment-tall size-tall wp-post-image" alt="Is My Child a Late Talker" title="" sizes="auto, (min-width: 1300px) 25vw, (min-width: 1000px) 33vw, (min-width: 690px) 100vw, 100vw"></span></a><span class="meta-category"><a class="insights-information" href="https://avspeechpathology.com.au/category/insights-information/">Insights &amp; Information</a></span><a class="entire-meta-link" href="https://avspeechpathology.com.au/insights-information/is-my-child-a-late-talker/"></a>
+            <div class="article-content-wrap">
+              <div class="post-header">
+                <span class="meta"> February 15, 2021 </span> 
+                <h3 class="title">Is My Child a Late Talker?</h3>	
+              </div><!--/post-header-->
+              <div class="excerpt">
+                There’s no denying that every child develops at a different rate; whether that is physically, mentally or socially. However, something to be aware of is that there are certain milestones…              </div>
+            </div>
+            
+            <div class="post-meta">
+              <span class="meta-author"> <a href="https://avspeechpathology.com.au/author/av-speech-pathology/"> <i class="icon-default-style icon-salient-m-user"></i> AV Speech Pathology</a> </span> 
+              
+                            
+              <div class="nectar-love-wrap">
+                <a href="#" class="nectar-love" id="nectar-love-2753" title="Love this"> <i class="icon-salient-heart-2"></i><span class="love-text">Love</span><span class="total_loves"><span class="nectar-love-count">0</span></span></a>              </div><!--/nectar-love-wrap-->	
+            </div>
+
+          </div>
+
+                
+      </div><!--/col-->
+      
+        
+    </div><!--/blog-recent-->
+  
+  <div id="fws_69972b70df19f" data-midnight="" data-column-margin="default" class="wpb_row vc_row-fluid vc_row inner_row standard_section   " style="padding-top: 0px; padding-bottom: 0px; "><div class="row-bg-wrap"> <div class="row-bg"></div> </div><div class="row_col_wrap_12_inner col span_12  left">
+	<div class="vc_col-sm-12 wpb_column column_container vc_column_container col child_column centered-text no-extra-padding inherit_tablet inherit_phone instance-10" data-t-w-inherits="default" data-bg-cover="" data-padding-pos="all" data-has-bg-color="false" data-bg-color="" data-bg-opacity="1" data-hover-bg="" data-hover-bg-opacity="1" data-animation="" data-delay="0">
+		<div class="vc_column-inner"><div class="column-bg-overlay-wrap" data-bg-animation="none"><div class="column-bg-overlay"></div></div>
+		<div class="wpb_wrapper">
+			<a class="nectar-button large regular extra-color-1 has-icon  regular-button" style="visibility: visible;" href="https://avspeechpathology.com.au/blog/" data-color-override="false" data-hover-color-override="false" data-hover-text-color-override="#fff"><span>View All Posts</span><i class="iconsmind-Triangle-ArrowRight"></i></a>
+		</div> 
+	</div>
+	</div> 
+</div></div>
+			</div> 
+		</div>
+	</div> 
+</div></div>
+			
+		</div><!--/row-->
+	</div><!--/container-->
+</div><!--/container-wrap-->
+
+
+<div id="footer-outer" data-midnight="light" data-cols="4" data-custom-color="false" data-disable-copyright="false" data-matching-section-color="false" data-copyright-line="false" data-using-bg-img="false" data-bg-img-overlay="0.8" data-full-width="false" data-using-widget-area="true" data-link-hover="default">
+	
+	
+<div id="call-to-action">
+	<div class="container">
+		  
+		  <span> Want more information? Book an initial consultation.  </span>
+		  <a class="nectar-button 
+		  regular-button accent-color" data-color-override="false" href="https://avspeechpathology.com.au/contact/" style="visibility: visible;">
+		  Get in Touch		</a>
+	</div>
+</div>
+
+		
+	<div id="footer-widgets" data-has-widgets="true" data-cols="4">
+		
+		<div class="container">
+			
+						
+			<div class="row">
+				
+								
+				<div class="col span_3 one-fourths clear-both">
+					<!-- Footer widget area 1 -->
+					
+		<div id="recent-posts-4" class="widget widget_recent_entries">
+		<h4>Fresh from the blog</h4>
+		<ul>
+											<li>
+					<a href="https://avspeechpathology.com.au/education/treatment-talk-lidcombe-program-of-early-stuttering-intervention/">Treatment Talk: Lidcombe Program of Early Stuttering Intervention</a>
+											<span class="post-date">March 31, 2021</span>
+									</li>
+											<li>
+					<a href="https://avspeechpathology.com.au/insights-information/stuttering-vs-childs-talk-whats-normal/">Stuttering vs Child’s Talk: What’s Normal?</a>
+											<span class="post-date">March 15, 2021</span>
+									</li>
+											<li>
+					<a href="https://avspeechpathology.com.au/education/our-treatments-dirfloortime/">Our Treatments: DIRFloortime®</a>
+											<span class="post-date">February 28, 2021</span>
+									</li>
+					</ul>
+
+		</div>					</div><!--/span_3-->
+					
+											
+						<div class="col span_3 one-fourths right-edge">
+							<!-- Footer widget area 2 -->
+							<div id="text-4" class="widget widget_text"><h4>Our Locations</h4>			<div class="textwidget"><p><strong>Brisbane Address:</strong><br>
+Suite 2A, 524 Milton Rd. Toowong 4066<br>
+<span style="color: #ffffff;"><a style="color: #ffffff;" href="https://goo.gl/maps/6d5xy6oaVjGUn3ry8" target="_blank" rel="noopener">View Map</a></span></p>
+<p><strong>Ipswich Address:</strong><br>
+T02, 95 Southern Cross Cct. Springfield Central 4300 (Springfield Doctors Medical Centre)<br>
+<span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.google.com/maps/place/Springfield+Doctors/@-27.6784838,152.8936327,17z/data=!4m6!3m5!1s0x6b914b29b2dda6e7:0xbd8eaaa4d6c3ff63!8m2!3d-27.6784517!4d152.8979762!16s%2Fg%2F11tfzmcjrm?entry=ttu" target="_blank" rel="noopener">View Map</a></span></p>
+</div>
+		</div>								
+							</div><!--/span_3-->
+							
+												
+						
+													<div class="col span_3 one-fourths clear-both">
+								<!-- Footer widget area 3 -->
+								<div id="text-5" class="widget widget_text"><h4>Our Contact Details</h4>			<div class="textwidget"><p><strong>Phone:</strong><br>
+07 3217 7037<br>
+<strong>Email:</strong><br>
+<span style="color: #ffffff;"><a style="color: #ffffff;" href="mailto:admin@avsp.net.au">admin@avsp.net.au</a></span></p>
+</div>
+		</div>									
+								</div><!--/span_3-->
+														
+															<div class="col span_3 one-fourths right-edge">
+									<!-- Footer widget area 4 -->
+									<div id="text-3" class="widget widget_text"><h4>Our Philosophy</h4>			<div class="textwidget"><strong>We are committed to helping your child thrive. Our goal is to enhance the lives of our clients.</strong>
+<br><br>
+We pride ourselves on providing quality care using the most up-to-date methods of assessment and therapy that have been proven to achieve real and meaningful outcomes.</div>
+		</div>										
+									</div><!--/span_3-->
+																
+							</div><!--/row-->
+							
+														
+						</div><!--/container-->
+						
+					</div><!--/footer-widgets-->
+					
+					
+  <div class="row" id="copyright" data-layout="default">
+	
+	<div class="container">
+	   
+				<div class="col span_5">
+		   
+					   
+						<p>© 2026 Alex V. Speech Pathology. 
+					   <a href="https://bekonstructivemarketing.com.au">Website &amp; Digital Marketing by BeKonstructive Marketing.</a>			 </p>
+					   
+		</div><!--/span_5-->
+			   
+	  <div class="col span_7 col_last">
+		<ul class="social">
+						   <li><a target="_blank" href="https://twitter.com/AlexAvsp"><i class="fa fa-twitter"></i> </a></li> 		  			 <li><a target="_blank" href="https://www.facebook.com/Alex-V-Speech-Pathology-221413228041036/"><i class="fa fa-facebook"></i> </a></li> 		  		  		  			 <li><a target="_blank" href="https://www.linkedin.com/company/alex-v-speech-pathology/?report%2Esuccess=KJ_KkFGTDCfMt-A7wV3Fn9Yvgwr02Kd6AZHGx4bQCDiP6-2rfP2oxyVoEQiPrcAQ7Bf"><i class="fa fa-linkedin"></i> </a></li> 		  		  		  		  		  		  		  		  		  		  		  		  		  		  		  		  		  		  		  		  		  		  		                            			 <li><a target="_blank" href="tel:0732177037"><i class="fa fa-phone"></i></a></li>      			 <li><a target="_blank" href="mailto:alex@avsp.net.au"><i class="fa fa-envelope"></i></a></li> 		</ul>
+	  </div><!--/span_7-->
+
+	  	
+	</div><!--/container-->
+	
+  </div><!--/row-->
+  
+		
+</div><!--/footer-outer-->
+
+	
+	<div id="slide-out-widget-area-bg" class="slide-out-from-right dark">
+				</div>
+		
+		<div id="slide-out-widget-area" class="slide-out-from-right" data-dropdown-func="separate-dropdown-parent-link" data-back-txt="Back">
+			
+						
+			<div class="inner" data-prepend-menu-mobile="false">
+				
+				<a class="slide_out_area_close" href="#">
+					<span class="icon-salient-x icon-default-style"></span>				</a>
+				
+				
+									<div class="off-canvas-menu-container mobile-only">
+						
+												
+						<ul class="menu">
+							<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-551 current_page_item menu-item-977"><a href="https://avspeechpathology.com.au/" aria-current="page">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1055"><a href="https://avspeechpathology.com.au/about/">About</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1056"><a href="#">Services</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1023"><a href="https://avspeechpathology.com.au/autism/">Autism</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1022"><a href="https://avspeechpathology.com.au/alternative-and-augmentative-communication/">Alternative &amp; Augmentative Communication</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1015"><a href="https://avspeechpathology.com.au/assistive-communication-for-children/">Assistive Communication for Children</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1021"><a href="https://avspeechpathology.com.au/childhood-apraxia-of-speech-cas/">Childhood Apraxia of Speech (CAS)</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1020"><a href="https://avspeechpathology.com.au/language-therapy/">Language Therapy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1014"><a href="https://avspeechpathology.com.au/literacy-for-children-reading-and-spelling/">Literacy for Children: Reading and Spelling</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1018"><a href="https://avspeechpathology.com.au/fluency-stuttering/">Fluency/Stuttering</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1017"><a href="https://avspeechpathology.com.au/social-skills-therapy/">Social Skills Therapy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1016"><a href="https://avspeechpathology.com.au/late-talkers/">Late Talkers</a></li>
+</ul>
+<span class="ocm-dropdown-arrow" style="top: 0px;"><i class="fa fa-angle-down"></i></span></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1013"><a href="https://avspeechpathology.com.au/faq/">FAQ</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1070"><a href="https://avspeechpathology.com.au/speech-and-language-milestones/">Speech and Language Milestones</a></li>
+</ul>
+<span class="ocm-dropdown-arrow" style="top: 0px;"><i class="fa fa-angle-down"></i></span></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1097"><a href="https://avspeechpathology.com.au/blog/">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1080"><a href="https://avspeechpathology.com.au/contact/">Contact</a></li>
+							
+						</ul>
+						
+						<ul class="menu secondary-header-items">
+													</ul>
+					</div>
+										
+				</div>
+				
+				<div class="bottom-meta-wrap"></div><!--/bottom-meta-wrap-->					
+				</div>
+		
+</div> <!--/ajax-content-wrap-->
+
+	<a id="to-top" class="
+		"><i class="fa fa-angle-up"></i></a>
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"\/*"},{"not":{"href_matches":["\/wp-*.php","\/wp-admin\/*","\/wp-content\/uploads\/*","\/wp-content\/*","\/wp-content\/plugins\/*","\/wp-content\/themes\/salient\/*","\/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script type="text/html" id="wpb-modifications"></script><link rel="stylesheet" id="iconsmind-css" href="https://avspeechpathology.com.au/wp-content/themes/salient/css/iconsmind.css?ver=7.6" type="text/css" media="all">
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/jquery/ui/menu.min.js?ver=1.13.3" id="jquery-ui-menu-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+/* ]]> */
+</script>
+<script type="text/javascript" id="wp-a11y-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "default", {"translation-revision-date":"2021-09-25 03:04:07+0000","generator":"GlotPress\/3.0.0-alpha.2","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"en_AU"},"Notifications":["Notifications"]}},"comment":{"reference":"wp-includes\/js\/dist\/a11y.js"}} );
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/dist/a11y.min.js?ver=3156534cc54473497e14" id="wp-a11y-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/jquery/ui/autocomplete.min.js?ver=1.13.3" id="jquery-ui-autocomplete-js"></script>
+<script type="text/javascript" id="my_acsearch-js-extra">
+/* <![CDATA[ */
+var MyAcSearch = {"url":"https:\/\/avspeechpathology.com.au\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/themes/salient/nectar/assets/functions/ajax-search/wpss-search-suggest.js" id="my_acsearch-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0" id="wp-polyfill-js"></script>
+<script type="text/javascript" id="contact-form-7-js-extra">
+/* <![CDATA[ */
+var wpcf7 = {"api":{"root":"https:\/\/avspeechpathology.com.au\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.5.2" id="contact-form-7-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/plugins/salient-nectar-slider/js/anime.js?ver=1.6" id="anime-js"></script>
+<script type="text/javascript" id="nectar-slider-js-extra">
+/* <![CDATA[ */
+var nectar_theme_info = {"using_salient":"true"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/plugins/salient-nectar-slider/js/nectar-slider.js?ver=1.6" id="nectar-slider-js"></script>
+<script type="text/javascript" id="salient-social-js-extra">
+/* <![CDATA[ */
+var nectarLove = {"ajaxurl":"https:\/\/avspeechpathology.com.au\/wp-admin\/admin-ajax.php","postID":"551","rooturl":"https:\/\/avspeechpathology.com.au","loveNonce":"01627b486f"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/plugins/salient-social/js/salient-social.js?ver=1.1" id="salient-social-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/jquery.easing.js?ver=1.3" id="jquery-easing-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/jquery.mousewheel.js?ver=3.1.13" id="jquery-mousewheel-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/themes/salient/js/priority.js?ver=12.1.0" id="nectar_priority-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/transit.js?ver=0.9.9" id="nectar-transit-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/waypoints.js?ver=4.0.1" id="nectar-waypoints-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/plugins/salient-portfolio/js/third-party/imagesLoaded.min.js?ver=4.1.4" id="imagesLoaded-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/hoverintent.js?ver=1.9" id="hoverintent-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/magnific.js?ver=7.0.1" id="magnific-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/themes/salient/js/third-party/superfish.js?ver=1.4.8" id="superfish-js"></script>
+<script type="text/javascript" id="nectar-frontend-js-extra">
+/* <![CDATA[ */
+var nectarLove = {"ajaxurl":"https:\/\/avspeechpathology.com.au\/wp-admin\/admin-ajax.php","postID":"551","rooturl":"https:\/\/avspeechpathology.com.au","disqusComments":"false","loveNonce":"01627b486f","mapApiKey":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/themes/salient/js/init.js?ver=12.1.0" id="nectar-frontend-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/plugins/salient-core/js/third-party/touchswipe.min.js?ver=1.0" id="touchswipe-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-includes/js/comment-reply.min.js?ver=6.8.3" id="comment-reply-js" async="async" data-wp-strategy="async"></script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6Lc6VOgZAAAAACmHbVJKGrab2tnHuoA5ReIC2owI&amp;ver=3.0" id="google-recaptcha-js"></script>
+<script type="text/javascript" id="wpcf7-recaptcha-js-extra">
+/* <![CDATA[ */
+var wpcf7_recaptcha = {"sitekey":"6Lc6VOgZAAAAACmHbVJKGrab2tnHuoA5ReIC2owI","actions":{"homepage":"homepage","contactform":"contactform"}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=5.5.2" id="wpcf7-recaptcha-js"></script>
+<script type="text/javascript" src="https://avspeechpathology.com.au/wp-content/plugins/js_composer_salient/assets/js/dist/js_composer_front.min.js?ver=6.2.0" id="wpb_composer_front_js-js"></script>
+
+<p id="a11y-speak-intro-text" class="a11y-speak-intro-text" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" hidden="hidden">Notifications</p><div id="a11y-speak-assertive" class="a11y-speak-region" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" aria-live="assertive" aria-relevant="additions text" aria-atomic="true"></div><div id="a11y-speak-polite" class="a11y-speak-region" style="position: absolute;margin: -1px;padding: 0;height: 1px;width: 1px;overflow: hidden;clip: rect(1px, 1px, 1px, 1px);-webkit-clip-path: inset(50%);clip-path: inset(50%);border: 0;word-wrap: normal !important;" aria-live="polite" aria-relevant="additions text" aria-atomic="true"></div><div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px; border-radius: 2px; overflow: hidden;"><div class="grecaptcha-logo"><iframe title="reCAPTCHA" width="256" height="60" role="presentation" name="a-tqqt83bf4ffr" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lc6VOgZAAAAACmHbVJKGrab2tnHuoA5ReIC2owI&amp;co=aHR0cHM6Ly9hdnNwZWVjaHBhdGhvbG9neS5jb20uYXU6NDQz&amp;hl=en&amp;v=vUgXt_KV952_-5BB2jjloYzl&amp;size=invisible&amp;anchor-ms=20000&amp;execute-ms=30000&amp;cb=ixxd5rkcxl9s"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div></body></html>
+
+[Total HTML length: 91740 chars]

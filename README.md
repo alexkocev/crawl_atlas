@@ -1,6 +1,8 @@
 # Crawl Atlas
 
-A data intelligence engine that extracts structured business signals from websites. Uses Playwright, rotating proxies (Bright Data), and smart extraction logic for both **one-shot datasets** and **recurring migration signals**.
+A data intelligence engine that extracts structured business signals from websites.
+
+**Repo:** [github.com/alexkocev/crawl_atlas](https://github.com/alexkocev/crawl_atlas) Uses Playwright, rotating proxies (Bright Data), and smart extraction logic for both **one-shot datasets** and **recurring migration signals**.
 
 ## Target Markets
 

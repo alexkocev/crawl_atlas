@@ -363,7 +363,7 @@ async def main():
 
                 try:
                     cell_range = f'B{row_num}:M{row_num}'
-                    worksheet.update(cell_range, [update_values])
+                    worksheet.update([update_values], cell_range)
 
                     if not data['error']:
                         print(f"✅ Updated Row {row_num}: {data['store_name']} ({data['platform']})")

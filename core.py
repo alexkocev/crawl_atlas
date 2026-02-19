@@ -98,6 +98,100 @@ def extract_email(text: str) -> Optional[str]:
     return None
 
 
+def extract_address_from_jsonld(html: str) -> dict:
+    """Extract address from JSON-LD schema.org (LocalBusiness, MedicalOrganization, etc.)"""
+    address = {}
+    pattern = r'<script[^>]*type\s*=\s*["\']application/ld\+json["\'][^>]*>(.*?)</script>'
+    for match in re.finditer(pattern, html, re.DOTALL | re.IGNORECASE):
+        try:
+            data = json.loads(match.group(1).strip())
+            # Handle both single object and @graph array
+            items = data if isinstance(data, list) else [data]
+            if isinstance(data, dict) and "@graph" in data:
+                items = data["@graph"]
+            for item in items:
+                addr = item.get("address") or {}
+                if isinstance(addr, str):
+                    address["full_address"] = addr
+                    return address
+                if isinstance(addr, dict):
+                    address["street"] = addr.get("streetAddress", "")
+                    address["city"] = addr.get("addressLocality", "")
+                    address["state"] = addr.get("addressRegion", "")
+                    address["postcode"] = addr.get("postalCode", "")
+                    country = addr.get("addressCountry", "")
+                    if isinstance(country, dict):
+                        country = country.get("name", "")
+                    address["country"] = country or ""
+                    if any(address.values()):
+                        return address
+        except Exception:
+            continue
+    return address
+
+
+def extract_address_from_text(text: str) -> dict:
+    """Fallback: regex-based address extraction from visible page text."""
+    address = {}
+    # Australian postcode pattern (4 digits), captures surrounding context
+    au_pattern = r'(\d+\s[\w\s]+(?:Street|St|Avenue|Ave|Road|Rd|Drive|Dr|Boulevard|Blvd|Lane|Ln|Place|Pl|Court|Ct|Way|Parade|Pde|Close|Cl|Terrace|Tce)[,\s]+[\w\s]+[,\s]+(?:NSW|VIC|QLD|SA|WA|TAS|ACT|NT)[,?\s]+(\d{4}))'
+    match = re.search(au_pattern, text, re.IGNORECASE)
+    if match:
+        address["full_address"] = match.group(0).strip()
+
+    # Postcode extraction as minimum signal
+    postcode_match = re.search(r'\b(\d{4})\b', text)
+    if postcode_match and not address.get("postcode"):
+        address["postcode"] = postcode_match.group(1)
+
+    return address
+
+
+def extract_full_address(html: str, page_text: str) -> dict:
+    """Try JSON-LD first, then text fallback. Returns dict with street/city/state/postcode/country."""
+    addr = extract_address_from_jsonld(html)
+    if not addr:
+        addr = extract_address_from_text(page_text)
+    return addr
+
+
+def extract_all_phones(text: str) -> list:
+    """Extract all phone numbers from text, deduplicated."""
+    patterns = [
+        r'\(0\d\)\s?\d{4}\s?\d{4}',          # (02) 9999 9999 Australian landline
+        r'0\d{9}',                              # 0412345678 mobile
+        r'0\d\s\d{4}\s\d{4}',                  # 02 9999 9999
+        r'1[38]00\s?\d{3}\s?\d{3}',            # 1300/1800 numbers
+        r'\+61\s?\d[\s\d]{8,11}',              # +61 international
+        r'\+\d{1,3}[\s\-]?\(?\d{1,4}\)?[\s\-]?\d{4}[\s\-]?\d{4}',  # Generic international
+    ]
+    found = set()
+    for pattern in patterns:
+        for m in re.finditer(pattern, text):
+            cleaned = re.sub(r'\s+', ' ', m.group(0)).strip()
+            found.add(cleaned)
+    return sorted(found)
+
+
+def extract_all_emails(text: str, html: str = "") -> list:
+    """Extract all unique, valid emails from text and mailto: links in HTML."""
+    found = set()
+    exclude = ['example.com', 'test.com', 'placeholder', 'noreply', 'no-reply', 'sentry', 'wixpress']
+
+    email_pattern = r'\b[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}\b'
+    for match in re.findall(email_pattern, text):
+        if not any(ex in match.lower() for ex in exclude):
+            found.add(match.lower())
+
+    # Also parse mailto: from raw HTML
+    for match in re.finditer(r'href=["\']mailto:([^"\'?\s]+)', html, re.IGNORECASE):
+        email = match.group(1).strip().lower()
+        if '@' in email and not any(ex in email for ex in exclude):
+            found.add(email)
+
+    return sorted(found)
+
+
 def extract_phone(text: str) -> Optional[str]:
     """Extract phone number from text using regex."""
     patterns = [

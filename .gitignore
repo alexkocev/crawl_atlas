@@ -12,4 +12,5 @@ venv/
 .DS_Store
 
 # Generated
+print_codebase.py
 printed_codebase.txt
