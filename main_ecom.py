@@ -126,9 +126,9 @@ def extract_specific_socials(html: str) -> Dict[str, str]:
     """Find specific social media URLs (IG, FB, TikTok)."""
     html_lower = html.lower()
     return {
-        'instagram': 'Yes' if 'instagram.com' in html_lower else 'No',
-        'facebook': 'Yes' if 'facebook.com' in html_lower else 'No',
-        'tiktok': 'Yes' if 'tiktok.com' in html_lower else 'No',
+        'instagram': 'YES' if 'instagram.com' in html_lower else 'NO',
+        'facebook': 'YES' if 'facebook.com' in html_lower else 'NO',
+        'tiktok': 'YES' if 'tiktok.com' in html_lower else 'NO',
     }
 
 
@@ -172,9 +172,9 @@ async def scrape_ecom_store(browser, url: str, max_retries: int = 2) -> Dict:
         'reviews': 'None',
         'loyalty': 'None',
         'pixels': 'None',
-        'instagram': 'No',
-        'facebook': 'No',
-        'tiktok': 'No',
+        'instagram': 'NO',
+        'facebook': 'NO',
+        'tiktok': 'NO',
         'email': '',
         'phone': '',
         'error': None,

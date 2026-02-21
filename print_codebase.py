@@ -23,6 +23,9 @@ EXCLUDE_FILES = {
     "requirements-dev.txt",
     "requirements.in",
     "printed_codebase.txt",  # Don't include the output itself
+    "main_ecom.py",
+    "exploration_printed_content.txt",
+    "exploration_print_content.py",
 }
 
 # File extensions to exclude
