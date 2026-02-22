@@ -16,11 +16,8 @@ from playwright.async_api import async_playwright, Page, TimeoutError as Playwri
 from core import (
     get_email_provider,
     detect_email_provider_from_addresses,
-    count_team_members,
-    detect_booking_type,
     detect_from_cookies,
     detect_from_meta_generator,
-    detect_multi_location,
     scan_robots_txt,
     extract_email,
     extract_phone,
@@ -31,10 +28,595 @@ from core import (
     extract_full_address,
     extract_all_phones,
     extract_all_emails,
-    classify_clinic_category,
-    _deduplicate_tech,
-    apply_stack_priority_to_result,
 )
+
+
+# -----------------------------------------------------------------------------
+# CLINIC-SPECIFIC: Booking, multi-location, category, team count, tech priority
+# -----------------------------------------------------------------------------
+
+EXTERNAL_BOOKING_DOMAINS = [
+    "centaurportal.com",
+    "hotdoc.com.au",
+    "healthengine.com.au",
+    "cliniko.com",
+    "halaxy.com",
+    "powerdiary.com",
+    "nookal.com",
+    "coreplus.com.au",
+    "splose.com",
+    "janeapp.com",
+    "acuityscheduling.com",
+    "calendly.com",
+    "setmore.com",
+    "zocdoc.com",
+    "doctolib.com",
+    "docplanner.com",
+    "automed.com.au",
+    "frontdesk.com.au",
+    "booking.frontdesk.com.au",
+    "mindbodyonline.com",
+    "fresha.com",
+    "gettimely.com",
+    "simplepractice.com",
+    "practicebetter.io",
+    "meetings.hubspot.com",
+    "meetings.hs-sites.com",
+    "connect.nookal.com",
+    "portal.nookal.com",
+    "clinics.janeapp.com",
+    "secure.cliniko.com",
+    "booking.cliniko.com",
+    "book.hotdoc.com.au",
+    "booking.healthengine.com.au",
+    "medirecords.com",
+]
+
+BOOKING_LINK_PATTERNS = [
+    "book", "booking", "appointment", "schedule",
+    "reserve", "book now", "book online", "make a booking",
+    "request appointment", "book an appointment",
+]
+
+
+def _vendor_name_from_domain(domain: str) -> str:
+    """Map a vendor domain to a clean display name."""
+    mapping = {
+        "centaurportal.com": "D4W eAppointments",
+        "hotdoc.com.au": "HotDoc",
+        "healthengine.com.au": "HealthEngine",
+        "cliniko.com": "Cliniko",
+        "halaxy.com": "Halaxy",
+        "powerdiary.com": "Power Diary",
+        "nookal.com": "Nookal",
+        "coreplus.com.au": "CorePlus",
+        "splose.com": "Splose",
+        "janeapp.com": "Jane App",
+        "acuityscheduling.com": "Acuity",
+        "calendly.com": "Calendly",
+        "setmore.com": "Setmore",
+        "zocdoc.com": "Zocdoc",
+        "doctolib.com": "Doctolib",
+        "docplanner.com": "Docplanner",
+        "automed.com.au": "AutoMed",
+        "frontdesk.com.au": "Front Desk",
+        "mindbodyonline.com": "Mindbody",
+        "fresha.com": "Fresha",
+        "gettimely.com": "Timely",
+        "hubspot.com": "HubSpot Meetings",
+        "simplepractice.com": "SimplePractice",
+        "medirecords.com": "MediRecords",
+    }
+    for key, name in mapping.items():
+        if key in domain:
+            return name
+    return domain
+
+
+async def detect_booking_type(page, base_url: str) -> dict:
+    """
+    Detect whether clinic booking is embedded, external_vendor, or not_detected.
+
+    Logic:
+    1. Find booking links on the current page (button text + href patterns)
+    2. For each candidate link:
+       - If href domain != clinic domain AND matches known vendor → external_vendor
+       - If href is a subdomain of clinic domain (booking.myclinic.com.au) → embedded
+       - If iframe src matches known vendor → external_vendor (embedded iframe)
+       - If iframe src is own subdomain → embedded
+    3. Return first confident match.
+
+    Returns:
+        {
+            "booking_type": "embedded" | "external_vendor" | "not_detected",
+            "booking_vendor": str,   # e.g. "HotDoc", "Cliniko", "" if embedded
+            "booking_url": str       # the detected booking URL
+        }
+    """
+    result = {
+        "booking_type": "not_detected",
+        "booking_vendor": "",
+        "booking_url": "",
+    }
+
+    try:
+        clinic_domain = urlparse(base_url).netloc.lower().replace("www.", "")
+        clinic_root = ".".join(clinic_domain.split(".")[-2:])  # e.g. "myclinic.com.au"
+
+        # ----------------------------------------------------------------
+        # Step 1: Check iframes first — most reliable signal
+        # ----------------------------------------------------------------
+        iframes = await page.query_selector_all("iframe[src]")
+        for iframe in iframes:
+            src = await iframe.get_attribute("src") or ""
+            if not src:
+                continue
+            src_lower = src.lower()
+            iframe_domain = urlparse(src).netloc.lower().replace("www.", "")
+
+            for vendor_domain in EXTERNAL_BOOKING_DOMAINS:
+                if vendor_domain in src_lower:
+                    vendor_name = _vendor_name_from_domain(vendor_domain)
+                    result.update({
+                        "booking_type": "external_vendor",
+                        "booking_vendor": vendor_name,
+                        "booking_url": src,
+                    })
+                    return result
+
+            if clinic_root in iframe_domain and iframe_domain != clinic_domain:
+                result.update({
+                    "booking_type": "embedded",
+                    "booking_vendor": "",
+                    "booking_url": src,
+                })
+                return result
+
+        # ----------------------------------------------------------------
+        # Step 2: Scan booking links (buttons, nav, CTAs)
+        # ----------------------------------------------------------------
+        all_links = await page.query_selector_all("a[href]")
+        booking_candidates = []
+
+        for link in all_links:
+            try:
+                href = (await link.get_attribute("href") or "").strip()
+                text = (await link.inner_text()).lower().strip()
+
+                if not href or href.startswith(("mailto:", "tel:", "#")):
+                    continue
+
+                is_booking_link = any(kw in text or kw in href.lower() for kw in BOOKING_LINK_PATTERNS)
+                if is_booking_link:
+                    full_url = urljoin(base_url, href)
+                    booking_candidates.append((text, full_url))
+            except Exception:
+                continue
+
+        # ----------------------------------------------------------------
+        # Step 3: Classify each booking candidate
+        # ----------------------------------------------------------------
+        for text, candidate_url in booking_candidates:
+            candidate_domain = urlparse(candidate_url).netloc.lower().replace("www.", "")
+
+            for vendor_domain in EXTERNAL_BOOKING_DOMAINS:
+                if vendor_domain in candidate_domain:
+                    vendor_name = _vendor_name_from_domain(vendor_domain)
+                    result.update({
+                        "booking_type": "external_vendor",
+                        "booking_vendor": vendor_name,
+                        "booking_url": candidate_url,
+                    })
+                    return result
+
+            if clinic_root in candidate_domain and candidate_domain != clinic_domain:
+                result.update({
+                    "booking_type": "embedded",
+                    "booking_vendor": "",
+                    "booking_url": candidate_url,
+                })
+                return result
+
+            if candidate_domain == clinic_domain and any(
+                kw in urlparse(candidate_url).path.lower()
+                for kw in ["/book", "/booking", "/appointment"]
+            ):
+                result.update({
+                    "booking_type": "embedded",
+                    "booking_vendor": "",
+                    "booking_url": candidate_url,
+                })
+                return result
+
+        # Step 4: Fallback — scan raw HTML for vendor domain fingerprints
+        try:
+            raw_html = await page.content()
+            raw_lower = raw_html.lower()
+            for vendor_domain in EXTERNAL_BOOKING_DOMAINS:
+                if vendor_domain in raw_lower:
+                    vendor_name = _vendor_name_from_domain(vendor_domain)
+                    result.update({
+                        "booking_type": "external_vendor",
+                        "booking_vendor": vendor_name,
+                        "booking_url": f"detected in HTML: {vendor_domain}",
+                    })
+                    return result
+        except Exception:
+            pass
+
+    except Exception as e:
+        result["booking_vendor"] = f"error: {str(e)[:60]}"
+
+    if result["booking_type"] == "not_detected" and not result["booking_vendor"]:
+        result["booking_vendor"] = "not_detected"
+
+    return result
+
+
+MULTI_LOCATION_NAV_KEYWORDS = [
+    "our clinics", "our locations", "find a clinic", "find us",
+    "all locations", "clinic locations", "find a location",
+    "our practices", "our centres", "our centers",
+    "locations near you", "find your clinic",
+]
+
+MULTI_LOCATION_URL_PATHS = [
+    "/locations", "/our-clinics", "/find-us", "/clinics",
+    "/our-locations", "/find-a-clinic", "/practices",
+    "/our-centres", "/our-centers", "/find-a-practice",
+]
+
+
+async def detect_multi_location(page, base_url: str, phones: list, postcodes: list) -> dict:
+    """
+    Detect whether a clinic is a multi-location group using 3 methods.
+
+    Method B runs first (zero extra page visits) — uses already-scraped phones/postcodes.
+    Method C scans nav links on current page.
+    Method A visits a locations page and counts address blocks (last resort).
+
+    Returns:
+        {
+            "multi_location": "YES" / "NO",
+            "location_count_estimate": int,
+            "detection_method": str
+        }
+    """
+    result = {
+        "multi_location": "no",
+        "location_count_estimate": 1,
+        "detection_method": "none",
+    }
+
+    parsed = urlparse(base_url)
+    base = f"{parsed.scheme or 'https'}://{parsed.netloc}"
+
+    # --- Method B: phone/postcode repetition (free, no page visit) ---
+    unique_postcodes = set(postcodes) if postcodes else set()
+    unique_phones = set(phones) if phones else set()
+
+    if len(unique_postcodes) > 1 or len(unique_phones) > 3:
+        result["multi_location"] = "yes"
+        result["location_count_estimate"] = max(len(unique_postcodes), len(unique_phones) // 2)
+        result["detection_method"] = "phone/postcode repetition"
+        return result
+
+    # --- Method C: nav/menu keyword scan (free, current page) ---
+    nav_triggered = False
+    try:
+        nav_links = await page.query_selector_all(
+            "nav a, header a, [class*='menu'] a, [class*='nav'] a"
+        )
+        for link in nav_links:
+            try:
+                text = (await link.inner_text()).lower().strip()
+                href = (await link.get_attribute("href") or "").lower()
+                if any(kw in text or kw in href for kw in MULTI_LOCATION_NAV_KEYWORDS):
+                    result["multi_location"] = "yes"
+                    result["detection_method"] = f"nav keyword: '{text}'"
+                    nav_triggered = True
+                    break
+            except Exception:
+                continue
+    except Exception:
+        pass
+
+    # --- Method A: visit locations page, count address blocks ---
+    locations_found = 0
+    visited_path = None
+
+    for path in MULTI_LOCATION_URL_PATHS:
+        candidate_url = urljoin(base, path)
+        try:
+            await page.goto(candidate_url, timeout=10000, wait_until="domcontentloaded")
+            await page.wait_for_timeout(1000)
+
+            if urlparse(page.url).path in ("", "/", "/home"):
+                continue
+
+            page_text = await page.inner_text("body") if await page.query_selector("body") else ""
+
+            au_postcodes = re.findall(r'\b\d{4}\b', page_text)
+            unique_on_page = set(au_postcodes)
+            state_mentions = re.findall(r'\b(?:NSW|VIC|QLD|SA|WA|TAS|ACT|NT)\b', page_text, re.IGNORECASE)
+            locations_found = max(len(unique_on_page), len(state_mentions))
+            visited_path = path
+
+            if locations_found >= 1:
+                break
+        except Exception:
+            continue
+
+    if locations_found > 1:
+        result["multi_location"] = "yes"
+        result["location_count_estimate"] = locations_found
+        result["detection_method"] = f"locations page ({visited_path})"
+    elif locations_found == 1 and not nav_triggered:
+        result["location_count_estimate"] = 1
+
+    if result["multi_location"] == "yes" and result["location_count_estimate"] <= 1:
+        result["location_count_estimate"] = 2
+
+    return result
+
+
+async def count_team_members(page: Page) -> int:
+    """Count team members by looking for team page and common patterns."""
+    try:
+        team_texts = ['Team', 'Staff', 'Practitioners', 'About Us', 'Our Team']
+        team_link = None
+
+        for text in team_texts:
+            try:
+                links = await page.query_selector_all(f'a:text-matches("{text}", "i")')
+                if links:
+                    href = await links[0].get_attribute('href')
+                    if href:
+                        team_link = urljoin(page.url, href)
+                        break
+            except Exception:
+                continue
+
+        if team_link:
+            try:
+                await page.goto(team_link, timeout=10000, wait_until='domcontentloaded')
+                await page.wait_for_timeout(1000)
+            except Exception:
+                pass
+
+        content = await page.content()
+        title_pattern = r'(Dr\.\s[A-Z][a-z]+|Physiotherapist|Osteopath|Podiatrist|Psychologist|Therapist|Practitioner)'
+        doctors = len(re.findall(title_pattern, content, re.IGNORECASE))
+
+        team_images = await page.query_selector_all(
+            'img[class*="team"], img[class*="staff"], img[class*="practitioner"], '
+            'img[alt*="doctor"], img[alt*="dr"], img[src*="team"]'
+        )
+        image_count = len(team_images)
+
+        return max(doctors // 2, image_count) if doctors > 0 or image_count > 0 else 0
+    except Exception:
+        return 0
+
+
+# Category keyword buckets — order matters for tie-breaking priority
+CATEGORY_KEYWORDS = {
+    "Dental": [
+        "dentist", "dental", "orthodontist", "endodontist", "periodontist",
+        "oral health", "teeth whitening", "implant", "cosmetic dentistry",
+        "tooth", "denture", "braces", "invisalign", "root canal",
+    ],
+    "GP / General Practice": [
+        "general practice", "general practitioner", "gp clinic", "family doctor",
+        "family medicine", "bulk billing", "medicare", "primary care",
+        "walk-in clinic", "medical centre", "medical center",
+    ],
+    "Physio / Rehab": [
+        "physiotherapy", "physiotherapist", "physio", "rehabilitation",
+        "sports injury", "exercise physiology", "exercise physiologist",
+        "hydrotherapy", "musculoskeletal", "sports medicine",
+        "pilates", "dry needling", "manual therapy",
+    ],
+    "Allied Health": [
+        "speech therapy", "speech pathology", "speech pathologist",
+        "occupational therapy", "occupational therapist",
+        "psychology", "psychologist", "counselling", "counseling",
+        "dietitian", "dietician", "nutritionist",
+        "podiatry", "podiatrist", "chiropodist",
+        "audiology", "audiologist",
+        "myotherapy", "remedial massage",
+        "osteopath", "osteopathy",
+        "chiropractic", "chiropractor",
+        "naturopath", "naturopathy",
+    ],
+    "Specialist": [
+        "specialist", "cardiologist", "cardiology",
+        "dermatologist", "dermatology", "skin specialist",
+        "oncologist", "oncology", "cancer centre",
+        "urologist", "urology",
+        "neurologist", "neurology",
+        "gastroenterologist", "gastroenterology",
+        "endocrinologist", "endocrinology",
+        "ophthalmologist", "ophthalmology", "eye specialist",
+        "gynaecologist", "gynaecology", "obstetrics",
+        "paediatrician", "paediatrics",
+        "rheumatologist", "rheumatology",
+        "psychiatrist", "psychiatry",
+        "orthopaedic", "orthopedic",
+        "plastic surgeon", "cosmetic surgeon",
+    ],
+}
+
+FIELD_WEIGHTS = {
+    "title": 4,
+    "meta_description": 3,
+    "h1": 3,
+    "body": 1,
+}
+
+
+def classify_clinic_category(html: str, page_text: str) -> dict:
+    """
+    Classify clinic into primary category using weighted keyword matching.
+    Checks <title>, <meta description>, <h1>, and visible body text.
+    Returns: {"primary_category": str, "confidence_score": float, "scores": dict}
+    """
+    def get_field(pattern, text, flags=re.IGNORECASE | re.DOTALL):
+        m = re.search(pattern, text, flags)
+        return m.group(1).lower() if m else ""
+
+    fields = {
+        "title":            get_field(r'<title[^>]*>(.*?)</title>', html),
+        "meta_description": get_field(r'<meta[^>]*name=["\']description["\'][^>]*content=["\'](.*?)["\']', html),
+        "h1":               get_field(r'<h1[^>]*>(.*?)</h1>', html),
+        "body":             (page_text or "").lower(),
+    }
+
+    scores = {cat: 0.0 for cat in CATEGORY_KEYWORDS}
+
+    for field_name, field_text in fields.items():
+        weight = FIELD_WEIGHTS.get(field_name, 1)
+        for category, keywords in CATEGORY_KEYWORDS.items():
+            for kw in keywords:
+                if kw.lower() in field_text:
+                    scores[category] += weight
+
+    total = sum(scores.values())
+    if total == 0:
+        return {
+            "primary_category": "Unknown",
+            "confidence_score": 0.0,
+            "all_scores": scores,
+        }
+
+    top_cat = max(scores, key=scores.get)
+    top_score = scores[top_cat]
+    second_score = sorted(scores.values(), reverse=True)[1] if len(scores) > 1 else 0
+
+    if second_score > 0 and top_score / second_score < 1.2:
+        top_cat = "Mixed / Multidisciplinary"
+
+    confidence = round((top_score / total) * 100, 1)
+
+    return {
+        "primary_category": top_cat,
+        "confidence_score": confidence,
+        "all_scores": scores,
+    }
+
+
+# Stack priority: higher index = preferred when multiple tools detected in same category.
+STACK_PRIORITY = {
+    "cms": [
+        "Joomla", "Umbraco", "Ghost", "Weebly", "Drupal", "Sitecore",
+        "Framer", "Webflow", "Squarespace", "Wix", "HubSpot CMS", "Shopify",
+        "WordPress",
+    ],
+    "pms_ehr": [
+        "MedicalDirector", "Genie Solutions", "Clinic to Cloud", "ProCare",
+        "Titanium", "Bluechip", "Shexie", "Medilink", "PrimaryClinic",
+        "Communicare", "MasterCare", "Audit4", "Profile (Intrahealth)",
+        "Zedmed", "Best Practice", "AutoMed", "MediRecords", "MediRecords (inferred)",
+        "MediRecords (Clinical CRM)", "Dental4Windows", "Exact (SOE)", "Praktika",
+        "Oasis Dental", "Dentrix", "Core Practice", "Epic", "Cerner",
+        "Allscripts", "Meditech", "TrakCare", "Athenahealth", "DrChrono",
+        "AdvancedMD", "Kareo", "Practice Fusion", "NextGen", "eClinicalWorks",
+        "Greenway Health", "Salesforce Health Cloud", "Mindbody", "Fresha",
+        "Timely", "Cosmetri", "Zandamed",
+        "Nookal", "Jane App", "Halaxy", "Power Diary", "Splose", "Coreplus",
+        "Practice Better", "SimplePractice", "Carepatron", "WriteUpp", "PracSuite",
+        "TM2 / TM3", "Smartsoft Front Desk", "Xestro", "PPMP",
+        "Genea",
+    ],
+    "crm": [
+        "Mailgun", "Send App", "MediRecords (Clinical CRM)", "MediRecords",
+        "Campaign Monitor", "Brevo", "ConvertKit", "Constant Contact",
+        "Podium", "Birdeye", "PatientPop", "Keap", "Pipedrive", "Zoho CRM",
+        "ActiveCampaign", "Mailchimp", "Klaviyo", "Salesforce",
+        "LeadConnector", "GoHighLevel", "HubSpot",
+    ],
+    "infra": [
+        "cPanel/Apache", "Apache", "nginx", "LiteSpeed", "VentraIP", "cPanel",
+        "Cloudflare", "WP Engine", "Kinsta",
+    ],
+}
+
+
+def _deduplicate_tech(result: dict) -> dict:
+    """
+    Deduplicate known duplicate/sibling pairs before apply_stack_priority.
+    """
+    rules = [
+        ("crm", "LeadConnector", "GoHighLevel", False),
+        ("crm", "MediRecords (Clinical CRM)", "MediRecords", False),
+        ("cms", "Wix", "WordPress", True),
+        ("pms_ehr", "Cliniko Booking", "Cliniko", False),
+        ("pms_ehr", "MediRecords (Clinical CRM)", "MediRecords", False),
+        ("booking", "Cliniko Booking", "Cliniko", False),
+    ]
+    for category, drop, keep, both_only in rules:
+        val = result.get(category, "not_detected")
+        if val == "not_detected" or not val:
+            continue
+        parts = [p.strip() for p in str(val).split(",") if p.strip()]
+        if drop in parts and keep in parts:
+            parts = [p for p in parts if p != drop]
+        elif drop in parts and not both_only:
+            parts = [keep if p == drop else p for p in parts]
+        new_val = ", ".join(dict.fromkeys(parts)) if parts else "not_detected"
+        result[category] = new_val
+    return result
+
+
+def _apply_stack_priority(category: str, values: list) -> list:
+    """Sort multi-value list using STACK_PRIORITY. Higher index = preferred."""
+    if not values or category not in STACK_PRIORITY or category == "pixels":
+        return values
+
+    priority_list = STACK_PRIORITY[category]
+
+    def get_weight(val):
+        try:
+            return -priority_list.index(val)
+        except ValueError:
+            return 0
+
+    return sorted(values, key=get_weight)
+
+
+def apply_stack_priority_to_result(result: dict) -> dict:
+    """
+    Apply stack priority SORTING to each tech category in result.
+    Keeps all detected tools — most important tool appears first.
+    """
+    for category in list(result.keys()):
+        if category == "pixels":
+            continue
+        if category not in STACK_PRIORITY:
+            continue
+
+        val = result.get(category, "not_detected")
+        if val == "not_detected" or not val:
+            continue
+
+        parts = [p.strip() for p in str(val).split(",") if p.strip()]
+        if len(parts) <= 1:
+            continue
+
+        if category == "infra":
+            cloudflare = "Cloudflare"
+            others = [p for p in parts if p != cloudflare]
+            if cloudflare in parts and others:
+                sorted_hosts = _apply_stack_priority("infra", others)
+                result[category] = f"{cloudflare}, " + ", ".join(sorted_hosts)
+            else:
+                result[category] = ", ".join(_apply_stack_priority("infra", parts))
+            continue
+
+        sorted_parts = _apply_stack_priority(category, parts)
+        result[category] = ", ".join(sorted_parts)
+
+    return result
 
 
 # Tech stack signatures - fingerprints for detection
@@ -915,7 +1497,7 @@ def _print_tech_summary(result: dict) -> None:
     lines = [
         "━" * 70,
         f"🏥 {result.get('clinic_name', 'N/A').upper()}",
-        f"🏷️  Category:          {result.get('primary_category', 'unknown')}",
+        f"🏷️  Category:          {result.get('primary_category', 'not_detected')}",
         f"📍 Multi-Location:    {result.get('multi_location', 'no')} "
         f"(~{result.get('location_count_estimate', 1)} locations) "
         f"[{result.get('location_detection_method', 'none')}]",
@@ -926,7 +1508,7 @@ def _print_tech_summary(result: dict) -> None:
     lines.append(f"📅 Booking Type:     {booking_type}")
     booking_vendor_display = booking_vendor or "not_detected"
     lines.append(f"📅 Booking Vendor:   {booking_vendor_display}")
-    lines.append(f"📧 Email Provider: {result.get('email_provider', 'unknown')}")
+    lines.append(f"📧 Email Provider: {result.get('email_provider', 'not_detected')}")
     for cat in tech_cats:
         val = result.get(cat, "not_detected")
         if val != "not_detected":
@@ -988,9 +1570,9 @@ async def scrape_clinic(browser, url: str) -> Dict:
     result = {
         "url":                      url,
         "clinic_name":              "",
-        "primary_category":         "unknown",
+        "primary_category":         "not_detected",
         "confidence_score":         0.0,
-        "email_provider":           "unknown",
+        "email_provider":           "not_detected",
         "multi_location":           "no",
         "location_count_estimate":  1,
         "location_detection_method": "none",
@@ -1220,7 +1802,7 @@ async def scrape_clinic(browser, url: str) -> Dict:
         category_result = classify_clinic_category(html, page_text)
         result["primary_category"] = category_result["primary_category"]
         if result["primary_category"] == "Unknown":
-            result["primary_category"] = "unknown"
+            result["primary_category"] = "not_detected"
         result["confidence_score"] = category_result.get("confidence_score", 0.0)
         result['address'] = extract_full_address(html, page_text)
         result['phones'] = extract_all_phones(page_text, html)
@@ -1229,8 +1811,8 @@ async def scrape_clinic(browser, url: str) -> Dict:
         # Secondary email provider detection from contact addresses (Gmail direct, etc.)
         direct_provider = detect_email_provider_from_addresses(result.get("emails", []))
         if direct_provider:
-            existing = result.get("email_provider", "unknown")
-            if existing in ("unknown", "privateemail", ""):
+            existing = result.get("email_provider", "not_detected")
+            if existing in ("not_detected", "privateemail", ""):
                 result["email_provider"] = direct_provider
             elif direct_provider not in existing:
                 result["email_provider"] = existing + f", {direct_provider}"
@@ -1355,10 +1937,10 @@ async def main():
                     addr = result.get("address", {})
                     update_values = [
                         result.get("clinic_name", ""),
-                        result.get("primary_category", "unknown"),  # internal key, header is clinic_category
+                        result.get("primary_category", "not_detected"),  # internal key, header is clinic_category
                         result.get("multi_location", "no"),
                         str(result.get("location_count_estimate", 1)),
-                        result.get("email_provider", "unknown"),
+                        result.get("email_provider", "not_detected"),
                         *tech_vals,
                         result.get("booking_type", "not_detected"),
                         result.get("booking_vendor", "") or "not_detected",
