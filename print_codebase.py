@@ -24,6 +24,7 @@ EXCLUDE_FILES = {
     "requirements.in",
     "printed_codebase.txt",  # Don't include the output itself
     "main_ecom.py",
+    "main_healthdirect.py",
     "exploration_printed_content.txt",
     "exploration_print_content.py",
 }

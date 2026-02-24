@@ -253,113 +253,6 @@ async def detect_booking_type(page, base_url: str) -> dict:
     return result
 
 
-MULTI_LOCATION_NAV_KEYWORDS = [
-    "our clinics", "our locations", "find a clinic", "find us",
-    "all locations", "clinic locations", "find a location",
-    "our practices", "our centres", "our centers",
-    "locations near you", "find your clinic",
-]
-
-MULTI_LOCATION_URL_PATHS = [
-    "/locations", "/our-clinics", "/find-us", "/clinics",
-    "/our-locations", "/find-a-clinic", "/practices",
-    "/our-centres", "/our-centers", "/find-a-practice",
-]
-
-
-async def detect_multi_location(page, base_url: str, phones: list, postcodes: list) -> dict:
-    """
-    Detect whether a clinic is a multi-location group using 3 methods.
-
-    Method B runs first (zero extra page visits) — uses already-scraped phones/postcodes.
-    Method C scans nav links on current page.
-    Method A visits a locations page and counts address blocks (last resort).
-
-    Returns:
-        {
-            "multi_location": "YES" / "NO",
-            "location_count_estimate": int,
-            "detection_method": str
-        }
-    """
-    result = {
-        "multi_location": "no",
-        "location_count_estimate": 1,
-        "detection_method": "none",
-    }
-
-    parsed = urlparse(base_url)
-    base = f"{parsed.scheme or 'https'}://{parsed.netloc}"
-
-    # --- Method B: phone/postcode repetition (free, no page visit) ---
-    unique_postcodes = set(postcodes) if postcodes else set()
-    unique_phones = set(phones) if phones else set()
-
-    if len(unique_postcodes) > 1 or len(unique_phones) > 3:
-        result["multi_location"] = "yes"
-        result["location_count_estimate"] = max(len(unique_postcodes), len(unique_phones) // 2)
-        result["detection_method"] = "phone/postcode repetition"
-        return result
-
-    # --- Method C: nav/menu keyword scan (free, current page) ---
-    nav_triggered = False
-    try:
-        nav_links = await page.query_selector_all(
-            "nav a, header a, [class*='menu'] a, [class*='nav'] a"
-        )
-        for link in nav_links:
-            try:
-                text = (await link.inner_text()).lower().strip()
-                href = (await link.get_attribute("href") or "").lower()
-                if any(kw in text or kw in href for kw in MULTI_LOCATION_NAV_KEYWORDS):
-                    result["multi_location"] = "yes"
-                    result["detection_method"] = f"nav keyword: '{text}'"
-                    nav_triggered = True
-                    break
-            except Exception:
-                continue
-    except Exception:
-        pass
-
-    # --- Method A: visit locations page, count address blocks ---
-    locations_found = 0
-    visited_path = None
-
-    for path in MULTI_LOCATION_URL_PATHS:
-        candidate_url = urljoin(base, path)
-        try:
-            await page.goto(candidate_url, timeout=10000, wait_until="domcontentloaded")
-            await page.wait_for_timeout(1000)
-
-            if urlparse(page.url).path in ("", "/", "/home"):
-                continue
-
-            page_text = await page.inner_text("body") if await page.query_selector("body") else ""
-
-            au_postcodes = re.findall(r'\b\d{4}\b', page_text)
-            unique_on_page = set(au_postcodes)
-            state_mentions = re.findall(r'\b(?:NSW|VIC|QLD|SA|WA|TAS|ACT|NT)\b', page_text, re.IGNORECASE)
-            locations_found = max(len(unique_on_page), len(state_mentions))
-            visited_path = path
-
-            if locations_found >= 1:
-                break
-        except Exception:
-            continue
-
-    if locations_found > 1:
-        result["multi_location"] = "yes"
-        result["location_count_estimate"] = locations_found
-        result["detection_method"] = f"locations page ({visited_path})"
-    elif locations_found == 1 and not nav_triggered:
-        result["location_count_estimate"] = 1
-
-    if result["multi_location"] == "yes" and result["location_count_estimate"] <= 1:
-        result["location_count_estimate"] = 2
-
-    return result
-
-
 async def count_team_members(page: Page) -> int:
     """Count team members by looking for team page and common patterns."""
     try:
@@ -1106,6 +999,56 @@ HOME_VISIT_KEYWORDS = [
     'domiciliary'
 ]
 
+BULK_BILLING_KEYWORDS = [
+    "bulk bill",
+    "bulk billing",
+    "no gap",
+    "no out-of-pocket",
+    "medicare direct",
+    "bulk billed",
+    "fully bulk billed",
+    "always bulk bill",
+    "we bulk bill",
+]
+
+PRIVATE_BILLING_KEYWORDS = [
+    "private fee",
+    "private billing",
+    "gap fee",
+    "out-of-pocket",
+    "standard consult fee",
+    "payment required on the day",
+    "mixed billing",
+    "private and bulk",
+    "full fee",
+    "private patients",
+]
+
+
+def detect_billing_type(page_text: str, html: str) -> str:
+    """
+    Detect billing model from visible page text and HTML.
+    Returns: "Bulk Billing", "Private / Mixed", or "not_detected"
+    Priority: if both signals found, return "Private / Mixed" (mixed billing).
+    Also checks for dollar amounts > $50 as a Private / Mixed signal.
+    """
+    text_lower = (page_text + " " + html).lower()
+
+    has_bulk = any(kw in text_lower for kw in BULK_BILLING_KEYWORDS)
+
+    has_private = any(kw in text_lower for kw in PRIVATE_BILLING_KEYWORDS)
+
+    # Check for dollar amounts > $50 (e.g. $80, $90, $120) as private signal
+    dollar_amounts = re.findall(r'\$(\d+)', text_lower)
+    has_large_fee = any(int(amt) > 50 for amt in dollar_amounts if amt.isdigit())
+
+    if has_private or has_large_fee:
+        return "Private / Mixed"
+    if has_bulk:
+        return "Bulk Billing"
+    return "not_detected"
+
+
 # Practitioner title keywords (used for detecting team/practitioner content)
 PRACTITIONER_KEYWORDS = [
     # General
@@ -1428,45 +1371,42 @@ def _get_tech_cats_for_sheet() -> list:
 def _ensure_sheet_headers(worksheet, tech_cats: list) -> None:
     """
     Write snake_case header row. tech_cats excludes 'booking'.
-    Column layout (32 cols):
+    Column layout (30 cols):
       A  website_url
       B  clinic_name
       C  clinic_category
-      D  multi_location
-      E  location_count
-      F  email_provider
-      G  pms_ehr
-      H  crm             ← merged crm + email_marketing
-      I  payments
-      J  telehealth
-      K  forms
-      L  pixels
-      M  live_chat
-      N  reviews
-      O  infra
-      P  cms
-      Q  booking_type
-      R  booking_vendor
-      S  street
-      T  city
-      U  state
-      V  postcode
-      W  country
-      X  phones
-      Y  emails
-      Z  practitioner_count
-      AA home_visits
-      AB instagram
-      AD whatsapp
-      AE scraping_date
-      AF error_log
+      D  email_provider
+      E  pms_ehr
+      F  crm             ← merged crm + email_marketing
+      G  payments
+      H  telehealth
+      I  forms
+      J  pixels
+      K  live_chat
+      L  reviews
+      M  infra
+      N  cms
+      O  booking_type
+      P  booking_vendor
+      Q  street
+      R  city
+      S  state
+      T  postcode
+      U  country
+      V  phones
+      W  emails
+      X  practitioner_count
+      Y  home_visits
+      Z  billing_type
+      AA instagram
+      AB whatsapp
+      AC scraping_date
+      AD error_log
     """
     headers = [
         "website_url",
         "clinic_name",
         "clinic_category",
-        "multi_location",
-        "location_count",
         "email_provider",
         *tech_cats,
         "booking_type",
@@ -1480,13 +1420,14 @@ def _ensure_sheet_headers(worksheet, tech_cats: list) -> None:
         "emails",
         "practitioner_count",
         "home_visits",
+        "billing_type",
         "instagram",
         "whatsapp",
         "scraping_date",
         "error_log",
     ]
     try:
-        worksheet.update([headers], "A1:AE1")
+        worksheet.update([headers], "A1:AD1")
     except Exception:
         pass
 
@@ -1498,9 +1439,6 @@ def _print_tech_summary(result: dict) -> None:
         "━" * 70,
         f"🏥 {result.get('clinic_name', 'N/A').upper()}",
         f"🏷️  Category:          {result.get('primary_category', 'not_detected')}",
-        f"📍 Multi-Location:    {result.get('multi_location', 'no')} "
-        f"(~{result.get('location_count_estimate', 1)} locations) "
-        f"[{result.get('location_detection_method', 'none')}]",
     ]
     booking_type = result.get("booking_type", "not_detected")
     booking_vendor = result.get("booking_vendor", "")
@@ -1516,6 +1454,7 @@ def _print_tech_summary(result: dict) -> None:
     lines.extend([
         f"👥 Team Size:      ~{result.get('practitioner_count', 0)} members",
         f"🚗 Home Visits:    {result.get('home_visits', 'no')}",
+        f"💳 Billing Type:   {result.get('billing_type', 'not_detected')}",
         f"📱 Social:         Instagram: {result.get('instagram', 'no')} | WhatsApp: {result.get('whatsapp', 'no')}",
     ])
     addr = result.get('address', {})
@@ -1573,14 +1512,12 @@ async def scrape_clinic(browser, url: str) -> Dict:
         "primary_category":         "not_detected",
         "confidence_score":         0.0,
         "email_provider":           "not_detected",
-        "multi_location":           "no",
-        "location_count_estimate":  1,
-        "location_detection_method": "none",
         "booking_type":             "not_detected",
         "booking_vendor":           "",
         "booking_url":              "",
         "practitioner_count":       0,
         "home_visits":              "no",
+        "billing_type":             "not_detected",
         "instagram":                "no",
         "whatsapp":                 "no",
         "address":                  {},
@@ -1775,7 +1712,36 @@ async def scrape_clinic(browser, url: str) -> Dict:
                         break
                 except:
                     continue
-        
+
+        # Detect billing type (homepage first)
+        try:
+            page_text_billing = await page.inner_text('body')
+        except Exception:
+            page_text_billing = ""
+        result["billing_type"] = detect_billing_type(page_text_billing, html)
+
+        # If not detected, check fee-related subpages
+        if result["billing_type"] == "not_detected":
+            fee_urls = [
+                urljoin(url, '/fees'),
+                urljoin(url, '/fee-schedule'),
+                urljoin(url, '/pricing'),
+                urljoin(url, '/costs'),
+                urljoin(url, '/billing'),
+            ]
+            for fee_url in fee_urls:
+                try:
+                    await page.goto(fee_url, timeout=10000, wait_until='domcontentloaded')
+                    await page.wait_for_timeout(1000)
+                    fee_html = await page.content()
+                    fee_text = await page.inner_text('body')
+                    billing = detect_billing_type(fee_text, fee_html)
+                    if billing != "not_detected":
+                        result["billing_type"] = billing
+                        break
+                except:
+                    continue
+
         # Extract social media (from homepage HTML)
         social = extract_social_media(html)
         result["instagram"] = social["instagram"]
@@ -1820,21 +1786,6 @@ async def scrape_clinic(browser, url: str) -> Dict:
         if "Google Workspace" in result.get("email_provider", "") and "Gmail (direct)" in result.get("email_provider", ""):
             result["email_provider"] = result["email_provider"].replace(", Gmail (direct)", "").replace("Gmail (direct), ", "")
 
-        # Multi-location detection (after phones/address extraction)
-        page_postcodes = re.findall(r'\b\d{4}\b', page_text)
-        addr_postcode = result.get('address', {}).get('postcode', '')
-        all_postcodes = list(set(page_postcodes + ([addr_postcode] if addr_postcode else [])))
-
-        location_result = await detect_multi_location(
-            page,
-            url,
-            phones=result.get('phones', []),
-            postcodes=all_postcodes,
-        )
-        result['multi_location'] = location_result['multi_location']
-        result['location_count_estimate'] = location_result['location_count_estimate']
-        result['location_detection_method'] = location_result['detection_method']
-
         # Count practitioners (navigates to team page if found)
         result['practitioner_count'] = await count_team_members(page)
 
@@ -1876,7 +1827,7 @@ async def main():
             print("No data rows found in the sheet (only header row exists)")
             return
         
-        # Column mapping (33 cols): A website_url ... AF scraping_date, AG error_log
+        # Column mapping (29 cols): A website_url ... AB scraping_date, AC error_log
         tech_cats_output = _get_tech_cats_for_sheet()
         _ensure_sheet_headers(worksheet, tech_cats_output)
 
@@ -1900,13 +1851,14 @@ async def main():
                     skipped_count += 1
                     continue
                 
-                # Check Scraping Date (Col AD=30 = index 29 current, legacy: AF=32, AG=33, AE=30, AA=26, AC=28, Y=24, X=23, Q=16, I=8)
-                scraping_date = (row_data[29].strip() if len(row_data) > 29 else "") or (
+                # Check Scraping Date (Col AC=29 = index 28 current, legacy: AB=28, AD=30, etc.)
+                scraping_date = (row_data[28].strip() if len(row_data) > 28 else "") or (
+                    row_data[27].strip() if len(row_data) > 27 else "") or (
+                    row_data[29].strip() if len(row_data) > 29 else "") or (
                     row_data[31].strip() if len(row_data) > 31 else "") or (
                     row_data[32].strip() if len(row_data) > 32 else "") or (
                     row_data[26].strip() if len(row_data) > 26 else "") or (
                     row_data[30].strip() if len(row_data) > 30 else "") or (
-                    row_data[28].strip() if len(row_data) > 28 else "") or (
                     row_data[24].strip() if len(row_data) > 24 else "") or (
                     row_data[23].strip() if len(row_data) > 23 else "") or (
                     row_data[16].strip() if len(row_data) > 16 else "") or (
@@ -1938,8 +1890,6 @@ async def main():
                     update_values = [
                         result.get("clinic_name", ""),
                         result.get("primary_category", "not_detected"),  # internal key, header is clinic_category
-                        result.get("multi_location", "no"),
-                        str(result.get("location_count_estimate", 1)),
                         result.get("email_provider", "not_detected"),
                         *tech_vals,
                         result.get("booking_type", "not_detected"),
@@ -1953,6 +1903,7 @@ async def main():
                         ", ".join(result.get("emails", [])),
                         str(result.get("practitioner_count", 0)),
                         result.get("home_visits", "no"),
+                        result.get("billing_type", "not_detected"),
                         result.get("instagram", "no"),
                         result.get("whatsapp", "no"),
                     ]
@@ -1962,22 +1913,22 @@ async def main():
                     
                     if result.get('error'):
                         error_msg = result['error']
-                        worksheet.update_cell(row_num, 30, timestamp)   # AD = scraping_date
-                        worksheet.update_cell(row_num, 31, error_msg)   # AE = error_log
+                        worksheet.update_cell(row_num, 29, timestamp)   # AC = scraping_date
+                        worksheet.update_cell(row_num, 30, error_msg)   # AD = error_log
                         error_count += 1
                         print(f"❌ ERROR: {error_msg}")
                     else:
-                        worksheet.update_cell(row_num, 31, '')  # AE = clear error
+                        worksheet.update_cell(row_num, 30, '')  # AD = clear error
                         _print_tech_summary(result)
 
-                    # Update data columns B through AD
-                    cell_range = f"B{row_num}:AC{row_num}"
+                    # Update data columns B through AB
+                    cell_range = f"B{row_num}:AB{row_num}"
                     worksheet.update([update_values], cell_range)
 
                     # Scraping date and error log
-                    worksheet.update_cell(row_num, 30, timestamp)   # AD = scraping_date
+                    worksheet.update_cell(row_num, 29, timestamp)   # AC = scraping_date
                     if not result.get('error'):
-                        worksheet.update_cell(row_num, 31, "")      # AE = clear error
+                        worksheet.update_cell(row_num, 30, "")      # AD = clear error
                     
                     processed_count += 1
                     print(f"✅ Row {row_num} updated successfully")
@@ -1985,8 +1936,8 @@ async def main():
                 except Exception as e:
                     error_msg = f'Unexpected error: {str(e)}'
                     timestamp = get_current_timestamp()
-                    worksheet.update_cell(row_num, 30, timestamp)   # AD = scraping_date
-                    worksheet.update_cell(row_num, 31, error_msg)   # AE = error_log
+                    worksheet.update_cell(row_num, 29, timestamp)   # AC = scraping_date
+                    worksheet.update_cell(row_num, 30, error_msg)   # AD = error_log
                     
                     error_count += 1
                     print(f"❌ ERROR updating row {row_num}: {error_msg}")
