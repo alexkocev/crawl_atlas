@@ -8,6 +8,7 @@ import asyncio
 import json
 import random
 import re
+import time
 from typing import Dict
 from urllib.parse import urljoin, urlparse
 
@@ -17,16 +18,15 @@ from core import (
     get_email_provider,
     detect_email_provider_from_addresses,
     detect_from_cookies,
+    detect_framework_from_cookies,
     detect_from_meta_generator,
+    parse_csp_header,
     scan_robots_txt,
     extract_email,
     extract_phone,
     extract_social_media,
-    get_company_name,
     init_google_sheets,
     get_current_timestamp,
-    extract_full_address,
-    extract_all_phones,
     extract_all_emails,
 )
 
@@ -70,6 +70,7 @@ EXTERNAL_BOOKING_DOMAINS = [
     "book.hotdoc.com.au",
     "booking.healthengine.com.au",
     "medirecords.com",
+    "formstack.com",
 ]
 
 BOOKING_LINK_PATTERNS = [
@@ -106,6 +107,7 @@ def _vendor_name_from_domain(domain: str) -> str:
         "hubspot.com": "HubSpot Meetings",
         "simplepractice.com": "SimplePractice",
         "medirecords.com": "MediRecords",
+        "formstack.com": "Formstack",
     }
     for key, name in mapping.items():
         if key in domain:
@@ -128,7 +130,7 @@ async def detect_booking_type(page, base_url: str) -> dict:
 
     Returns:
         {
-            "booking_type": "embedded" | "external_vendor" | "not_detected",
+            "booking_type": "embedded" | "external_vendor" | "lead_form" | "not_detected",
             "booking_vendor": str,   # e.g. "HotDoc", "Cliniko", "" if embedded
             "booking_url": str       # the detected booking URL
         }
@@ -228,6 +230,63 @@ async def detect_booking_type(page, base_url: str) -> dict:
                 })
                 return result
 
+        # Step 3b: Detect "lead form" booking — form-based callback request, not a real-time slot picker
+        LEAD_FORM_PHRASES = [
+            "call you back", "we will call you", "request a call", "book a call",
+            "choose a convenient time", "callback", "call back", "speak to our team",
+            "contact us to book", "enquire now", "start your booking",
+            "request a booking", "request an appointment", "submit your details",
+            "we will be in touch", "our team will contact you",
+        ]
+        LEAD_FORM_DOMAINS = [
+            # GoHighLevel
+            "leadconnectorhq.com/widget/form",
+            "api.leadconnectorhq.com/widget/form",
+            "backend.leadconnectorhq.com/forms",
+            "link.msgsndr.com/js/form_embed",
+            # Formstack
+            ".formstack.com/forms/",
+            "fscdn.formstack.com",
+            # JotForm
+            "form.jotform.com",
+            # Typeform
+            "typeform.com/to/",
+            # Google Forms
+            "docs.google.com/forms",
+            "forms.gle",
+            # Gravity Forms / WPForms (self-hosted, identified by path)
+            "/wp-content/uploads/wpforms/",
+            "/wp-content/uploads/gravity_forms/",
+        ]
+        LEAD_FORM_VENDOR_MAP = {
+            "leadconnectorhq.com":  "GoHighLevel",
+            "msgsndr.com":          "GoHighLevel",
+            "formstack.com":        "Formstack",
+            "jotform.com":          "JotForm",
+            "typeform.com":         "Typeform",
+            "docs.google.com/forms": "Google Forms",
+            "forms.gle":            "Google Forms",
+        }
+        try:
+            page_text_lower = (await page.inner_text("body")).lower()
+            raw_html_lower = (await page.content()).lower()
+            has_lead_phrase = any(phrase in page_text_lower for phrase in LEAD_FORM_PHRASES)
+            has_lead_domain = any(domain in raw_html_lower for domain in LEAD_FORM_DOMAINS)
+            matched_vendor = ""
+            for domain, vendor in LEAD_FORM_VENDOR_MAP.items():
+                if domain in raw_html_lower:
+                    matched_vendor = vendor
+                    break
+            if has_lead_phrase or has_lead_domain:
+                result.update({
+                    "booking_type": "lead_form",
+                    "booking_vendor": matched_vendor,
+                    "booking_url": "",
+                })
+                return result
+        except Exception:
+            pass
+
         # Step 4: Fallback — scan raw HTML for vendor domain fingerprints
         try:
             raw_html = await page.content()
@@ -253,43 +312,93 @@ async def detect_booking_type(page, base_url: str) -> dict:
     return result
 
 
-async def count_team_members(page: Page) -> int:
-    """Count team members by looking for team page and common patterns."""
-    try:
-        team_texts = ['Team', 'Staff', 'Practitioners', 'About Us', 'Our Team']
-        team_link = None
+EXCLUDE_ROLES = [
+    "ceo", "chief executive", "admin", "receptionist", "manager",
+    "coordinator", "director of operations", "practice manager",
+    "office manager", "marketing", "accountant", "it support",
+]
 
-        for text in team_texts:
+
+async def count_team_members(page: Page, page_cache: dict = None) -> int:
+    """
+    Count practitioners by:
+    1. First scanning all <a href> links for a team/staff page URL
+    2. Then trying hardcoded fallback paths
+    3. Counting lines in visible text that contain a practitioner keyword,
+       excluding admin/non-clinical roles
+    """
+    EXCLUDE_ROLES = [
+        "ceo", "chief executive", "admin", "receptionist", "manager",
+        "coordinator", "director of operations", "practice manager",
+        "office manager", "marketing", "accountant", "it support",
+        "bookkeeper", "billing", "customer service",
+    ]
+
+    TEAM_LINK_KEYWORDS = [
+        "our-team", "our team", "meet the team", "meet-the-team",
+        "staff", "practitioners", "our-practitioners", "team",
+        "about-us", "about us", "who we are",
+    ]
+
+    base = f"{urlparse(page.url).scheme}://{urlparse(page.url).netloc}"
+    urls_to_try = []
+
+    # Step 1: Discover team page from existing <a href> links
+    try:
+        links = await page.query_selector_all("a[href]")
+        for link in links:
+            href = (await link.get_attribute("href") or "").strip()
+            if not href or href.startswith(("mailto:", "tel:", "#", "javascript:")):
+                continue
+            href_lower = href.lower()
+            if any(kw in href_lower for kw in TEAM_LINK_KEYWORDS):
+                full = urljoin(base, href)
+                if full not in urls_to_try:
+                    urls_to_try.append(full)
+    except Exception:
+        pass
+
+    # Step 2: Add hardcoded fallback paths
+    for path in ["/about", "/about-us", "/team", "/our-team",
+                 "/staff", "/meet-the-team", "/practitioners"]:
+        candidate = urljoin(base, path)
+        if candidate not in urls_to_try:
+            urls_to_try.append(candidate)
+
+    best_count = 0
+
+    for url in urls_to_try[:6]:  # cap at 6 pages
+        if page_cache is not None and url in page_cache:
+            _, text = page_cache[url]
+        else:
             try:
-                links = await page.query_selector_all(f'a:text-matches("{text}", "i")')
-                if links:
-                    href = await links[0].get_attribute('href')
-                    if href:
-                        team_link = urljoin(page.url, href)
-                        break
+                if page.is_closed():
+                    break
+                await page.goto(url, timeout=7000, wait_until="domcontentloaded")
+                await page.wait_for_timeout(150)
+                text = await page.inner_text("body")
+                if page_cache is not None:
+                    page_cache[url] = (await page.content(), text)
             except Exception:
                 continue
 
-        if team_link:
-            try:
-                await page.goto(team_link, timeout=10000, wait_until='domcontentloaded')
-                await page.wait_for_timeout(1000)
-            except Exception:
-                pass
+        lines = [l.strip() for l in text.splitlines() if l.strip()]
+        found = set()
 
-        content = await page.content()
-        title_pattern = r'(Dr\.\s[A-Z][a-z]+|Physiotherapist|Osteopath|Podiatrist|Psychologist|Therapist|Practitioner)'
-        doctors = len(re.findall(title_pattern, content, re.IGNORECASE))
+        for line in lines:
+            line_lower = line.lower()
+            if len(line) < 4:
+                continue
+            if any(role in line_lower for role in EXCLUDE_ROLES):
+                continue
+            if any(kw in line_lower for kw in PRACTITIONER_KEYWORDS):
+                key = re.sub(r'\s+', ' ', line_lower)[:40]
+                found.add(key)
 
-        team_images = await page.query_selector_all(
-            'img[class*="team"], img[class*="staff"], img[class*="practitioner"], '
-            'img[alt*="doctor"], img[alt*="dr"], img[src*="team"]'
-        )
-        image_count = len(team_images)
+        if len(found) > best_count:
+            best_count = len(found)
 
-        return max(doctors // 2, image_count) if doctors > 0 or image_count > 0 else 0
-    except Exception:
-        return 0
+    return best_count
 
 
 # Category keyword buckets — order matters for tie-breaking priority
@@ -636,7 +745,7 @@ TECH_SIGNATURES = {
     # 3. CMS / WEBSITE BUILDER
     # ─────────────────────────────────────────────────────────────────────
     "cms": {
-        "WordPress":   ["wp-content", "wp-includes", "wp-json", "/wp-json/wp/v2/", "wordpress"],
+        "WordPress":   ["wp-content", "wp-includes", "wp-json", "/wp-json/wp/v2/", "wordpress", "/themes/Divi/", "/themes/divi/"],
         "Drupal":      ["sites/default/files", "drupalSettings", "core/misc/drupal.js", "drupal.org"],
         "Wix":         ["wix.com", "wix-thunderbolt", "static.wixstatic.com", "static.parastorage.com", "wix-code"],
         "Squarespace": ["squarespace.com", "static1.squarespace", "squarespace.com/universal/scripts"],
@@ -660,9 +769,18 @@ TECH_SIGNATURES = {
                               "js.hs-scripts.com", "hs-analytics.net",
                               "data-hubspot"],
         "Salesforce":        ["salesforce.com", "pardot.com", "force.com",
-                              "salesforceliveagent", "exacttarget.com",
-                              "marketingcloud.com", "salesforce-communities",
+                              "salesforceliveagent", "salesforce-communities",
                               "tfaforms.net"],
+        "Salesforce Marketing Cloud": [
+            "sfmc_utm",
+            "exacttarget.com",
+            "exacttarget",
+            "marketingcloud.com",
+            "salesforce-mc",
+            "members.list-manage",
+            "pub.s10.exacttarget.com",
+            "sfmc",
+        ],
         "Zoho CRM":          ["zoho.com/crm", "zohopublic", "salesiq.zoho.com",
                               "zohocrm", "campaigns.zoho"],
         "Pipedrive":         ["pipedrive.com", "pipedriveassets.com"],
@@ -703,6 +821,7 @@ TECH_SIGNATURES = {
         "Medipass": ["medipass.com.au", "medipass-connect"],
         "Hicaps":   ["hicaps.com.au"],
         "Windcave": ["windcave.com", "paymentexpress.com"],
+        "Authorize.net": ["authorize.net", "acceptjs.authorize", "authorizeNet", "accept.authorize"],
     },
 
     # ─────────────────────────────────────────────────────────────────────
@@ -742,6 +861,14 @@ TECH_SIGNATURES = {
         "Paperform":  ["paperform.co"],
         "Cognito Forms": ["cognitoforms.com"],
         "FormAssembly": ["tfaforms.net", "tfaforms.com", "formassembly.com", "fa-form", "wFORMS"],
+        "Formstack":    ["formstack.com", "fscdn.formstack.com", ".formstack.com/forms/"],
+        "HubSpot Forms": [
+            "hscollectedforms.net",
+            "forms.hsforms.com",
+            "js-ap1.hscollectedforms.net",
+            "hsforms.com/embed/v3/form",
+            "hsforms.net",
+        ],
         "GoHighLevel Forms": ["link.msgsndr.com/js/form_embed", "msgsndr.com/js/form",
                              "leadconnectorhq.com/form", "highlevel.*form"],
     },
@@ -752,7 +879,19 @@ TECH_SIGNATURES = {
     "pixels": {
         "Meta Pixel":         ["fbevents.js", "connect.facebook.net/en_us/fbevents", "fbq("],
         "Google Ads":         ["googleadservices.com", "google_conversion"],
-        "Google Analytics 4": ["gtag.js", "google-analytics.com", "googletagmanager.com/gtag", "gtag/js?id=G-"],
+        "Google Analytics 4": [
+            "gtag.js",
+            "googletagmanager.com/gtag",
+            "gtag/js?id=G-",              # GA4 measurement ID
+            "google-analytics.com/g/collect",  # GA4 hit endpoint
+        ],
+        "Google Universal Analytics": [
+            "gtag/js?id=UA-",
+            "google-analytics.com/analytics.js",  # UA async snippet
+            "ssl.google-analytics.com/ga.js",     # UA legacy snippet (ga.js)
+            "google-analytics.com/ga.js",         # non-SSL variant
+            "UA-\\d{4,}-\\d{1,}",                # UA-XXXXXXX-X inline ID
+        ],
         "Google Tag Manager": ["googletagmanager.com", "gtm.js"],
         "LinkedIn Insight":   ["snap.licdn.com", "linkedin.com/insight"],
         "TikTok Pixel":       ["analytics.tiktok.com", "ttq.load"],
@@ -764,6 +903,25 @@ TECH_SIGNATURES = {
         "Mixpanel":           ["mixpanel.com"],
         "Heap":               ["heap.io"],
         "Call Dynamics":      ["calldynamics.com.au", "artemisData"],
+        "DoubleClick / Floodlight": [
+            "googletagmanager.com/gtag/js?id=DC-",
+            "fls.doubleclick.net",
+            "stats.g.doubleclick.net",
+            "id=DC-",
+        ],
+        "Bing Ads":         ["bat.bing.com", "bat.js", "microsoft.com/bat", "bing.com/ads"],
+        "Outbrain":         ["amplify.outbrain.com", "obtp.js", "outbrain.com"],
+        "Taboola":          ["cdn.taboola.com", "taboola.com/libtrc"],
+        "Reddit Ads": [
+            "rdt.js",                        # Reddit pixel script filename
+            "alb.reddit.com",                # Reddit pixel network endpoint
+            "reddit-pixel",                  # inline snippet identifier
+            "!function(w,d){if(!w.rdt)",     # Reddit pixel bootstrap snippet
+        ],
+        "CallRail":         ["cdn.callrail.com", "callrail.com"],
+        "Contentsquare":    ["hj.contentsquare.net", "contentsquare.net", "csq-"],
+        "Simpli.fi":        ["tag.simpli.fi", "simpli.fi"],
+        "AD360":            ["cdn.ad360.media", "ad360.media", "ad360pixelevent"],
     },
 
     # ─────────────────────────────────────────────────────────────────────
@@ -784,15 +942,35 @@ TECH_SIGNATURES = {
         "Tidio":          ["tidio.com", "tidiochat"],
         "GoHighLevel Chat": ["widgets.leadconnectorhq.com/chat-widget",
                             "leadconnectorhq.com/chat", "msgsndr.com/chat"],
+        "Genesys": [
+            "mypurecloud.com",
+            "mypurecloud.com.au",
+            "genesys.com",
+            "genesys-bootstrap",
+            "genesys.min.js",
+            "purecloud.com",
+            "apps.mypurecloud",
+        ],
     },
 
     # ─────────────────────────────────────────────────────────────────────
     # 11. REVIEWS & REPUTATION
     # ─────────────────────────────────────────────────────────────────────
     "reviews": {
-        "Google Reviews":        ["aggregaterating", "g.co/kgs", "ratingvalue", "ratingcount",
-                                 "maps.googleapis.com", "google.com/maps/embed", "place_id",
-                                 "goo.gl/maps", "g.page"],
+        "Google Reviews": [
+            # Schema.org structured rating data (self-reported stars on the page)
+            "aggregaterating",
+            "ratingvalue",
+            "ratingcount",
+            # Embedded Google Maps widget with reviews panel (not just a link)
+            "google.com/maps/embed",
+            "maps.googleapis.com/maps/api/js",
+            # Google Places reviews widget
+            "maps.googleapis.com/maps/api/place",
+            # Direct Places review deep-link (write-a-review CTA)
+            "search.google.com/local/writereview",
+            "g.co/kgs",  # Knowledge Graph - only in structured widgets
+        ],
         # loader-feed.js: CDN script (cdn.trustindex.io/loader-feed.js); trustindex-feed-instagram-widget: relative CSS /wp-content/uploads/trustindex-feed-instagram-widget.css (was missed before relative link hrefs fix)
         "Trustindex":            ["cdn.trustindex.io", "trustindex-feed", "loader-feed.js", "trustindex-feed-instagram-widget"],
         "Doctify":               ["doctify.com"],
@@ -803,6 +981,12 @@ TECH_SIGNATURES = {
         "Birdeye Reviews":       ["birdeye.com"],
         "Feefo":                 ["feefo.com"],
         "Whitecoat":             ["whitecoat.com.au"],
+        "Elfsight": [
+            "static.elfsight.com",
+            "elfsight.com/platform",
+            "apps.elfsight.com",
+            "elfsight-app",
+        ],
     },
 
     # ─────────────────────────────────────────────────────────────────────
@@ -838,6 +1022,8 @@ TECH_SIGNATURES = {
         "NetRegistry":  ["netregistry.com.au"],
         "GreenGeeks":   ["greengeeks.com"],
         "SiteGround":   ["siteground.com", "sgcpanel"],
+        "WPStaq":       ["wpstaq", "wpstaq.com"],
+        "NitroPack":    ["nitropack.io", "x-nitro-cache", "cdn-akhmn.nitrocdn.com", "nitrocdn.com"],
     },
 }
 
@@ -886,12 +1072,20 @@ VISIBLE_TEXT_SIGNATURES = {
     },
     "reviews": {
         "Google Reviews":  ["google reviews", "google maps", "write a review.*google", "review us on google"],
+        "Elfsight":        ["elfsight", "powered by elfsight"],
     },
     "infra": {
         "HealthLink":      ["healthlink edi", "edi:", "healthlink secure messaging"],
         "VentraIP":        ["ventraip", "synergy wholesale", "hosted by ventraip",
                             "parked.*ventraip"],
         "cPanel":          ["cpanel", "webmail", "cPanel Email"],
+    },
+    "payments": {
+        "HICAPS":   ["hicaps available", "hicaps terminal", "hicaps on-site",
+                     "eftpos and hicaps", "hicaps and eftpos", "hicaps claims",
+                     "health fund claims.*hicaps", "hicaps"],
+        "Tyro":     ["tyro", "tyro payments", "tyro health"],
+        "Medipass": ["medipass", "medipass connect"],
     },
 }
 
@@ -929,6 +1123,8 @@ def apply_co_occurrence_rules(result: dict) -> dict:
         ("booking", "D4W eAppointments",            "pms_ehr",    "Dental4Windows (inferred)"),
         ("crm",     "GoHighLevel",                  "forms",      "GoHighLevel Forms (inferred)"),
         ("crm",     "GoHighLevel",                  "live_chat",  "GoHighLevel Chat (inferred)"),
+        ("crm",     "HubSpot",                      "forms",      "HubSpot Forms (inferred)"),
+        ("crm",     "HubSpot",                      "live_chat",  "HubSpot Chat (inferred)"),
         ("crm",     "MediRecords (Clinical CRM)",   "pms_ehr",    "MediRecords (inferred)"),
         ("booking", "MediRecords Booking",          "pms_ehr",    "MediRecords (inferred)"),
         ("pms_ehr", "MediRecords",                  "telehealth", "MediRecords Native Telehealth (inferred)"),
@@ -989,6 +1185,8 @@ HEADER_SIGNATURES = {
     "VentraIP":      ["ventraip", "synergy", "cpanel"],
     "cPanel/Apache": ["apache", "cpanel"],
     "Parked Domain": ["parking", "parked-domain", "domain-for-sale"],
+    "WPStaq":        ["wpstaq"],
+    "NitroPack":     ["x-nitro-cache", "nitropack", "nitro-cache"],
 }
 
 # Home visit keywords
@@ -1141,6 +1339,14 @@ async def detect_from_headers(response) -> dict:
         for name, patterns in HEADER_SIGNATURES.items():
             if any(p in header_str for p in patterns):
                 found[name] = True
+
+        # CSP header — enterprise tools whitelist their domains here
+        csp_value = headers.get("content-security-policy", "")
+        if csp_value:
+            csp_hits = parse_csp_header(csp_value)
+            for cat, tools in csp_hits.items():
+                for tool in tools:
+                    found.setdefault(cat, set()).add(tool)
     except Exception:
         pass
     return found
@@ -1177,10 +1383,45 @@ def _scan_page_for_tech(html: str, page_text: str, script_srcs: list, iframe_src
                     results[category].add(tool_name)
                     break
 
+    # Regex-based UA ID detector (UA IDs appear inline in scripts, not as URLs)
+    if re.search(r"UA-\d{4,10}-\d{1,2}", html_lower):
+        results.setdefault("pixels", set()).add("Google Universal Analytics")
+
+    # Filename-based detection for tools deployed on custom subdomains
+    FILENAME_SIGNATURES = {
+        "sfmc_utm":        ("crm",      "Salesforce Marketing Cloud"),
+        "sfmc.js":         ("crm",      "Salesforce Marketing Cloud"),
+        "callrail":        ("pixels",   "CallRail"),
+        "contentsquare":   ("pixels",   "Contentsquare"),
+        "obtp.js":         ("pixels",   "Outbrain"),
+        "taboola":         ("pixels",   "Taboola"),
+        "bat.js":          ("pixels",   "Bing Ads"),
+        "reddit":          ("pixels",   "Reddit Ads"),
+    }
+    for filename_sig, (cat, tool) in FILENAME_SIGNATURES.items():
+        if filename_sig in all_sources:
+            results.setdefault(cat, set()).add(tool)
+
     # Meta generator tag detection
     meta_hits = detect_from_meta_generator(html)
     for cat, tools in meta_hits.items():
         results.setdefault(cat, set()).update(tools)
+
+    # Theme detection pass (WordPress themes/page builders)
+    THEME_SIGNATURES = {
+        "Divi":            ["/themes/Divi/", "/themes/divi/", "et_pb_", "divi-child"],
+        "Elementor":       ["/plugins/elementor/", "elementor-frontend", "data-elementor-type"],
+        "Avada":           ["/themes/Avada/", "fusion-builder"],
+        "Beaver Builder":  ["fl-builder", "/plugins/bb-plugin/"],
+        "WPBakery":        ["vc_row", "wpb_wrapper"],
+        "GeneratePress":   ["/themes/generatepress/"],
+        "Astra":           ["/themes/astra/"],
+    }
+    for theme_name, patterns in THEME_SIGNATURES.items():
+        for pat in patterns:
+            if pat.lower() in all_sources:
+                results.setdefault("cms", set()).add(f"WordPress ({theme_name})")
+                break
 
     # WordPress plugin path detection (script/link srcs contain wp-content/plugins/)
     plugin_signatures = {
@@ -1222,6 +1463,13 @@ async def _collect_page_sources(page: Page) -> tuple:
             src = await script.get_attribute("src")
             if src:
                 script_srcs.append(src)
+                # If this is a CDN-proxied URL that contains a wp-content path,
+                # also append the path component alone so plugin signatures match
+                # e.g. cdn-akhmn.nitrocdn.com/.../wp-content/plugins/gravityforms/...
+                if "wp-content" in src.lower():
+                    path = urlparse(src).path
+                    if path and path not in script_srcs:
+                        script_srcs.append(path)
         for iframe in await page.query_selector_all("iframe[src]"):
             src = await iframe.get_attribute("src")
             if src:
@@ -1243,7 +1491,11 @@ def _merge_tech_results(accum: dict, new: dict, header_infra: dict = None) -> No
     for cat, tools in new.items():
         accum.setdefault(cat, set()).update(tools)
     if header_infra:
-        accum.setdefault("infra", set()).update(header_infra.keys())
+        for k, v in header_infra.items():
+            if v is True:
+                accum.setdefault("infra", set()).add(k)
+            elif isinstance(v, set):
+                accum.setdefault(k, set()).update(v)
 
 
 def _tech_dict_to_flat(tech: dict) -> dict:
@@ -1259,6 +1511,7 @@ async def detect_tech_stack(
     context,
     base_url: str,
     initial_response=None,
+    page_cache: dict = None,
 ) -> dict:
     """
     Detect tech stack from up to 3 pages: homepage + /contact + /book (or first booking link).
@@ -1277,6 +1530,8 @@ async def detect_tech_stack(
     try:
         html = await page.content()
         page_text = await page.inner_text("body") if await page.query_selector("body") else ""
+        if page_cache is not None:
+            page_cache[base_url] = (html, page_text)
         script_srcs, iframe_srcs, link_hrefs = await _collect_page_sources(page)
         all_script_srcs.extend(script_srcs)
         page_results = _scan_page_for_tech(html, page_text, script_srcs, iframe_srcs, link_hrefs)
@@ -1318,11 +1573,23 @@ async def detect_tech_stack(
     for url in extra_urls:
         if pages_visited >= 5:
             break
+        # Guard: stop if context/page was closed by a previous navigation
         try:
-            resp = await page.goto(url, timeout=10000, wait_until="domcontentloaded")
-            await page.wait_for_timeout(1000)
+            if page.is_closed():
+                break
+        except Exception:
+            break
+        try:
+            resp = await page.goto(url, timeout=7000, wait_until="domcontentloaded")
+            await page.wait_for_timeout(150)
+
+            if page.is_closed():
+                break
+
             html = await page.content()
             page_text = await page.inner_text("body") if await page.query_selector("body") else ""
+            if page_cache is not None:
+                page_cache[url] = (html, page_text)
             script_srcs, iframe_srcs, link_hrefs = await _collect_page_sources(page)
             all_script_srcs.extend(script_srcs)
             page_results = _scan_page_for_tech(html, page_text, script_srcs, iframe_srcs, link_hrefs)
@@ -1371,52 +1638,28 @@ def _get_tech_cats_for_sheet() -> list:
 def _ensure_sheet_headers(worksheet, tech_cats: list) -> None:
     """
     Write snake_case header row. tech_cats excludes 'booking'.
-    Column layout (30 cols):
+    clinic_name, clinic_category, street/city/state/postcode/country, phones removed — use Outscraper data.
+    Column layout:
       A  website_url
-      B  clinic_name
-      C  clinic_category
-      D  email_provider
-      E  pms_ehr
-      F  crm             ← merged crm + email_marketing
-      G  payments
-      H  telehealth
-      I  forms
-      J  pixels
-      K  live_chat
-      L  reviews
-      M  infra
-      N  cms
-      O  booking_type
-      P  booking_vendor
-      Q  street
-      R  city
-      S  state
-      T  postcode
-      U  country
-      V  phones
-      W  emails
-      X  practitioner_count
-      Y  home_visits
-      Z  billing_type
-      AA instagram
-      AB whatsapp
-      AC scraping_date
-      AD error_log
+      B  email_provider_stack
+      C–L tech_cats (pms_stack, crm_stack, payments_stack, telehealth_stack, forms_stack, pixels_stack, live_chat_stack, reviews_stack, infra_stack, cms_stack)
+      M  booking_type
+      N  booking_stack
+      O  emails
+      P  practitioner_count
+      Q  home_visits
+      R  billing_type
+      S  instagram
+      T  whatsapp
+      U  scraping_date
+      V  error_log
     """
     headers = [
         "website_url",
-        "clinic_name",
-        "clinic_category",
-        "email_provider",
-        *tech_cats,
+        "email_provider_stack",
+        *[f"{c}_stack" for c in tech_cats],
         "booking_type",
-        "booking_vendor",
-        "street",
-        "city",
-        "state",
-        "postcode",
-        "country",
-        "phones",
+        "booking_stack",
         "emails",
         "practitioner_count",
         "home_visits",
@@ -1427,7 +1670,7 @@ def _ensure_sheet_headers(worksheet, tech_cats: list) -> None:
         "error_log",
     ]
     try:
-        worksheet.update([headers], "A1:AD1")
+        worksheet.update([headers], "A1:V1")
     except Exception:
         pass
 
@@ -1437,8 +1680,7 @@ def _print_tech_summary(result: dict) -> None:
     tech_cats = [c for c in TECH_SIGNATURES.keys() if c != "booking"]
     lines = [
         "━" * 70,
-        f"🏥 {result.get('clinic_name', 'N/A').upper()}",
-        f"🏷️  Category:          {result.get('primary_category', 'not_detected')}",
+        f"🏥 {result.get('url', 'N/A')}",
     ]
     booking_type = result.get("booking_type", "not_detected")
     booking_vendor = result.get("booking_vendor", "")
@@ -1457,11 +1699,6 @@ def _print_tech_summary(result: dict) -> None:
         f"💳 Billing Type:   {result.get('billing_type', 'not_detected')}",
         f"📱 Social:         Instagram: {result.get('instagram', 'no')} | WhatsApp: {result.get('whatsapp', 'no')}",
     ])
-    addr = result.get('address', {})
-    if any(addr.values()):
-        lines.append(f"📍 Address:          {addr}")
-    if result.get('phones'):
-        lines.append(f"📞 Phones:           {', '.join(result['phones'])}")
     if result.get('emails'):
         lines.append(f"📮 Emails:           {', '.join(result['emails'])}")
     lines.append("━" * 70)
@@ -1508,9 +1745,6 @@ async def scrape_clinic(browser, url: str) -> Dict:
     tech_categories = list(TECH_SIGNATURES.keys())
     result = {
         "url":                      url,
-        "clinic_name":              "",
-        "primary_category":         "not_detected",
-        "confidence_score":         0.0,
         "email_provider":           "not_detected",
         "booking_type":             "not_detected",
         "booking_vendor":           "",
@@ -1520,8 +1754,6 @@ async def scrape_clinic(browser, url: str) -> Dict:
         "billing_type":             "not_detected",
         "instagram":                "no",
         "whatsapp":                 "no",
-        "address":                  {},
-        "phones":                   [],
         "emails":                   [],
         "error":                    None,
     }
@@ -1532,6 +1764,13 @@ async def scrape_clinic(browser, url: str) -> Dict:
     context = await browser.new_context(
         user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     )
+    async def block_heavy_resources(route):
+        if route.request.resource_type in ("image", "media", "font", "stylesheet"):
+            await route.abort()
+        else:
+            await route.continue_()
+
+    await context.route("**/*", block_heavy_resources)
     page = await context.new_page()
 
     try:
@@ -1587,10 +1826,24 @@ async def scrape_clinic(browser, url: str) -> Dict:
             "analytics.tiktok.com":    ("pixels", "TikTok Pixel"),
             "googletagmanager.com":    ("pixels", "Google Tag Manager"),
             "googleadservices.com":    ("pixels", "Google Ads"),
+            "google-analytics.com/analytics.js": ("pixels", "Google Universal Analytics"),
+            "ssl.google-analytics.com/ga.js":    ("pixels", "Google Universal Analytics"),
+            "google-analytics.com/ga.js":        ("pixels", "Google Universal Analytics"),
             "snap.licdn.com":          ("pixels", "LinkedIn Insight"),
             "ct.pinterest.com":        ("pixels", "Pinterest"),
             "clarity.ms":              ("pixels", "Microsoft Clarity"),
             "hotjar.com":              ("pixels", "Hotjar"),
+            "bat.bing.com":            ("pixels", "Bing Ads"),
+            "amplify.outbrain.com":    ("pixels", "Outbrain"),
+            "cdn.taboola.com":         ("pixels", "Taboola"),
+            "alb.reddit.com":           ("pixels", "Reddit Ads"),
+            "rdt.js":                   ("pixels", "Reddit Ads"),
+            "cdn.callrail.com":        ("pixels", "CallRail"),
+            "hj.contentsquare.net":     ("pixels", "Contentsquare"),
+            "tag.simpli.fi":           ("pixels", "Simpli.fi"),
+            "cdn.ad360.media":         ("pixels", "AD360"),
+            "fls.doubleclick.net":     ("pixels", "DoubleClick / Floodlight"),
+            "stats.g.doubleclick.net":  ("pixels", "DoubleClick / Floodlight"),
             # ── Telehealth ──
             "zoom.us":                 ("telehealth", "Zoom"),
             "coviu.com":               ("telehealth", "Coviu"),
@@ -1603,9 +1856,15 @@ async def scrape_clinic(browser, url: str) -> Dict:
             "zdassets.com":            ("live_chat", "Zendesk"),
             "client.crisp.chat":       ("live_chat", "Crisp"),
             "wchat.freshchat.com":     ("live_chat", "Freshchat"),
+            "apps.mypurecloud.com.au": ("live_chat", "Genesys"),
+            "apps.mypurecloud.com":    ("live_chat", "Genesys"),
+            "genesys.com":             ("live_chat", "Genesys"),
+            "genesyscloud.com":        ("live_chat", "Genesys"),
             # ── CRM / Email Marketing ──
             "hs-scripts.com":          ("crm", "HubSpot"),
             "pardot.com":              ("crm", "Salesforce"),
+            "exacttarget.com":         ("crm", "Salesforce Marketing Cloud"),
+            "marketingcloud.com":      ("crm", "Salesforce Marketing Cloud"),
             "salesiq.zoho.com":        ("crm", "Zoho CRM"),
             "pipedriveassets.com":     ("crm", "Pipedrive"),
             "podium.com":              ("crm", "Podium"),
@@ -1617,23 +1876,41 @@ async def scrape_clinic(browser, url: str) -> Dict:
             "js.stripe.com":           ("payments", "Stripe"),
             "squareup.com":            ("payments", "Square"),
             "medipass.com.au":         ("payments", "Medipass"),
+            "authorize.net":             ("payments", "Authorize.net"),
+            "acceptjs.authorize.net":    ("payments", "Authorize.net"),
             # ── Forms ──
             "typeform.com":            ("forms", "Typeform"),
             "jotform.com":             ("forms", "JotForm"),
+            "hscollectedforms.net":    ("forms", "HubSpot Forms"),
+            "forms.hsforms.com":       ("forms", "HubSpot Forms"),
+            "hsforms.net":             ("forms", "HubSpot Forms"),
+            "formstack.com":           ("forms", "Formstack"),
+            "fscdn.formstack.com":     ("forms", "Formstack"),
             # ── Centaur Portal / D4W ──
             "centaurportal.com":       ("booking", "D4W eAppointments"),
             # ── GoHighLevel / LeadConnector ──
-            "widgets.leadconnectorhq.com": ("crm", "GoHighLevel"),
-            "link.msgsndr.com":        ("forms", "GoHighLevel Forms"),
-            "msgsndr.com":             ("crm", "GoHighLevel"),
-            "gohighlevel.com":          ("crm", "GoHighLevel"),
+            "api.leadconnectorhq.com":      ("crm", "GoHighLevel"),
+            "backend.leadconnectorhq.com":  ("crm", "GoHighLevel"),
+            "stcdn.leadconnectorhq.com":    ("crm", "GoHighLevel"),
+            "widgets.leadconnectorhq.com":  ("crm", "GoHighLevel"),
+            "link.msgsndr.com":             ("forms", "GoHighLevel Forms"),
+            "msgsndr.com":                  ("crm", "GoHighLevel"),
+            "gohighlevel.com":              ("crm", "GoHighLevel"),
             "cdn.trustindex.io":       ("reviews", "Trustindex"),
             "trustindex.io":           ("reviews", "Trustindex"),
+            "static.elfsight.com":     ("reviews", "Elfsight"),
+            "apps.elfsight.com":      ("reviews", "Elfsight"),
+            "elfsight.com":           ("reviews", "Elfsight"),
             "plugins/send-app":        ("crm", "Send App"),
             "medirecords":             ("crm", "MediRecords (Clinical CRM)"),
             # Mailgun / LeadConnector transactional email
             "mailgun.org":              ("crm", "Mailgun"),
             "mg.mail":                  ("crm", "Mailgun"),
+            # ── Infra / CDN ──
+            "nitrocdn.com":             ("infra", "NitroPack"),
+            "nitropack.io":             ("infra", "NitroPack"),
+            "b-cdn.net":                ("infra", "Bunny CDN"),
+            "cdn.bunny.net":            ("infra", "Bunny CDN"),
         }
 
         def on_request(request):
@@ -1647,8 +1924,8 @@ async def scrape_clinic(browser, url: str) -> Dict:
         cookie_hits = {}
         # Load homepage
         try:
-            response = await page.goto(url, timeout=30000, wait_until='domcontentloaded')
-            await page.wait_for_timeout(2000)  # Wait for dynamic content
+            response = await page.goto(url, timeout=20000, wait_until='domcontentloaded')
+            await page.wait_for_timeout(400)  # Wait for dynamic content
             cookies = await context.cookies()
             cookie_hits = detect_from_cookies(cookies)
         except PlaywrightTimeoutError:
@@ -1659,9 +1936,6 @@ async def scrape_clinic(browser, url: str) -> Dict:
             result['error'] = f'Error loading homepage: {str(e)}'
             await context.close()
             return result
-
-        # Get clinic name
-        result['clinic_name'] = await get_company_name(page, url)
 
         # Get HTML for analysis
         html = await page.content()
@@ -1674,8 +1948,10 @@ async def scrape_clinic(browser, url: str) -> Dict:
         # Wait for DNS lookup to complete
         result["email_provider"] = await provider_task
 
-        # Detect tech stack (homepage + up to 2 subpages: /contact, /book)
-        tech_stack = await detect_tech_stack(page, context, url, initial_response=response)
+        # Detect tech stack (homepage + up to 4 subpages: /contact, /book, /about, /services)
+        # Store page texts during detect_tech_stack for reuse by billing/home visits/team count
+        page_cache = {}  # url -> (html, page_text)
+        tech_stack = await detect_tech_stack(page, context, url, initial_response=response, page_cache=page_cache)
         for k, v in tech_stack.items():
             result[k] = v
 
@@ -1696,31 +1972,43 @@ async def scrape_clinic(browser, url: str) -> Dict:
                 elif name not in current:
                     result[category] = current + f", {name}"
 
+        framework_hits = detect_framework_from_cookies(cookies)
+        # Only apply framework detection if no known CMS detected yet
+        known_cms = ["WordPress", "Wix", "Squarespace", "Webflow", "Shopify",
+                     "Drupal", "Joomla", "Ghost", "Weebly", "Framer"]
+        current_cms = result.get("cms", "not_detected")
+        if not any(cms in current_cms for cms in known_cms):
+            for category, tools in framework_hits.items():
+                for name in tools:
+                    current = result.get(category, "not_detected")
+                    if current == "not_detected":
+                        result[category] = name
+                    elif name not in current:
+                        result[category] = current + f", {name}"
+
         # Check for home visits
         result["home_visits"] = "yes" if check_home_visits(html) else "no"
 
-        # Also check services page for home visits
+        # Also check services page for home visits (use cache if detect_tech_stack already visited)
         if result["home_visits"] == "no":
-            services_urls = [urljoin(url, '/services'), urljoin(url, '/service')]
-            for services_url in services_urls:
-                try:
-                    await page.goto(services_url, timeout=10000, wait_until='domcontentloaded')
-                    await page.wait_for_timeout(1000)
-                    services_html = await page.content()
-                    if check_home_visits(services_html):
-                        result["home_visits"] = "yes"
-                        break
-                except:
-                    continue
+            for cached_url, (cached_html, _) in page_cache.items():
+                if check_home_visits(cached_html):
+                    result["home_visits"] = "yes"
+                    break
 
-        # Detect billing type (homepage first)
-        try:
-            page_text_billing = await page.inner_text('body')
-        except Exception:
-            page_text_billing = ""
-        result["billing_type"] = detect_billing_type(page_text_billing, html)
+        # Detect billing type (homepage first, use cache if available)
+        if url in page_cache:
+            _, page_text_billing = page_cache[url]
+            html_billing = page_cache[url][0]
+        else:
+            try:
+                page_text_billing = await page.inner_text('body')
+            except Exception:
+                page_text_billing = ""
+            html_billing = html
+        result["billing_type"] = detect_billing_type(page_text_billing, html_billing)
 
-        # If not detected, check fee-related subpages
+        # If not detected, check fee-related subpages (use cache first if available)
         if result["billing_type"] == "not_detected":
             fee_urls = [
                 urljoin(url, '/fees'),
@@ -1730,33 +2018,37 @@ async def scrape_clinic(browser, url: str) -> Dict:
                 urljoin(url, '/billing'),
             ]
             for fee_url in fee_urls:
-                try:
-                    await page.goto(fee_url, timeout=10000, wait_until='domcontentloaded')
-                    await page.wait_for_timeout(1000)
-                    fee_html = await page.content()
-                    fee_text = await page.inner_text('body')
+                if fee_url in page_cache:
+                    fee_html, fee_text = page_cache[fee_url]
                     billing = detect_billing_type(fee_text, fee_html)
-                    if billing != "not_detected":
-                        result["billing_type"] = billing
-                        break
-                except:
-                    continue
+                else:
+                    try:
+                        await page.goto(fee_url, timeout=10000, wait_until='domcontentloaded')
+                        await page.wait_for_timeout(400)
+                        fee_html = await page.content()
+                        fee_text = await page.inner_text('body')
+                        page_cache[fee_url] = (fee_html, fee_text)
+                        billing = detect_billing_type(fee_text, fee_html)
+                    except Exception:
+                        continue
+                if billing != "not_detected":
+                    result["billing_type"] = billing
+                    break
 
         # Extract social media (from homepage HTML)
         social = extract_social_media(html)
         result["instagram"] = social["instagram"]
         result["whatsapp"] = social["whatsapp"]
 
-        # Navigate back to homepage (detect_tech_stack may have left us on /contact or /book)
-        try:
-            await page.goto(url, timeout=10000, wait_until='domcontentloaded')
-            await page.wait_for_timeout(500)
-        except Exception:
-            pass
-
-        # Get fresh HTML and page text for extraction
-        html = await page.content()
-        page_text = await page.inner_text('body')
+        # Reuse cached homepage — no extra navigation needed
+        if url in page_cache:
+            html, page_text = page_cache[url]
+        else:
+            try:
+                html = await page.content()
+                page_text = await page.inner_text('body')
+            except Exception:
+                html, page_text = "", ""
         text_hits = scan_visible_text_for_tech(page_text)
         for category, tools in text_hits.items():
             for name in tools:
@@ -1765,13 +2057,6 @@ async def scrape_clinic(browser, url: str) -> Dict:
                     result[category] = name
                 elif name not in current:
                     result[category] = current + f", {name}"
-        category_result = classify_clinic_category(html, page_text)
-        result["primary_category"] = category_result["primary_category"]
-        if result["primary_category"] == "Unknown":
-            result["primary_category"] = "not_detected"
-        result["confidence_score"] = category_result.get("confidence_score", 0.0)
-        result['address'] = extract_full_address(html, page_text)
-        result['phones'] = extract_all_phones(page_text, html)
         result['emails'] = extract_all_emails(page_text, html)
 
         # Secondary email provider detection from contact addresses (Gmail direct, etc.)
@@ -1786,8 +2071,8 @@ async def scrape_clinic(browser, url: str) -> Dict:
         if "Google Workspace" in result.get("email_provider", "") and "Gmail (direct)" in result.get("email_provider", ""):
             result["email_provider"] = result["email_provider"].replace(", Gmail (direct)", "").replace("Gmail (direct), ", "")
 
-        # Count practitioners (navigates to team page if found)
-        result['practitioner_count'] = await count_team_members(page)
+        # Count practitioners (navigates to team page if found; uses cache for /about, /team, etc.)
+        result['practitioner_count'] = await count_team_members(page, page_cache=page_cache)
 
         # Cross-infer PMS ↔ booking and stamp source fields
         result = infer_pms_booking(result)
@@ -1796,7 +2081,10 @@ async def scrape_clinic(browser, url: str) -> Dict:
         result['error'] = f'Unexpected error: {str(e)}'
         print(f"  ❌ Error: {e}")
     finally:
-        await context.close()
+        try:
+            await context.close()
+        except Exception:
+            pass  # Context was already closed by a navigation/crash — safe to ignore
 
     # Infer additional tools from co-occurrence patterns (runs after infer_pms_booking)
     result = apply_co_occurrence_rules(result)
@@ -1811,158 +2099,157 @@ async def scrape_clinic(browser, url: str) -> Dict:
 
 
 async def main():
-    """Main function to scrape clinics from Google Sheets."""
-    # Configuration - Update these values
     SHEET_KEY_OR_URL = 'https://docs.google.com/spreadsheets/d/1y9zzp1J1Fn60UKYN0RkTsSQcHcMb1mi2cD4NH8OfAF4/edit?usp=sharing'
     SERVICE_ACCOUNT_FILE = 'yoluko-frontdesk-3d208271a3c0.json'
-    
-    try:
-        # Initialize Google Sheets connection
-        worksheet = init_google_sheets(SHEET_KEY_OR_URL, SERVICE_ACCOUNT_FILE)
-        
-        # Get all values from the sheet
-        all_values = worksheet.get_all_values()
-        
-        if len(all_values) < 2:  # Header row + at least one data row
-            print("No data rows found in the sheet (only header row exists)")
-            return
-        
-        # Column mapping (29 cols): A website_url ... AB scraping_date, AC error_log
-        tech_cats_output = _get_tech_cats_for_sheet()
-        _ensure_sheet_headers(worksheet, tech_cats_output)
 
-        async with async_playwright() as p:
-            browser = await p.chromium.launch(headless=True)
-            processed_count = 0
-            skipped_count = 0
-            error_count = 0
-            
-            # Start from row 2 (skip header row)
-            for row_idx in range(1, len(all_values)):
-                row_num = row_idx + 1  # 1-indexed row number for Google Sheets
-                row_data = all_values[row_idx]
-                
-                # Get URL from Column A (index 0)
-                url = row_data[0].strip() if len(row_data) > 0 else ''
-                
-                # Skip empty URLs
-                if not url:
-                    print(f"Row {row_num}: Skipping - No URL provided")
-                    skipped_count += 1
-                    continue
-                
-                # Check Scraping Date (Col AC=29 = index 28 current, legacy: AB=28, AD=30, etc.)
-                scraping_date = (row_data[28].strip() if len(row_data) > 28 else "") or (
-                    row_data[27].strip() if len(row_data) > 27 else "") or (
-                    row_data[29].strip() if len(row_data) > 29 else "") or (
-                    row_data[31].strip() if len(row_data) > 31 else "") or (
-                    row_data[32].strip() if len(row_data) > 32 else "") or (
-                    row_data[26].strip() if len(row_data) > 26 else "") or (
-                    row_data[30].strip() if len(row_data) > 30 else "") or (
-                    row_data[24].strip() if len(row_data) > 24 else "") or (
-                    row_data[23].strip() if len(row_data) > 23 else "") or (
-                    row_data[16].strip() if len(row_data) > 16 else "") or (
-                    row_data[8].strip() if len(row_data) > 8 else ""
-                )
-                
-                # Skip if already scraped
-                if scraping_date:
-                    print(f"Row {row_num}: Skipping {url} - Already scraped on {scraping_date}")
-                    skipped_count += 1
-                    continue
-                
-                # Ensure URL has protocol
-                if not url.startswith(('http://', 'https://')):
-                    url = 'https://' + url
-                
-                print(f"\n{'='*80}")
-                print(f"Processing Row {row_num}: {url}")
-                print(f"{'='*80}")
-                
+    CONCURRENCY = 5  # ← tune this (3 is safe, 5 is pushing it)
+
+    worksheet = init_google_sheets(SHEET_KEY_OR_URL, SERVICE_ACCOUNT_FILE, worksheet_name='main_clinics')
+    all_values = worksheet.get_all_values()
+
+    if len(all_values) < 2:
+        print("No data rows found")
+        return
+
+    tech_cats_output = _get_tech_cats_for_sheet()
+    _ensure_sheet_headers(worksheet, tech_cats_output)
+
+    # Shared state
+    semaphore = asyncio.Semaphore(CONCURRENCY)
+    sheets_lock = asyncio.Lock()         # ← serializes ALL gspread calls
+    stats = {"processed": 0, "skipped": 0, "errors": 0}
+    start_time = time.time()
+
+    # ----------------------------------------------------------------
+    # Helper: all sheet writes go through this lock
+    # ----------------------------------------------------------------
+    async def write_to_sheet(row_num: int, result: dict, tech_cats: list):
+        timestamp = get_current_timestamp()
+        tech_vals = [result.get(cat, "not_detected") for cat in tech_cats]
+
+        full_row_values = [
+            result.get("email_provider", "not_detected"),
+            *tech_vals,
+            result.get("booking_type", "not_detected"),
+            result.get("booking_vendor", "") or "not_detected",
+            ", ".join(result.get("emails", [])),
+            str(result.get("practitioner_count", 0)),
+            result.get("home_visits", "no"),
+            result.get("billing_type", "not_detected"),
+            result.get("instagram", "no"),
+            result.get("whatsapp", "no"),
+            timestamp,                        # U = scraping_date
+            result.get("error", "") or "",    # V = error_log
+        ]
+
+        async with sheets_lock:
+            # Single API call — batch everything B→V
+            await asyncio.get_running_loop().run_in_executor(
+                None,
+                lambda: worksheet.update([full_row_values], f"B{row_num}:V{row_num}")
+            )
+
+    # ----------------------------------------------------------------
+    # Worker: scrape one clinic + write results
+    # ----------------------------------------------------------------
+    async def process_clinic(browser, row_num: int, url: str):
+        async with semaphore:
+            print(f"\n{'='*60}")
+            print(f"▶ Row {row_num}: {url}")
+            print(f"{'='*60}")
+
+            SKIP_URL_PATTERNS = [
+                "health.qld.gov.au",
+                "health.nsw.gov.au",
+                "health.vic.gov.au",
+                "health.wa.gov.au",
+                "health.sa.gov.au",
+                ".gov.au",          # all gov sites — huge, no booking stack
+                "facebook.com",
+                "linkedin.com",
+            ]
+
+            if any(pattern in url for pattern in SKIP_URL_PATTERNS):
+                print(f"⏭️  Row {row_num} SKIPPED — gov/social URL: {url}")
+                stats["skipped"] += 1
+                # Still write a scraping_date so it won't be retried
+                await write_to_sheet(row_num, {"error": "Skipped — gov/social domain"}, tech_cats_output)
+                return
+
+            try:
                 try:
-                    # Scrape the clinic
-                    result = await scrape_clinic(browser, url)
-                    
-                    # Prepare update values (B through AE)
-                    tech_cats_output = _get_tech_cats_for_sheet()
-                    tech_vals = [result.get(cat, "not_detected") for cat in tech_cats_output]
-                    addr = result.get("address", {})
-                    update_values = [
-                        result.get("clinic_name", ""),
-                        result.get("primary_category", "not_detected"),  # internal key, header is clinic_category
-                        result.get("email_provider", "not_detected"),
-                        *tech_vals,
-                        result.get("booking_type", "not_detected"),
-                        result.get("booking_vendor", "") or "not_detected",
-                        addr.get("street", ""),
-                        addr.get("city", ""),
-                        addr.get("state", ""),
-                        addr.get("postcode", ""),
-                        addr.get("country", ""),
-                        ", ".join(result.get("phones", [])),
-                        ", ".join(result.get("emails", [])),
-                        str(result.get("practitioner_count", 0)),
-                        result.get("home_visits", "no"),
-                        result.get("billing_type", "not_detected"),
-                        result.get("instagram", "no"),
-                        result.get("whatsapp", "no"),
-                    ]
-                    
-                    # Get timestamp
-                    timestamp = get_current_timestamp()
-                    
-                    if result.get('error'):
-                        error_msg = result['error']
-                        worksheet.update_cell(row_num, 29, timestamp)   # AC = scraping_date
-                        worksheet.update_cell(row_num, 30, error_msg)   # AD = error_log
-                        error_count += 1
-                        print(f"❌ ERROR: {error_msg}")
-                    else:
-                        worksheet.update_cell(row_num, 30, '')  # AD = clear error
-                        _print_tech_summary(result)
+                    result = await asyncio.wait_for(scrape_clinic(browser, url), timeout=60)
+                except asyncio.TimeoutError:
+                    result = {"error": "Skipped — exceeded 60s timeout", "url": url}
+                    print(f"⏱️  Row {row_num} TIMEOUT (>60s) — moving on")
+                await write_to_sheet(row_num, result, tech_cats_output)
 
-                    # Update data columns B through AB
-                    cell_range = f"B{row_num}:AB{row_num}"
-                    worksheet.update([update_values], cell_range)
+                if result.get("error"):
+                    stats["errors"] += 1
+                    print(f"❌ Row {row_num} ERROR: {result['error']}")
+                else:
+                    stats["processed"] += 1
+                    _print_tech_summary(result)
+                    print(f"✅ Row {row_num} done")
 
-                    # Scraping date and error log
-                    worksheet.update_cell(row_num, 29, timestamp)   # AC = scraping_date
-                    if not result.get('error'):
-                        worksheet.update_cell(row_num, 30, "")      # AD = clear error
-                    
-                    processed_count += 1
-                    print(f"✅ Row {row_num} updated successfully")
-                    
-                except Exception as e:
-                    error_msg = f'Unexpected error: {str(e)}'
-                    timestamp = get_current_timestamp()
-                    worksheet.update_cell(row_num, 29, timestamp)   # AC = scraping_date
-                    worksheet.update_cell(row_num, 30, error_msg)   # AD = error_log
-                    
-                    error_count += 1
-                    print(f"❌ ERROR updating row {row_num}: {error_msg}")
-                
-                # Random delay between updates (5-10 seconds) to avoid rate limits
-                if row_idx < len(all_values) - 1:
-                    delay = random.uniform(5, 10)
-                    print(f"⏳ Waiting {delay:.1f} seconds before next request...\n")
-                    await asyncio.sleep(delay)
-            
+            except Exception as e:
+                stats["errors"] += 1
+                error_result = {"error": f"Worker error: {str(e)}"}
+                await write_to_sheet(row_num, error_result, tech_cats_output)
+                print(f"❌ Row {row_num} crashed: {e}")
+
+            # Small per-clinic delay INSIDE the worker (not blocking others)
+            await asyncio.sleep(random.uniform(1, 3))
+
+    # ----------------------------------------------------------------
+    # Build task list (skip already-scraped rows)
+    # ----------------------------------------------------------------
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+
+        tasks = []
+        for row_idx in range(1, len(all_values)):
+            row_num = row_idx + 1
+            row_data = all_values[row_idx]
+
+            url = row_data[0].strip() if row_data else ""
+            if not url:
+                stats["skipped"] += 1
+                continue
+
+            scraping_date = row_data[19].strip() if len(row_data) > 19 else ""
+            if scraping_date:
+                print(f"Row {row_num}: skip ({url}) — already scraped")
+                stats["skipped"] += 1
+                continue
+
+            if not url.startswith(("http://", "https://")):
+                url = "https://" + url
+
+            tasks.append(process_clinic(browser, row_num, url))
+
+        print(f"\n🚀 Starting {len(tasks)} clinics with concurrency={CONCURRENCY}\n")
+
+        try:
+            await asyncio.gather(*tasks)
+        except (KeyboardInterrupt, asyncio.CancelledError):
+            print("\n⏹️  Interrupted")
+        finally:
             await browser.close()
-            
-            # Final summary
-            print("\n" + "="*80)
-            print("SCRAPING COMPLETE")
-            print("="*80)
-            print(f"✅ Successfully processed: {processed_count}")
-            print(f"⏭️  Skipped (already scraped): {skipped_count}")
-            print(f"❌ Errors: {error_count}")
-            print(f"📊 Total rows checked: {len(all_values) - 1}")
-            print("="*80)
-    
-    except Exception as e:
-        print(f"❌ Fatal error: {e}")
-        raise
+
+    # ----------------------------------------------------------------
+    # Summary
+    # ----------------------------------------------------------------
+    elapsed = time.time() - start_time
+    total_done = stats["processed"] + stats["errors"]
+    avg = elapsed / total_done if total_done else 0
+
+    print(f"\n{'='*60}")
+    print(f"✅ Processed: {stats['processed']}")
+    print(f"⏭️  Skipped:   {stats['skipped']}")
+    print(f"❌ Errors:    {stats['errors']}")
+    print(f"⏱️  Avg/clinic: {avg:.1f}s  |  Total: {elapsed:.0f}s")
+    print(f"{'='*60}")
 
 
 if __name__ == '__main__':

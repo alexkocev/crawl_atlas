@@ -15,6 +15,8 @@ EXCLUDE_DIRS = {
     ".mypy_cache",
     ".pytest_cache",
     ".ruff_cache",
+    ".claude",  # Cursor worktrees with old copies of files
+    ".cursor",
 }
 
 # File patterns to exclude
@@ -22,11 +24,12 @@ EXCLUDE_FILES = {
     "requirements.txt",
     "requirements-dev.txt",
     "requirements.in",
-    "printed_codebase.txt",  # Don't include the output itself
     "main_ecom.py",
     "main_healthdirect.py",
-    "exploration_printed_content.txt",
-    "exploration_print_content.py",
+    "print_codebase.py",
+    "print_exploration_content.py",
+    "printed_codebase.txt",
+    "printed_exploration_content.py",
 }
 
 # File extensions to exclude

@@ -243,6 +243,100 @@ def detect_from_cookies(cookies: list) -> dict:
     return found
 
 
+FRAMEWORK_COOKIE_SIGNATURES = {
+    # Laravel
+    "XSRF-TOKEN":           ("cms", "Laravel (Custom)"),
+    "_token":               ("cms", "Laravel (Custom)"),
+    # Django
+    "csrftoken":            ("cms", "Django (Custom)"),
+    "sessionid":            ("cms", "Django (Custom)"),
+    # Ruby on Rails
+    "_rails_session":       ("cms", "Rails (Custom)"),
+    # ASP.NET
+    "ASP.NET_SessionId":    ("cms", "ASP.NET (Custom)"),
+    "__RequestVerificationToken": ("cms", "ASP.NET (Custom)"),
+    # Next.js / Vercel
+    "__next_hmr_cb":        ("cms", "Next.js (Custom)"),
+    "next-auth.session-token": ("cms", "Next.js (Custom)"),
+    # Phoenix / Elixir
+    "_csrf_token":          ("cms", "Phoenix (Custom)"),
+}
+
+# Session cookie patterns that confirm Laravel when combined with XSRF-TOKEN
+LARAVEL_SESSION_PATTERN = re.compile(r'^[a-z0-9_]+_session$')
+
+
+def detect_framework_from_cookies(cookies: list) -> dict:
+    """
+    Detect backend framework from session/CSRF cookie naming conventions.
+    Only fires when NO known CMS (WordPress, Wix, Squarespace, Shopify etc.)
+    is already detected — avoids false positives on WP sites that also set
+    XSRF-TOKEN via a plugin.
+    Returns dict of category -> set of tool names.
+    """
+    found = {}
+    cookie_names = [c.get("name", "") for c in cookies]
+
+    for name in cookie_names:
+        # Direct match
+        if name in FRAMEWORK_COOKIE_SIGNATURES:
+            cat, tool = FRAMEWORK_COOKIE_SIGNATURES[name]
+            found.setdefault(cat, set()).add(tool)
+        # Laravel session cookie pattern: appname_session
+        if LARAVEL_SESSION_PATTERN.match(name) and "XSRF-TOKEN" in cookie_names:
+            found.setdefault("cms", set()).add("Laravel (Custom)")
+
+    return found
+
+
+CSP_SIGNATURES = {
+    "mkt.dynamics.com":         ("crm", "Microsoft Dynamics 365"),
+    "dynamics.com":             ("crm", "Microsoft Dynamics 365"),
+    "cxondemand.com":           ("crm", "NICE CXone"),
+    "salesforce.com":           ("crm", "Salesforce"),
+    "pardot.com":               ("crm", "Salesforce"),
+    "marketo.net":              ("crm", "Adobe Marketo"),
+    "eloqua.com":               ("crm", "Oracle Eloqua"),
+    "hsforms.com":              ("crm", "HubSpot"),
+    "hs-scripts.com":           ("crm", "HubSpot"),
+    "klaviyo.com":              ("crm", "Klaviyo"),
+    "mypurecloud.com":          ("live_chat", "Genesys"),
+    "mypurecloud.com.au":       ("live_chat", "Genesys"),
+    "genesys.com":              ("live_chat", "Genesys"),
+    "zopim.com":                ("live_chat", "Zendesk"),
+    "zdassets.com":             ("live_chat", "Zendesk"),
+    "intercom.io":              ("live_chat", "Intercom"),
+    "tawk.to":                  ("live_chat", "Tawk.to"),
+    "formstack.com":            ("forms", "Formstack"),
+    "wpforms.com":              ("forms", "WPForms"),
+    "typeform.com":             ("forms", "Typeform"),
+    "jotform.com":              ("forms", "JotForm"),
+    "stripe.com":               ("payments", "Stripe"),
+    "authorize.net":            ("payments", "Authorize.net"),
+    "medipass.com.au":          ("payments", "Medipass"),
+    "coviu.com":                ("telehealth", "Coviu"),
+    "zoom.us":                  ("telehealth", "Zoom"),
+    "doxy.me":                  ("telehealth", "Doxy.me"),
+}
+
+
+def parse_csp_header(header_value: str) -> dict:
+    """
+    Scan Content-Security-Policy header value for known vendor domains.
+    Returns dict of category -> set of tool names.
+    High-value signal: enterprise tools whitelist their own domains in CSP
+    even when their scripts load lazily or are behind GTM.
+    """
+    found = {}
+    if not header_value:
+        return found
+    header_lower = header_value.lower()
+    for domain, (category, tool) in CSP_SIGNATURES.items():
+        if domain in header_lower:
+            found.setdefault(category, set()).add(tool)
+    return found
+
+
 META_GENERATOR_SIGNATURES = {
     "wordpress": ("cms", "WordPress"),
     "wix": ("cms", "Wix"),
@@ -254,6 +348,11 @@ META_GENERATOR_SIGNATURES = {
     "ghost": ("cms", "Ghost"),
     "weebly": ("cms", "Weebly"),
     "framer": ("cms", "Framer"),
+    "divi":      ("cms", "WordPress (Divi)"),
+    "elementor": ("cms", "WordPress (Elementor)"),
+    "avada":     ("cms", "WordPress (Avada)"),
+    "beaver builder": ("cms", "WordPress (Beaver Builder)"),
+    "wpbakery":  ("cms", "WordPress (WPBakery)"),
 }
 
 
@@ -348,12 +447,24 @@ async def scan_external_js(script_srcs: list, base_url: str) -> dict:
 
 
 ROBOTS_SIGNATURES = {
-    "/wp-admin": ("cms", "WordPress"),
-    "/wp-content": ("cms", "WordPress"),
-    "shopify": ("cms", "Shopify"),
-    "squarespace": ("cms", "Squarespace"),
-    "wix": ("cms", "Wix"),
-    "webflow": ("cms", "Webflow"),
+    # CMS
+    "/wp-admin":        ("cms",   "WordPress"),
+    "/wp-content":      ("cms",   "WordPress"),
+    "shopify":          ("cms",   "Shopify"),
+    "squarespace":      ("cms",   "Squarespace"),
+    "wix":              ("cms",   "Wix"),
+    "webflow":          ("cms",   "Webflow"),
+    # WordPress plugins (Disallow paths)
+    "/wp-content/uploads/wpforms/":          ("forms",  "WPForms"),
+    "/wp-content/uploads/gravity_forms/":    ("forms",  "Gravity Forms"),
+    "/wp-content/plugins/contact-form-7/":   ("forms",  "Contact Form 7"),
+    "/wp-content/plugins/elementor/":        ("forms",  "Elementor Forms"),
+    "/wp-content/plugins/woocommerce/":      ("payments", "WooCommerce"),
+    # Hosting
+    "wpstaq":           ("infra", "WPStaq"),
+    "wpengine":         ("infra", "WP Engine"),
+    "kinsta":           ("infra", "Kinsta"),
+    "siteground":       ("infra", "SiteGround"),
 }
 
 
@@ -666,11 +777,26 @@ def extract_phone(text: str) -> Optional[str]:
 
 
 def extract_social_media(html: str) -> Dict[str, str]:
-    """Extract social media presence from HTML."""
+    """Extract social media presence from HTML. Only detects actionable links/embeds."""
     html_lower = html.lower()
+
+    # Instagram: must be a linked profile, not just a mention
+    has_instagram = bool(re.search(
+        r'href=["\'][^"\']*instagram\.com/[^"\']{2,}',
+        html_lower
+    ))
+
+    # WhatsApp: must be an actual click-to-chat link or widget embed
+    # Matches: wa.me/..., api.whatsapp.com/send, whatsapp://send, widget embeds
+    has_whatsapp = bool(re.search(
+        r'(wa\.me/|api\.whatsapp\.com/send|whatsapp://send|'
+        r'href=["\'][^"\']*whatsapp\.com/[^"\']*[?&]phone=)',
+        html_lower
+    ))
+
     return {
-        "instagram": "yes" if "instagram.com" in html_lower else "no",
-        "whatsapp": "yes" if "wa.me" in html_lower or "whatsapp" in html_lower else "no",
+        "instagram": "yes" if has_instagram else "no",
+        "whatsapp":  "yes" if has_whatsapp else "no",
     }
 
 
@@ -696,7 +822,7 @@ async def get_company_name(page: Page, url: str) -> str:
         return domain.replace('www.', '')
 
 
-def init_google_sheets(sheet_key_or_url: str, service_account_file: str = 'service_account.json'):
+def init_google_sheets(sheet_key_or_url: str, service_account_file: str = 'service_account.json', worksheet_name: str = None):
     """
     Initialize Google Sheets connection using service account credentials.
     Pass the appropriate sheet key/URL for each scraper (e.g. clinics vs ecom).
@@ -704,6 +830,7 @@ def init_google_sheets(sheet_key_or_url: str, service_account_file: str = 'servi
     Args:
         sheet_key_or_url: Google Sheet key (from URL) or full URL
         service_account_file: Path to service account JSON file
+        worksheet_name: Optional tab name (e.g. 'main_clinics'). If None, uses first tab.
 
     Returns:
         gspread worksheet object
@@ -739,9 +866,9 @@ def init_google_sheets(sheet_key_or_url: str, service_account_file: str = 'servi
         )
         client = gspread.authorize(credentials)
         sheet = client.open_by_key(sheet_key)
-        worksheet = sheet.sheet1
+        worksheet = sheet.worksheet(worksheet_name) if worksheet_name else sheet.sheet1
 
-        print(f"✅ Connected to Google Sheet: {sheet.title}")
+        print(f"✅ Connected to Google Sheet: {sheet.title}" + (f" (tab: {worksheet_name})" if worksheet_name else ""))
         return worksheet
 
     except FileNotFoundError:

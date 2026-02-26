@@ -1,6 +1,6 @@
 
 ══════════════════════════════════════════════════════════════════════
-  🔍 RAW DATA DUMP: https://www.doublebaydoctors.com
+  🔍 RAW DATA DUMP: http://www.talkitupbendigo.com/
 ══════════════════════════════════════════════════════════════════════
 
 ⏳ Loading homepage...
@@ -8,619 +8,439 @@
 ══════════════════════════════════════════════════════════════════════
   📄 HOMEPAGE HTML (first 3000 chars)
 ══════════════════════════════════════════════════════════════════════
-<!DOCTYPE html><html lang="en" style=""><head>
-  
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" id="wixDesktopViewport">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Wix.com Website Builder">
+<!DOCTYPE html><html lang="en"><head>
+		<title>Talk It Up Speech Pathology - Home</title><meta property="og:site_name" content="Talk It Up Speech Pathology">
+<meta property="og:title" content="Talk It Up Speech Pathology">
+<meta property="og:description" content="Talk It Up Speech Pathologist Emma Tyrrell. Private Speech Pathologist. 130 MacKenzie St West, Golden Square. Providing specialist assessment and treatment in communication and swallowing.">
+<meta property="og:image" content="https://www.talkitupbendigo.com/uploads/9/2/3/0/9230733/logo-mini_orig.png">
+<meta property="og:image" content="https://www.talkitupbendigo.com/uploads/9/2/3/0/9230733/logo-1-green-with-pink-a-horizontal-1.png">
+<meta property="og:url" content="https://www.talkitupbendigo.com/">
 
-  <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/b948b8_f9c1bb31016948d7b12c760b955ba792%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/b948b8_f9c1bb31016948d7b12c760b955ba792%7Emv2.png" type="image/png">
-  <link rel="shortcut icon" href="https://static.wixstatic.com/media/b948b8_f9c1bb31016948d7b12c760b955ba792%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/b948b8_f9c1bb31016948d7b12c760b955ba792%7Emv2.png" type="image/png">
-  <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/b948b8_f9c1bb31016948d7b12c760b955ba792%7Emv2.png/v1/fill/w_180%2Ch_180%2Clg_1%2Cusm_0.66_1.00_0.01/b948b8_f9c1bb31016948d7b12c760b955ba792%7Emv2.png" type="image/png">
+<meta name="description" content="Talk It Up Speech Pathologist Emma Tyrrell. Private Speech Pathologist. 130 MacKenzie St West, Golden Square. Providing specialist assessment and treatment in communication and swallowing.">
+<meta name="keywords" content="speech, pathologist, emma, tyrrell, bendigo, private, practice, autism, pathology, autism, ASD, NDIS, therapist, talk, it, up">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Safari Pinned Tab Icon -->
-  <!-- <link rel="mask-icon" href="https://static.wixstatic.com/media/b948b8_f9c1bb31016948d7b12c760b955ba792%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/b948b8_f9c1bb31016948d7b12c760b955ba792%7Emv2.png"> -->
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="//cdn2.editmysite.com/css/sites.css?buildTime=1760628286">
+<link rel="stylesheet" type="text/css" href="//cdn2.editmysite.com/css/old/fancybox.css?1760628286">
+<link rel="stylesheet" type="text/css" href="//cdn2.editmysite.com/css/social-icons.css?buildtime=1760628286" media="screen,projection">
+<link rel="stylesheet" type="text/css" href="/files/main_style.css?1761517539" title="wsite-theme-css">
+<link href="//cdn2.editmysite.com/fonts/Raleway/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Lora/font.css?2" rel="stylesheet" type="text/css">
 
-  <!-- Origin trials -->
-  
-    <script src="https://connect.facebook.net/signals/config/255091665909473?v=2.9.268&amp;r=stable&amp;domain=www.doublebaydoctors.com&amp;hme=8c09666b801027ec77ae6e3d39d3827f08833acc316174b73d9ec4ab26e1bdc3&amp;ex_m=96%2C188%2C136%2C21%2C68%2C69%2C129%2C64%2C43%2C130%2C73%2C63%2C10%2C144%2C82%2C15%2C95%2C124%2C117%2C71%2C74%2C123%2C141%2C104%2C146%2C7%2C3%2C4%2C6%2C5%2C2%2C83%2C93%2C147%2C152%2C202%2C57%2C168%2C169%2C50%2C240%2C28%2C70%2C214%2C213%2C212%2C30%2C56%2C9%2C59%2C89%2C90%2C91%2C97%2C120%2C29%2C27%2C122%2C119%2C118%2C137%2C72%2C140%2C138%2C139%2C45%2C55%2C113%2C14%2C143%2C40%2C228%2C229%2C227%2C24%2C25%2C26%2C17%2C19%2C39%2C35%2C37%2C36%2C78%2C84%2C88%2C102%2C128%2C131%2C41%2C103%2C22%2C20%2C109%2C65%2C33%2C133%2C132%2C134%2C125%2C23%2C32%2C54%2C101%2C142%2C66%2C16%2C135%2C106%2C77%2C62%2C18%2C31%2C252%2C195%2C182%2C183%2C181%2C255%2C247%2C196%2C99%2C121%2C76%2C111%2C49%2C42%2C44%2C105%2C110%2C116%2C53%2C60%2C115%2C48%2C51%2C47%2C92%2C145%2C0%2C114%2C13%2C112%2C11%2C1%2C52%2C85%2C58%2C61%2C108%2C81%2C80%2C148%2C149%2C86%2C87%2C8%2C94%2C46%2C126%2C79%2C75%2C67%2C107%2C98%2C38%2C127%2C34%2C100%2C12%2C150" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-5H20HTTW4N&amp;cx=c&amp;gtm=4e62i1"></script><script async="" src="https://static.parastorage.com/services/wix-thunderbolt/dist/originTrials.3c681624.bundle.min.js"></script>
-  
+<link href="//cdn2.editmysite.com/fonts/Lato/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Lato/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Saginaw/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Montserrat/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Lato/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Montserrat/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Raleway/font.css?2" rel="stylesheet" type="text/css">
+<style type="text/css">
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-
 
-
-  <!-- Segmenter Polyfill -->
-  <script>
-    if (!window.Intl || !window.Intl.Segmenter) {
-      (function() {
-        var script = document.createElement('script');
-        script.src = 'https://static
-
-  ... [659,390 total chars]
+  ... [42,679 total chars]
 
 ══════════════════════════════════════════════════════════════════════
   📡 HTTP RESPONSE HEADERS (all)
 ══════════════════════════════════════════════════════════════════════
-  accept-ranges: bytes
-  age: 99579
-  alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
-  cache-control: public,max-age=0,must-revalidate
-  content-encoding: br
-  content-language: en-AU
-  content-length: 146098
+  cache-control: private, max-age=30, no-store
+  cdn-cache-control: max-age=30, public
+  cf-cache-status: EXPIRED
+  cf-ray: 9d3836898858aa81-SIN
+  content-encoding: gzip
+  content-security-policy-report-only: script-src 'none'; connect-src 'none'; report-uri https://csp-reporting.cloudflare.com/cdn-cgi/script_monitor/report?m=MqngPKoXrh_siHwcq9nK1lfeWbT2L2Rh.DX3U_uDb4U-1772033102-1.0.1.1-OdXNh.oUg0QPyaQkv6TkKBwagpKL1aEeAqHbGPN6ehhMTozNFTWS7FPPFfWnbqkTIR2zj.b16tckPF2asUPjmL.kgSKedKLp9TuToGbVdUJkxlsILdxYawM6M3ftJ4rGqQ68h3sfVa1l9UKCXfsibjQccbOUaHCL67O7U9V0_XHlvbudxBFeAa8wbocUc7BJ; report-to cf-csp-endpoint
   content-type: text/html; charset=UTF-8
-  date: Sat, 21 Feb 2026 01:32:41 GMT
-  etag: W/"2ba16ffd5607410c7a867a3ab29b0b41"
-  glb-x-seen-by: +G+VG14k01AWUL6hnhvGbViB5QmpRe2J37zq9nDD6cs=
-  link: <https://static.parastorage.com/>; rel=preconnect; crossorigin;,<https://static.parastorage.com/>; rel=preconnect;,<https://static.wixstatic.com/>; rel=preconnect; crossorigin;,<https://static.wixstatic.com/>; rel=preconnect;,<https://siteassets.parastorage.com>; rel=preconnect; crossorigin;,
-  raw-x-seen-by: DscQIpEjFqb2lISzhzgYFN+0+rENTQg4+DhiXKLbasY=
-  rdwr_response: allowed
-  server: Pepyaka
-  server-timing: cache;desc=hit, varnish;desc=hit_hit, dc;desc=fastly_grad
-  set-cookie: ssr-caching=cache#desc=hit#varnish=hit_hit#dc#desc=fastly_grad; max-age=20
-client-session-bind=1aefb653-3890-44a5-a008-4557f72a5719; Path=/; Secure; SameSite=Lax;
-server-session-bind=1aefb653-3890-44a5-a008-4557f72a5719; Path=/; Secure; SameSite=Lax; HttpOnly;
-  strict-transport-security: max-age=86400
-  vary: Accept-Encoding
-  via: 1.1 google
-  x-cache: HIT
-  x-cache-status: HIT
-  x-content-type-options: nosniff
-  x-seen-by: PvUL11RS8RecImN/wT8k2Rq+aWZiZ7uY18ugbhVArek=
-  x-served-by: cache-nrt-rjtf7700076-NRT
-  x-wix-request-id: 1771637561.735572238395630790
+  date: Wed, 25 Feb 2026 15:25:02 GMT
+  last-modified: Wed, 25 Feb 2026 15:25:02 GMT
+  report-to: {"endpoints":[{"url":"https:\/\/csp-reporting.cloudflare.com\/cdn-cgi\/script_monitor\/report?m=MqngPKoXrh_siHwcq9nK1lfeWbT2L2Rh.DX3U_uDb4U-1772033102-1.0.1.1-OdXNh.oUg0QPyaQkv6TkKBwagpKL1aEeAqHbGPN6ehhMTozNFTWS7FPPFfWnbqkTIR2zj.b16tckPF2asUPjmL.kgSKedKLp9TuToGbVdUJkxlsILdxYawM6M3ftJ4rGqQ68h3sfVa1l9UKCXfsibjQccbOUaHCL67O7U9V0_XHlvbudxBFeAa8wbocUc7BJ"}],"group":"cf-csp-endpoint","max_age":86400}
+  server: cloudflare
+  vary: Accept-Encoding,User-Agent
+  x-host: grn26.sf2p.intern.weebly.net
+  x-ua-compatible: IE=edge,chrome=1
 
   HTTP Status: 200
 
 ══════════════════════════════════════════════════════════════════════
   🍪 COOKIES (name, value, domain)
 ══════════════════════════════════════════════════════════════════════
-  name=ssr-caching  value=cache#desc=hit#varnish=hit_hit#dc#desc=fastly_grad  domain=www.doublebaydoctors.com
-  name=server-session-bind  value=1aefb653-3890-44a5-a008-4557f72a5719  domain=www.doublebaydoctors.com
-  name=_gcl_au  value=1.1.326144456.1771637562  domain=.doublebaydoctors.com
-  name=XSRF-TOKEN  value=1771637562|NacT0JCajp_O  domain=.www.doublebaydoctors.com
-  name=hs  value=107428346  domain=.www.doublebaydoctors.com
-  name=svSession  value=bd42e9d00ec414b316f76a1490c8995c78b48289d084d37b753fa5990a962676d972443d060930382c973c846e7458041e60994d53964e647acf431e4f798bcd29426528a145ac8a0170b63c239550974164685475ce9e14ba3e97a883f61b3bf00c51ac0d813bf788caf2d2d39478692800ddab235fb6be5624788b9b7b9b3c34b5ac9e3fbc811ebb134d6c74292126  domain=.www.doublebaydoctors.com
-  name=bSession  value=6b4e72a0-17a0-440d-b145-662d9e445b00|1  domain=.www.doublebaydoctors.com
-  name=_fbp  value=fb.1.1771637563152.882210329544897697  domain=.doublebaydoctors.com
-  name=_ga_5H20HTTW4N  value=GS2.1.s1771637564$o1$g0$t1771637564$j60$l0$h0  domain=.doublebaydoctors.com
-  name=_ga  value=GA1.1.2125702659.1771637564  domain=.doublebaydoctors.com
-  name=IDE  value=AHWqTUkqA3RHXAF1tKz0oGST1S_srxg1AoIvTO9VLxyfC-RrBreg4arUvGsmN9Uv  domain=.doubleclick.net
+  name=__cf_bm  value=pig0DilMeV7d1m_urdcMofdv.ot7xgJFjA1bWf6yr34-1772033102-1.0.1.1-fpHHTy64cqLNMf8JnRLBQSP1T8Q5sTq8OqdauL1WK.4VuOXQni7_iGAB3Du7_PlmPw8_C9059MsmivHs0r4RsyeMMel92oYJVDMRYO29rAQ  domain=.www.talkitupbendigo.com
+  name=_snow_ses.2bba  value=*  domain=.talkitupbendigo.com
+  name=_snow_id.2bba  value=fe6435ae-1faa-4c0e-9388-d82cb077238c.1772033103.1.1772033103.1772033103.6cf33299-6d50-42ed-98cd-6789256cc0da  domain=.talkitupbendigo.com
 
 ══════════════════════════════════════════════════════════════════════
   📜 SCRIPT SRC URLs
 ══════════════════════════════════════════════════════════════════════
-  https://connect.facebook.net/signals/config/255091665909473?v=2.9.268&r=stable&domain=www.doublebaydoctors.com&hme=8c09666b801027ec77ae6e3d39d3827f08833acc316174b73d9ec4ab26e1bdc3&ex_m=96%2C188%2C136%2C21%2C68%2C69%2C129%2C64%2C43%2C130%2C73%2C63%2C10%2C144%2C82%2C15%2C95%2C124%2C117%2C71%2C74%2C123%2C141%2C104%2C146%2C7%2C3%2C4%2C6%2C5%2C2%2C83%2C93%2C147%2C152%2C202%2C57%2C168%2C169%2C50%2C240%2C28%2C70%2C214%2C213%2C212%2C30%2C56%2C9%2C59%2C89%2C90%2C91%2C97%2C120%2C29%2C27%2C122%2C119%2C118%2C137%2C72%2C140%2C138%2C139%2C45%2C55%2C113%2C14%2C143%2C40%2C228%2C229%2C227%2C24%2C25%2C26%2C17%2C19%2C39%2C35%2C37%2C36%2C78%2C84%2C88%2C102%2C128%2C131%2C41%2C103%2C22%2C20%2C109%2C65%2C33%2C133%2C132%2C134%2C125%2C23%2C32%2C54%2C101%2C142%2C66%2C16%2C135%2C106%2C77%2C62%2C18%2C31%2C252%2C195%2C182%2C183%2C181%2C255%2C247%2C196%2C99%2C121%2C76%2C111%2C49%2C42%2C44%2C105%2C110%2C116%2C53%2C60%2C115%2C48%2C51%2C47%2C92%2C145%2C0%2C114%2C13%2C112%2C11%2C1%2C52%2C85%2C58%2C61%2C108%2C81%2C80%2C148%2C149%2C86%2C87%2C8%2C94%2C46%2C126%2C79%2C75%2C67%2C107%2C98%2C38%2C127%2C34%2C100%2C12%2C150
-  https://connect.facebook.net/en_US/fbevents.js
-  https://www.googletagmanager.com/gtag/js?id=G-5H20HTTW4N&cx=c&gtm=4e62i1
-  https://static.parastorage.com/services/wix-thunderbolt/dist/originTrials.3c681624.bundle.min.js
-  https://static.parastorage.com/unpkg/core-js-bundle@3.2.1/minified.js
-  https://static.parastorage.com/unpkg/focus-within-polyfill@5.0.9/dist/focus-within-polyfill.js
-  https://www.googletagmanager.com/gtag/js?id=AW-935607345
-  https://googleads.g.doubleclick.net/pagead/viewthroughconversion/935607345/?random=1771637562024&cv=11&fst=1771637562024&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be62i1v9180259474za200zd9180259474xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&frm=0&tiba=Double%20Bay%20Doctors&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=326144456.1771637562&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&data=event%3Dgtag.config&rfmt=3&fmt=4
-  https://static.parastorage.com/unpkg/requirejs-bolt@2.3.6/requirejs.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap.5e35e013.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap-classic.091e440e.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[DropDownMenu_SolidColorMenuButtonSkin].f4b96cb5.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[StylableButton_Default].bb7aff42.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SearchBox].81690a07.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[DropDownMenu_OverlineMenuButtonSkin].c274ad1b.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[Container_DefaultAreaSkin].2353971d.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[FooterContainer_BevelScreen].dab4b402.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[AppWidget_Classic].92255d46.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[MeshGroup].ed33e0e4.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SkipToContentButton].8b0178bf.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[Masonry].202de494.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[ClassicSection].7122231e.bundle.min.js
-  https://static.parastorage.com/services/profile-card-tpa-ooi/1.2887.0/ProfileCardViewerWidgetNoCss.bundle.min.js
-  https://www.googletagmanager.com/gtag/js?id=G-5H20HTTW4N
-  blob:https://www.doublebaydoctors.com/a845989a-b587-489c-947d-922509312185
-  blob:https://www.doublebaydoctors.com/da83feaa-034d-4d18-9dfd-de18d255e4d1
-  https://googleads.g.doubleclick.net/pagead/viewthroughconversion/935607345/?random=1771637563996&cv=11&fst=1771637563996&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be62i1v9180259474za200zd9180259474xec&gcd=13t3t3t3t5l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&tiba=Double%20Bay%20Doctors&frm=0&userId=08044ab4-e32b-4484-bd98-94e4f35d4801&did=dYzMzMD&gdid=dYzMzMD&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=326144456.1771637562&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&data=event%3Dpage_view%3Bpage_path%3D%2F&rfmt=3&fmt=4
-  https://browser.sentry-cdn.com/7.120.3/modulemetadata.es5.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/thunderbolt-commons.5cfa998a.bundle.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/main.1cfc9c2c.bundle.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.f600e767.bundle.min.js
-  https://static.parastorage.com/unpkg/lodash@4.17.21/lodash.min.js
-  https://static.parastorage.com/unpkg/react@18.3.1/umd/react.production.min.js
-  https://static.parastorage.com/unpkg/react-dom@18.3.1/umd/react-dom.production.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/browser-deprecation.bundle.es5.js
-  https://static.parastorage.com/services/tag-manager-client/1.1028.0/siteTags.bundle.min.js
+  /files/templateArtifacts.js?1761517539
+  //cdn2.editmysite.com/js/wsnbn/snowday262.js
+  https://ssl.google-analytics.com/ga.js
+  https://cdn2.editmysite.com/js/jquery-1.8.3.min.js
+  //cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1760628286&
+  //cdn2.editmysite.com/js/site/main.js?buildTime=1760628286
+  //cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1760628286&
+  /files/theme/plugins.js?1531150540
+  /files/theme/custom.js?1531150540
+  /files/theme/mobile.js?1531150540
+  //cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1760628286
 
 ══════════════════════════════════════════════════════════════════════
   🖼️ IFRAME SRC URLs
 ══════════════════════════════════════════════════════════════════════
-  https://static.parastorage.com/services/santa/1.13152.0/node_modules/@wix/santa-galleries/target/Masonry/Masonry.html?compId=comp-mec3qzsx&deviceType=desktop&locale=en&viewMode=site
+  (none)
 
 ══════════════════════════════════════════════════════════════════════
   🏷️ META TAGS (name, property, content)
 ══════════════════════════════════════════════════════════════════════
-  
-  name=viewport | content=width=device-width, initial-scale=1
-  content=IE=edge
-  name=generator | content=Wix.com Website Builder
-  name=format-detection | content=telephone=no
-  name=skype_toolbar | content=skype_toolbar_parser_compatible
-  content=517a07cf-ac97-470c-ba3e-e60b4d4eba0a
-  content=018382b4-10c8-4512-9e0b-fb81af19dfe8
-  content=5128
-  content=bug
-  name=description | content=Double Bay Doctors offers a comprehensive family-centred medical service with experienced practitioners that care for you and your family.
-  property=og:title | content=Double Bay Doctors 
-  property=og:description | content=Double Bay Doctors offers a comprehensive family-centred medical service with experienced practitioners that care for you and your family.
-  property=og:url | content=https://www.doublebaydoctors.com
-  property=og:site_name | content=Double Bay Doctors
-  property=og:type | content=website
-  name=facebook-domain-verification | content=ivjshem930vykmf86uf3j0nkpycpnc
-  name=google-site-verification | content=dHDT4G0xOIOdP0mKa7YqXgyHWBK1gOLxryRwfbM71yc
-  name=twitter:card | content=summary_large_image
-  name=twitter:title | content=Double Bay Doctors 
-  name=twitter:description | content=Double Bay Doctors offers a comprehensive family-centred medical service with experienced practitioners that care for you and your family.
-  content=A/VAet/bEjA4ln7DXeiHQE7cBUrzS4f9Qz45yc8fguKgPEio2/c/rEzqRnIPfbgp49o+M2MFkhRKy9Z7LKGPowUAAACLeyJvcmlnaW4iOiJodHRwczovL3N0YXRpYy5wYXJhc3RvcmFnZS5jb206NDQzIiwiZmVhdHVyZSI6IlByZXJlbmRlclVudGlsU2NyaXB0IiwiZXhwaXJ5IjoxNzg4ODI1NjAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==
+  property=og:site_name | content=Talk It Up Speech Pathology
+  property=og:title | content=Talk It Up Speech Pathology
+  property=og:description | content=Talk It Up Speech Pathologist Emma Tyrrell. Private Speech Pathologist. 130 MacKenzie St West, Golden Square. Providing specialist assessment and treatment in communication and swallowing.
+  property=og:image | content=https://www.talkitupbendigo.com/uploads/9/2/3/0/9230733/logo-mini_orig.png
+  property=og:image | content=https://www.talkitupbendigo.com/uploads/9/2/3/0/9230733/logo-1-green-with-pink-a-horizontal-1.png
+  property=og:url | content=https://www.talkitupbendigo.com/
+  name=description | content=Talk It Up Speech Pathologist Emma Tyrrell. Private Speech Pathologist. 130 MacKenzie St West, Golden Square. Providing specialist assessment and treatment in communication and swallowing.
+  name=keywords | content=speech, pathologist, emma, tyrrell, bendigo, private, practice, autism, pathology, autism, ASD, NDIS, therapist, talk, it, up
+  content=text/html; charset=utf-8
+  name=viewport | content=width=device-width, initial-scale=1.0
 
 ══════════════════════════════════════════════════════════════════════
   📋 JSON-LD BLOCKS (raw)
 ══════════════════════════════════════════════════════════════════════
-
-  --- Block 1 ---
-{"@context":"https://schema.org/","@type":"WebSite","url":"https://www.doublebaydoctors.com/","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.doublebaydoctors.com/search?q={search_term}"},"query-input":"required name=search_term"}}
-
-  --- Block 2 ---
-{"@context":"https://schema.org/","@type":"LocalBusiness","name":"Double Bay Doctors","url":"https://www.doublebaydoctors.com","image":"https://static.wixstatic.com/media/b948b8_86f94cc134ca4932b5c12d9e3f0f9780~mv2.png","address":{"@type":"PostalAddress","addressCountry":"AU","addressLocality":"Double Bay","addressRegion":"NSW","postalCode":"2028","streetAddress":"422 New South Head Road"},"telephone":"02 9328 3100"}
-
-  --- Block 3 ---
-{"@context":"https://schema.org/","@type":"WebSite","name":"Double Bay Doctors","url":"https://www.doublebaydoctors.com"}
+  (none)
 
 ══════════════════════════════════════════════════════════════════════
   🤖 ROBOTS.TXT (raw)
 ══════════════════════════════════════════════════════════════════════
-User-agent: *
-Allow: /
-Disallow: *?lightbox=
+Sitemap: https://www.talkitupbendigo.com/sitemap.xml
 
-# Optimization for Google Ads Bot
-User-agent: AdsBot-Google-Mobile
-User-agent: AdsBot-Google
-Disallow: /_partials*
-Disallow: /pro-gallery-webapp/v1/galleries/*
-
-# Block PetalBot
-User-agent: PetalBot
+User-agent: NerdyBot
 Disallow: /
 
-# Crawl delay for overly enthusiastic bots
 User-agent: dotbot
 Crawl-delay: 10
-User-agent: AhrefsBot
-Crawl-delay: 10
 
-Sitemap: https://www.doublebaydoctors.com/sitemap.xml
+User-agent: *
+Disallow: /ajax/
+Disallow: /apps/
 
-# Auto generated, go to SEO Tools > Robots.txt Editor to change this
 
 ══════════════════════════════════════════════════════════════════════
   📝 VISIBLE PAGE TEXT (body)
 ══════════════════════════════════════════════════════════════════════
-Skip to Main Content
-Fertility advice
+HOME ABOUT FOR FAMILIES CONTACT DETAILS WAITLIST/NURSING HOME REFERRALS POSITIONS VACANT MORE... 
 
-HOME
+Welcome to the Talk It Up Speech Pathology
+​
+Choosing a healthcare provider is one of the most important decisions you can make. You want someone who is caring, knowledgeable and accessible. We will take the time to go over all of your options and treat you as a person, not just a patient.
 
-BOOK ONLINE
+At Talk It Up Speech Pathology, we pride ourselves on our client service and professionalism. We offer a knowledgeable staff, safe and proven procedures within a friendly environment.
 
-NEW PATIENTS
+This website is for both new and current clients. It includes specific information on the practice and about our speech pathologists, along with general speech pathology information and links.
 
-CONTACT
+We are a registered NDIS Provider for participants aged over 9 years. We are able to provide a service to  participants under 9 years if they are self managed or plan managed.
 
-SERVICES
+Address:
+130 Mackenzie St West
+Golden Square, Victoria 3555
 
-PRACTITIONERS
+Enquires:
+Reception Phone: 0438 006 445 
+Please leave a clear message with your name and phone number and we will return your call. 
 
-TEST RESULTS
+Referrals: reception@talkitupbendigo.com
+Accounts: accounts@talkitupbendigo.com
 
-FEES
+To be added to our waitlist, please fill in our online waitlist form. 
 
-not your typical doctors clinic
-CANCELLATION POLICY
-PRIVACY POLICY
-CONTACT
-CAREERS
-EMERGENCIES
+EFTPOS and HICAPS Available
+
+Office Hours:
+8:00am - 5pm Monday to Friday
+
+
+
+Acknowledgement of Country
+
+We respectfully acknowledge the Dja Dja Wurrung people, the Traditional Custodians of the land on which we meet, work, and learn in Bendigo. We pay our respects to their Elders past, present, and emerging, and extend that respect to all First Nations Peoples.
+​
+We recognise that Country is not just a place, but a living cultural and storytelling landscape—nurtured over millennia through spoken word, song, and story. As a speech pathology practice committed to supporting communication and storytelling for all, we are mindful and grateful to honour the oldest storytellers of this land, and to continue learning from their enduring connection to place, language, and expression.
 
 ══════════════════════════════════════════════════════════════════════
   🔗 ALL <a href> LINKS
 ══════════════════════════════════════════════════════════════════════
-  https://www.doublebaydoctors.com
-  https://www.doublebaydoctors.com
-  https://www.doublebaydoctors.com/book-online
-  https://www.doublebaydoctors.com/new-patients
-  https://www.doublebaydoctors.com/contact-us
-  https://www.doublebaydoctors.com/services
-  https://www.doublebaydoctors.com/practitioners
-  https://www.doublebaydoctors.com/results-and-recalls
-  https://www.doublebaydoctors.com/fees
-  https://www.doublebaydoctors.com/cancellation-policy
-  https://www.doublebaydoctors.com/privacy-policy
-  https://www.doublebaydoctors.com/contact-us
-  https://www.doublebaydoctors.com/careers
-  https://www.doublebaydoctors.com/emergencies
-  https://www.facebook.com/doublebaydoctors/
-  https://www.instagram.com/doublebaydoctors/
+  /
+  /
+  /about.html
+  /for-families.html
+  /contact-details.html
+  /waitlistnursing-home-referrals.html
+  /positions-vacant.html
+  /our-commitment-to-child-safety.html
+  #
+  tel:0438 006 445
+  mailto:accounts@talkitupbendigo.com
+  /
+  /about.html
+  /for-families.html
+  /contact-details.html
+  /waitlistnursing-home-referrals.html
+  /positions-vacant.html
+  /our-commitment-to-child-safety.html
+  /about.html
+  /our-team-2025.html
+  /our-services.html
+  /for-families.html
+  /important-information.html
+  /fees-and-insurance.html
+  /privacy.html
+  /related-links.html
+  /cancellation-policy.html
+  /faqs.html
+  /contact-details.html
+  /directions-and-maps.html
+  /waitlistnursing-home-referrals.html
+  /waitlist-signup.html
+  /nursing-home-referral.html
+  /our-team-2025.html
+  /our-services.html
+  /important-information.html
+  /fees-and-insurance.html
+  /privacy.html
+  /related-links.html
+  /cancellation-policy.html
+  /faqs.html
+  /directions-and-maps.html
+  /waitlist-signup.html
+  /nursing-home-referral.html
+  /our-commitment-to-child-safety.html
 
 ══════════════════════════════════════════════════════════════════════
   📞 TEL: AND MAILTO: LINKS
 ══════════════════════════════════════════════════════════════════════
-  (none)
+  tel:0438 006 445
+  mailto:accounts@talkitupbendigo.com
 
 ══════════════════════════════════════════════════════════════════════
   📄 /contact PAGE
 ══════════════════════════════════════════════════════════════════════
 
-  URL: https://www.doublebaydoctors.com/contact
+  URL: http://www.talkitupbendigo.com/contact
 
   --- HTML (first 3000 chars) ---
-<!DOCTYPE html><html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex">
-    <title>404 Error: Page Not Found</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><script src="/gdpr/gdprscript.js?buildTime=1771974631"></script>
+	<title>404 - Page Not Found</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="robots" content="noarchive">
+	<link rel="shortcut icon" href="//cdn1.editmysite.com/developer/none.ico">
 
-    
-    <script async="" src="https://static.parastorage.com/polyfill/v2/polyfill.min.js?features=default,es6,es7,es2017&amp;flags=gated&amp;unknown=polyfill&amp;rum=0"></script>
-    <script src="https://static.parastorage.com/unpkg-semver/fedops-logger@5/fedops-logger.bundle.min.js"></script>
-    <script>fedopsLogger.reportAppLoadStarted("classic-error-pages-statics");</script>
-    <script src="https://static.parastorage.com/unpkg-semver/header-footer-provider/app.bundle.min.js"></script>
-    <script crossorigin="" src="https://static.parastorage.com/unpkg/react@18.2.0/umd/react.production.min.js"></script>
-    <script crossorigin="" src="https://static.parastorage.com/unpkg/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+	<style type="text/css">
+		@font-face {
+			font-family: 'Proxima Nova';
+			font-weight: 300;
+			src: url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-light/31AC96_0_0.eot");
+			src: url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-light/31AC96_0_0.eot?#iefix") format("embedded-opentype"), url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-light/31AC96_0_0.woff") format("woff"), url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-light/31AC96_0_0.ttf") format("truetype");
+		}
 
-    <link rel="stylesheet" href="//static.parastorage.com/services/classic-error-pages-statics/1.84.0/app.min.css">
+		@font-face {
+			font-family: 'Proxima Nova';
+			src: url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-regular/31AC96_1_0.eot");
+			src: url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-regular/31AC96_1_0eot?#iefix") format("embedded-opentype"), url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-regular/31AC96_1_0.woff") format("woff"), url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-regular/31AC96_1_0.ttf") format("truetype");
+		}
 
-    <link rel="preload" as="font" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforTextVF_W_Wght.8022447a.woff2" crossorigin="">
-    <link rel="preload" as="font" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforDisplayVF_W_Wght.ab35e4df.woff2" crossorigin="">
-    <link rel="stylesheet" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madefor.min.css">
-    <link rel="stylesheet" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madeforDisplay.min.css">
+		@font-face {
+			font-family: 'Proxima Nova';
+			font-weight: 500;
+			src: url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-semibold/31AC96_2_0.eot");
+			src: url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-semibold/31AC96_2_0.eot?#iefix") format("embedded-opentype"), url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-semibold/31AC96_2_0.woff") format("woff"), url("//cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-semibold/31AC96_2_0.ttf") format("truetype");
+		}
 
-</head>
-<body>
-<div id="root"><div class="ECJ82r" data-hook="root"><div class="foBJFG ohOhpx" data-hook="error-app"><div class="yVYGS4 xCL0HT" data-hook="error-layout"><h2 class="OI1Le8">ERROR: PAGE NOT FOUND</h2><h1 class="ivF5iX" data-hook="error-code">404</h1><div class="ZIfBpV" data-hook="error-description"><div>This page isn’t available.</div></div><a href="//www.doublebaydoctors.com" data-hook="error-button"><button class="jjAW4i GGC4dV">Go to Homepage</button></a></div></div></div></div>
-<script>
-    window.__LOCALE__ = 'en';
-    window.__ERROR_DATA__ = {
-        staticsUrl: '//static.parastorage.com/services/classic-error-pages-statics/1.84.0/',
-        baseDomain: 'wix.com',
-        errorCode: '404-NotBranded',
-        exceptionName: '',
-        serverErrorCode: '-100',
-        data: {},
-        brand: 'wix',
-        requestId: '1771634567.61950579395254440692'
-    };
-</script>
-<script src="//static.parastorage.com/services/classic-error-pages-statics/1.84.0/app.bundle.min.js"></script>
+		body {
+			background-color: #F8F8F8;
+			font-family: 'Proxima Nova';
+		}
 
+		hr {
+			border: 1px solid #E7E7E7;
+			border-top: 0;
+		}
 
-</body></html>
+		.warning-container {
+			padding: 38px 40px;
+			padding-bottom: 0;
+			box-sizing: border-box;
+			text-align: center;
+			background-color: white;
+			border: 1px solid #D4D4D4;
+			height: 335px;
+			width: 484px;
+			margin: 0 auto;
+			margin-top: 10%;
+			-webkit-box-shadow: 0px 0px 41px -8px rgba(237,234,237,1);
+			-moz-box-shadow: 0px 0px 41px -8px rgba(237,234,237,1);
+			box-shadow: 0px 0px 41px -8px rgba(237,234,237,1);
+		}
+
+		.header {
+			margin: 26px 0 0 0;
+			color: #363B3E;
+			font-size: 45px;
+			font-weight: 500;
+		}
+
+		.error {
+			margin: 0 0 0 0;
+			color: #9BA0A3;
+			margin-bottom: 35px;
+		}
+
+		.check-url, .otherwise {
+			color: #666C70;
+		}
+
+		.check-url {
+			margin-top: 0;
+			font-wei
+
+  ... [6,015 total chars]
 
   --- Visible text ---
-ERROR: PAGE NOT FOUND
 404
-This page isn’t available.
-Go to Homepage
+
+Error - Page Not Found
+
+Please check the URL.
+
+Otherwise, click here to be redirected to the homepage.
+
+This site uses cookies to personalize your experience, analyze site usage, and offer tailored promotions. www.youronlinechoices.eu I accept
 
 ══════════════════════════════════════════════════════════════════════
   📄 /about PAGE
 ══════════════════════════════════════════════════════════════════════
 
-  URL: https://www.doublebaydoctors.com/about
+  URL: http://www.talkitupbendigo.com/about
 
   --- HTML (first 3000 chars) ---
-<!DOCTYPE html><html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex">
-    <title>404 Error: Page Not Found</title>
+<!DOCTYPE html><html lang="en"><head>
+		<title>about - Talk It Up Speech Pathology</title><meta property="og:site_name" content="Talk It Up Speech Pathology">
+<meta property="og:title" content="about">
+<meta property="og:description" content="Talk It Up Speech Pathology Emma Tyrrell, Bendigo speech pathologist in private practice">
+<meta property="og:image" content="https://www.talkitupbendigo.com/uploads/9/2/3/0/9230733/logo-mini_orig.png">
+<meta property="og:image" content="https://www.talkitupbendigo.com/uploads/9/2/3/0/9230733/logo-1-green-with-pink-a-horizontal-1.png">
+<meta property="og:url" content="https://www.talkitupbendigo.com/about.html">
 
-    
-    <script async="" src="https://static.parastorage.com/polyfill/v2/polyfill.min.js?features=default,es6,es7,es2017&amp;flags=gated&amp;unknown=polyfill&amp;rum=0"></script>
-    <script src="https://static.parastorage.com/unpkg-semver/fedops-logger@5/fedops-logger.bundle.min.js"></script>
-    <script>fedopsLogger.reportAppLoadStarted("classic-error-pages-statics");</script>
-    <script src="https://static.parastorage.com/unpkg-semver/header-footer-provider/app.bundle.min.js"></script>
-    <script crossorigin="" src="https://static.parastorage.com/unpkg/react@18.2.0/umd/react.production.min.js"></script>
-    <script crossorigin="" src="https://static.parastorage.com/unpkg/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+<meta name="description" content="Talk It Up Speech Pathology Emma Tyrrell, Bendigo speech pathologist in private practice">
+<meta name="keywords" content="speech, pathologist, emma, tyrrell, bendigo, private, practice, autism,">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="//static.parastorage.com/services/classic-error-pages-statics/1.84.0/app.min.css">
+		
+		<link id="wsite-base-style" rel="stylesheet" type="text/css" href="//cdn2.editmysite.com/css/sites.css?buildTime=1760628286">
+<link rel="stylesheet" type="text/css" href="//cdn2.editmysite.com/css/old/fancybox.css?1760628286">
+<link rel="stylesheet" type="text/css" href="//cdn2.editmysite.com/css/social-icons.css?buildtime=1760628286" media="screen,projection">
+<link rel="stylesheet" type="text/css" href="/files/main_style.css?1761517539" title="wsite-theme-css">
+<link href="//cdn2.editmysite.com/fonts/Raleway/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Lora/font.css?2" rel="stylesheet" type="text/css">
 
-    <link rel="preload" as="font" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforTextVF_W_Wght.8022447a.woff2" crossorigin="">
-    <link rel="preload" as="font" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforDisplayVF_W_Wght.ab35e4df.woff2" crossorigin="">
-    <link rel="stylesheet" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madefor.min.css">
-    <link rel="stylesheet" href="https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madeforDisplay.min.css">
+<link href="//cdn2.editmysite.com/fonts/Lato/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Lato/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Saginaw/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Montserrat/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Lato/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Montserrat/font.css?2" rel="stylesheet" type="text/css">
+<link href="//cdn2.editmysite.com/fonts/Raleway/font.css?2" rel="stylesheet" type="text/css">
+<style type="text/css">
+.wsite-elements.wsite-not-footer:not(.wsite-header-elements) div.paragraph, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) p, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-block .product-title, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .product-description, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, .wsite-elements.wsite-not-footer:not(.wsite-header-elements) .wsite-form-field label, #wsite-content div.paragraph, #wsite-content p, #wsite-content .product-block .product-title, #wsite-content .product-description, #wsite-conten
 
-</head>
-<body>
-<div id="root"><div class="ECJ82r" data-hook="root"><div class="foBJFG ohOhpx" data-hook="error-app"><div class="yVYGS4 xCL0HT" data-hook="error-layout"><h2 class="OI1Le8">ERROR: PAGE NOT FOUND</h2><h1 class="ivF5iX" data-hook="error-code">404</h1><div class="ZIfBpV" data-hook="error-description"><div>This page isn’t available.</div></div><a href="//www.doublebaydoctors.com" data-hook="error-button"><button class="jjAW4i GGC4dV">Go to Homepage</button></a></div></div></div></div>
-<script>
-    window.__LOCALE__ = 'en';
-    window.__ERROR_DATA__ = {
-        staticsUrl: '//static.parastorage.com/services/classic-error-pages-statics/1.84.0/',
-        baseDomain: 'wix.com',
-        errorCode: '404-NotBranded',
-        exceptionName: '',
-        serverErrorCode: '-100',
-        data: {},
-        brand: 'wix',
-        requestId: '1771634892.057505824908512506142'
-    };
-</script>
-<script src="//static.parastorage.com/services/classic-error-pages-statics/1.84.0/app.bundle.min.js"></script>
-
-
-</body></html>
+  ... [40,325 total chars]
 
   --- Visible text ---
-ERROR: PAGE NOT FOUND
-404
-This page isn’t available.
-Go to Homepage
+HOME ABOUT FOR FAMILIES CONTACT DETAILS WAITLIST/NURSING HOME REFERRALS POSITIONS VACANT MORE... 
+All of our clinical staff are Certified Practicing Speech Pathologists and are members of our professional association, Speech Pathology Australia. They hold current Police Checks, Working With Children Checks, Disability Worker Exclusion Scheme Checks.
+
+
+
+Acknowledgement of Country
+
+We respectfully acknowledge the Dja Dja Wurrung people, the Traditional Custodians of the land on which we meet, work, and learn in Bendigo. We pay our respects to their Elders past, present, and emerging, and extend that respect to all First Nations Peoples.
+​
+We recognise that Country is not just a place, but a living cultural and storytelling landscape—nurtured over millennia through spoken word, song, and story. As a speech pathology practice committed to supporting communication and storytelling for all, we are mindful and grateful to honour the oldest storytellers of this land, and to continue learning from their enduring connection to place, language, and expression.
 
 ══════════════════════════════════════════════════════════════════════
   🌐 ALL OUTGOING NETWORK REQUESTS
 ══════════════════════════════════════════════════════════════════════
-  https://www.doublebaydoctors.com/
-  https://static.parastorage.com/services/wix-thunderbolt/dist/originTrials.3c681624.bundle.min.js
-  https://www.googletagmanager.com/gtag/js?id=AW-935607345
-  https://static.parastorage.com/fonts/v2/af36905f-3c92-4ef9-b0c1-f91432f16ac1/v1/avenir-lt-w01_35-light1475496.woff2
-  https://static.wixstatic.com/media/b948b8_60fccc893ead4a2e9a8b2fd61e5d9246~mv2.png/v1/fill/w_220,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/DBD_logo-01.png
-  https://static.wixstatic.com/media/b948b8_24a0ba991d194fe0a38b34d06cd15a05~mv2_d_4582_3053_s_4_2.jpg/v1/fill/w_127,h_84,al_c,q_80,usm_0.66_1.00_0.01,blur_2,enc_avif,quality_auto/b948b8_24a0ba991d194fe0a38b34d06cd15a05~mv2_d_4582_3053_s_4_2.jpg
-  https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ce6ec7c11b174c0581e20f42bb865ce3.png
-  https://static.wixstatic.com/media/fdcfaba150fc427da298a00cb09d91c1.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fdcfaba150fc427da298a00cb09d91c1.png
-  https://frog.wix.com/bolt-performance?src=72&evid=21&appName=thunderbolt&is_rollout=0&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=oregon-usercode&microPop=fastly_grad&is_cached=true&msid=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&session_id=5038e22a-e314-445e-8709-63fad132229d&ish=true&isb=true&isbr=webdriver&vsi=2bb776bf-cee1-40b5-99ad-7c5de9c86bbc&caching=hit,hit_hit&pv=visible&pn=1&v=1.16889.0&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&st=2&ts=65&tsn=295&platformOnSite=true&hasInitialZoom=false&mpaSessionId=12e5cb41-5a86-4a13-9545-910028dfd129
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.VerticalMenu_uiType_NativeMapper%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dom_store%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.imageEncodingAVIF%2C.isClassNameToRootEnabled%2C.motionTimeAnimationsCSS%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.removeDynamicModelTopologyFromSiteAssets%2C.shouldUseResponsiveImages%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Desktop&dfCk=6&dfVersion=1.5286.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.doublebaydoctors.com&fileId=427f9587.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=false&isPremiumDomain=true&isTrackClicksAnalyticsEnabled=false&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=true&language=en&languageResolutionMethod=QueryParam&metaSiteId=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&module=thunderbolt-features&oneDocEnabled=true&originalLanguage=en&pageId=b948b8_f37f71fe4815cb73014d5fa99dacee37_5128.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=018382b4-10c8-4512-9e0b-fb81af19dfe8&siteRevision=5128&staticHTMLComponentUrl=https%3A%2F%2Fwww-doublebaydoctors-com.filesusr.com%2F&useSandboxInHTMLComp=false&viewMode=desktop
-  https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.VerticalMenu_uiType_NativeMapper%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dom_store%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.imageEncodingAVIF%2C.isClassNameToRootEnabled%2C.motionTimeAnimationsCSS%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.removeDynamicModelTopologyFromSiteAssets%2C.shouldUseResponsiveImages%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Desktop&dfCk=6&dfVersion=1.5286.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.doublebaydoctors.com&fileId=427f9587.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=false&isPremiumDomain=true&isTrackClicksAnalyticsEnabled=false&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=en&languageResolutionMethod=QueryParam&metaSiteId=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&module=thunderbolt-features&oneDocEnabled=true&originalLanguage=en&pageId=b948b8_d26cc4d2f221bb4d0512ca0c7b03c33a_5116.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=018382b4-10c8-4512-9e0b-fb81af19dfe8&siteRevision=5128&staticHTMLComponentUrl=https%3A%2F%2Fwww-doublebaydoctors-com.filesusr.com%2F&useSandboxInHTMLComp=false&viewMode=desktop
-  https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5286.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.doublebaydoctors.com&fileId=9e8e114d.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=true&language=en&metaSiteId=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=en&pageId=b948b8_f37f71fe4815cb73014d5fa99dacee37_5128.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=018382b4-10c8-4512-9e0b-fb81af19dfe8&siteRevision=5128&staticHTMLComponentUrl=https%3A%2F%2Fwww-doublebaydoctors-com.filesusr.com%2F&viewMode=desktop
-  https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5286.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.doublebaydoctors.com&fileId=9e8e114d.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=en&metaSiteId=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=en&pageId=b948b8_d26cc4d2f221bb4d0512ca0c7b03c33a_5116.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=018382b4-10c8-4512-9e0b-fb81af19dfe8&siteRevision=5128&staticHTMLComponentUrl=https%3A%2F%2Fwww-doublebaydoctors-com.filesusr.com%2F&viewMode=desktop
-  https://static.wixstatic.com/ufonts/b948b8_c60100953f2f4fb6a27bb28769615c42/woff2/file.woff2
-  https://browser.sentry-cdn.com/7.120.3/modulemetadata.es5.min.js
-  https://static.parastorage.com/services/santa/1.13152.0/node_modules/@wix/santa-galleries/target/Masonry/Masonry.html?compId=comp-mec3qzsx&deviceType=desktop&locale=en&viewMode=site
-  https://www.doublebaydoctors.com/_partials/wix-thunderbolt/dist/clientWorker.54ace832.bundle.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/thunderbolt-commons.5cfa998a.bundle.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/main.1cfc9c2c.bundle.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/main.renderer.f600e767.bundle.min.js
-  https://static.parastorage.com/unpkg/lodash@4.17.21/lodash.min.js
-  https://static.parastorage.com/unpkg/react@18.3.1/umd/react.production.min.js
-  https://static.parastorage.com/unpkg/react-dom@18.3.1/umd/react-dom.production.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/browser-deprecation.bundle.es5.js
-  https://static.parastorage.com/services/tag-manager-client/1.1028.0/siteTags.bundle.min.js
-  https://static.wixstatic.com/media/b948b8_24a0ba991d194fe0a38b34d06cd15a05~mv2_d_4582_3053_s_4_2.jpg/v1/fill/w_1280,h_562,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b948b8_24a0ba991d194fe0a38b34d06cd15a05~mv2_d_4582_3053_s_4_2.jpg
-  https://static.parastorage.com/services/third-party/jquery/1.10.2/dist/jquery.min.js
-  https://static.parastorage.com/services/third-party/lodash/2.4.1/dist/lodash.min.js
-  https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js
-  https://static.parastorage.com/services/santa/1.13152.0/node_modules/@wix/santa-galleries/lib/js/utils.js
-  https://static.parastorage.com/services/santa/1.13152.0/node_modules/@wix/santa-galleries/lib/js/app.proto.js
-  https://static.parastorage.com/services/js-sdk/1.44.0/js/wix.min.js
-  https://static.parastorage.com/services/santa/1.13152.0/node_modules/@wix/santa-galleries/target/Masonry/css/style.min.css
-  https://static.parastorage.com/services/santa/1.13152.0/node_modules/@wix/santa-galleries/target/Masonry/js/app.min.js
-  https://frog.wix.com/bolt-performance?src=72&evid=28&appName=thunderbolt&is_rollout=0&is_company_network=false&is_sav_rollout=0&is_dac_rollout=0&dc=oregon-usercode&microPop=fastly_grad&is_cached=true&msid=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&session_id=5038e22a-e314-445e-8709-63fad132229d&ish=true&isb=true&isbr=webdriver&vsi=2bb776bf-cee1-40b5-99ad-7c5de9c86bbc&caching=hit,hit_hit&pv=visible&pn=1&v=1.16889.0&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&st=2&ts=65&tsn=295&name=partially_visible&duration=1771637561949&pageId=oqjq6&isSuccessfulSSR=true
-  https://googleads.g.doubleclick.net/pagead/viewthroughconversion/935607345/?random=1771637562024&cv=11&fst=1771637562024&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be62i1v9180259474za200zd9180259474xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&frm=0&tiba=Double%20Bay%20Doctors&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=326144456.1771637562&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&data=event%3Dgtag.config&rfmt=3&fmt=4
-  https://www.google.com/ccm/collect?frm=0&en=page_view&dl=https%3A%2F%2Fwww.doublebaydoctors.com%2F&scrsrc=www.googletagmanager.com&rnd=1761551681.1771637562&dt=Double%20Bay%20Doctors&auid=326144456.1771637562&navt=n&npa=0&gtm=45be62i1v9180259474za200zd9180259474xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&apve=1&apvf=f&apvc=1&tids=AW-935607345&tid=AW-935607345&tft=1771637562035&tfd=503
-  https://www.googletagmanager.com/static/service_worker/6240/sw_iframe.html?origin=https%3A%2F%2Fwww.doublebaydoctors.com
-  https://static.parastorage.com/services/wix-thunderbolt/dist/8338.cde7648b.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/thunderbolt-components-registry.174af3c5.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_2.c2783099.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/assetsLoader.c3153d4a.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_3.2afa254d.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/businessLogger.b94ccd34.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/componentsLoader.f9e1f624.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/consentPolicy.1387b1ee.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/domSelectors.8eb533e2.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_7.f63f20b4.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/ooi.0f45b1e4.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/renderer.d7853531.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_4.82359388.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/router.86e596a8.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/stores.7c7bd98d.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/usedPlatformApis.e6c4d27d.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/accessibility.50a13acc.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/appMonitoring.88a16f37.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_5.8de4053f.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_44.c918ab20.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/contentReflow.e425d9d6.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/cyclicTabbing.f10751c5.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/quickActionBar.2339844f.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/domStore.6c7ba3bf.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_38.533bf999.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/dynamicPages.d7fc0274.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/environmentWixCodeSdk.03d6f1d5.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/environment.5c057c2b.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/tslib.inline.79623d43.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/mpaNavigation.75d877bf.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/panorama.32e5a33e.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_19.9a541ee8.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/passwordProtectedPage.f3c56884.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/protectedPages.56f2f1ba.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/routerFetch.67b312bb.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_6.0a329fcc.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/seo.e72fcc34.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/siteMembers.5805aeba.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_9.087f92d6.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/siteScrollBlocker.4ed9f98f.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/speculationRules.c7fe8d1b.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/ssrCache.e89c9b2b.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_22.3f9c0502.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/platform.d555c6e9.chunk.min.js
-  https://static.parastorage.com/unpkg/lodash@4.17.21/lodash.min.js
-  https://www.google.com/pagead/1p-user-list/935607345/?random=1771637562024&cv=11&fst=1771635600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be62i1v9180259474za200zd9180259474xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&frm=0&tiba=Double%20Bay%20Doctors&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=326144456.1771637562&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&data=event%3Dgtag.config&rfmt=3&fmt=3&is_vtc=1&cid=CAQSiwEA56J1eYFLQS1lQXfoX-DYVWKvNzymSOrr_PKvJhjxrpr5J7KNKrJYc1g46Hto3ie6XY8OPLO6bYvnvL_cM4Z9Xk6Wpl8Kfdv1tOwpnNkCrXD9HT1WYxqhZcyUzbyyw9dSx8ZZbaoj_wK5E-N_wb1spo-v3kQ_aDycwWPHDomSyfIL1zDuzSdYyuPR&random=2661075833&rmt_tld=0&ipr=y
-  https://www.google.com.vn/pagead/1p-user-list/935607345/?random=1771637562024&cv=11&fst=1771635600000&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be62i1v9180259474za200zd9180259474xec&gcd=13l3l3l3l1l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&frm=0&tiba=Double%20Bay%20Doctors&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=326144456.1771637562&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&data=event%3Dgtag.config&rfmt=3&fmt=3&is_vtc=1&cid=CAQSiwEA56J1eYFLQS1lQXfoX-DYVWKvNzymSOrr_PKvJhjxrpr5J7KNKrJYc1g46Hto3ie6XY8OPLO6bYvnvL_cM4Z9Xk6Wpl8Kfdv1tOwpnNkCrXD9HT1WYxqhZcyUzbyyw9dSx8ZZbaoj_wK5E-N_wb1spo-v3kQ_aDycwWPHDomSyfIL1zDuzSdYyuPR&random=2661075833&rmt_tld=1&ipr=y
-  https://static.parastorage.com/services/wix-thunderbolt/dist/mainSdks.a2d9d768.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/nonMainSdks.36ac5409.chunk.min.js
-  https://static.parastorage.com/services/profile-card-tpa-ooi/1.2887.0/viewerScript.bundle.min.js
-  https://static.parastorage.com/services/profile-card-tpa-ooi/1.2887.0/ProfileCardController.bundle.min.js
-  https://static.parastorage.com/services/dbsm-viewer-app/1.9021.0/app.js
-  https://static.parastorage.com/services/search-app/1.3958.0/viewerScript.bundle.min.js
-  https://static.parastorage.com/services/santa-members-viewer-app/1.2819.0/viewerScript.bundle.min.js
-  https://static.parastorage.com/services/wix-code-viewer-app/1.1479.745/app.js
-  https://www.doublebaydoctors.com/_api/v1/access-tokens
-  https://frog.wix.com/
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://frog.wix.com/site-members?_msid=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&vsi=2bb776bf-cee1-40b5-99ad-7c5de9c86bbc&_av=thunderbolt-1.16889.0&isb=true&isbr=webdriver&_brandId=wix&_siteBranchId=undefined&_ms=964&_isHeadless=undefined&_hostingPlatform=VIEWER&_lv=2.0.985%7CC&_visitorId=08044ab4-e32b-4484-bd98-94e4f35d4801&_siteMemberId=undefined&bsi=6b4e72a0-17a0-440d-b145-662d9e445b00%7C1&src=5&evid=698&biToken=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&context=undefined&ts=735&viewmode=undefined&visitor_id=08044ab4-e32b-4484-bd98-94e4f35d4801&site_member_id=undefined&site_settings_lng=en&browser_lng=en&lng_mismatch=false&layout=undefined&_isca=1&_iscf=1&_ispd=0&_ise=0&_=17716375624960
-  https://frog.wix.com/bolt-performance?_msid=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&vsi=2bb776bf-cee1-40b5-99ad-7c5de9c86bbc&_av=thunderbolt-1.16889.0&isb=true&isbr=webdriver&_brandId=wix&_siteBranchId=undefined&_ms=966&_isHeadless=undefined&_hostingPlatform=VIEWER&_lv=2.0.985%7CC&_visitorId=08044ab4-e32b-4484-bd98-94e4f35d4801&_siteMemberId=undefined&bsi=6b4e72a0-17a0-440d-b145-662d9e445b00%7C1&src=72&evid=19&isEligible=true&_isca=1&_iscf=1&_ispd=0&_ise=0&_=17716375624981
-  https://static.parastorage.com/services/wix-thunderbolt/dist/reporter-api.ddfdba50.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_0.7d73ac98.chunk.min.js
-  https://www.doublebaydoctors.com/_api/tag-manager/api/v1/tags/sites/517a07cf-ac97-470c-ba3e-e60b4d4eba0a?wixSite=false&htmlsiteId=018382b4-10c8-4512-9e0b-fb81af19dfe8&language=en&partytown=false
-  https://static.parastorage.com/services/editor-elements/1.14912.0/rb_wixui.thunderbolt.manifest.min.json
-  https://static.parastorage.com/services/editor-elements/1.14912.0/rb_dsgnsys.thunderbolt.manifest.min.json
-  https://static.parastorage.com/services/editor-elements/1.14912.0/rb_wixui.corvid.manifest.min.json
-  https://static.parastorage.com/services/editor-elements/1.14912.0/rb_dsgnsys.corvid.manifest.min.json
-  https://static.parastorage.com/unpkg/requirejs-bolt@2.3.6/requirejs.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_27.dcf624a4.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_14.ac391de9.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/animationsWixCodeSdk.f9642416.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/993.6a1dadc0.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/environmentService.73f1ef44.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/imagePlaceholder.2980857a.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_23.ad805b6d.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_41.2f6d8749.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_28.a74cf8a9.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/mobileFullScreen.fd421ddc.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/6315.baf905ef.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/motion.fdf55479.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/9519.d9c1c680.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/ooiTpaSharedConfig.7c4a1a1f.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_24.8067b0ee.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/pageAnchors.4466d2a9.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/platformPubsub.362e28a1.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/scrollToAnchor.c14886bc.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_11.3ca3e726.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_32.34524135.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/svgLoader.386f8159.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/group_8.05e3b319.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/tpa.d6e58e65.chunk.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap.5e35e013.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt_bootstrap-classic.091e440e.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[DropDownMenu_SolidColorMenuButtonSkin].f4b96cb5.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[StylableButton_Default].bb7aff42.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SearchBox].81690a07.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[DropDownMenu_OverlineMenuButtonSkin].c274ad1b.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[Container_DefaultAreaSkin].2353971d.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[FooterContainer_BevelScreen].dab4b402.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[AppWidget_Classic].92255d46.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[MeshGroup].ed33e0e4.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[SkipToContentButton].8b0178bf.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[Masonry].202de494.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/thunderbolt/rb_wixui.thunderbolt[ClassicSection].7122231e.bundle.min.js
-  https://static.wixstatic.com/shapes/8463f60718194af748c49dddbe45b668_svgshape.v1.HollowCircle.svg
-  https://static.parastorage.com/services/profile-card-tpa-ooi/1.2887.0/ProfileCardViewerWidgetNoCss.bundle.min.js
-  https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5286.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.doublebaydoctors.com&fileId=9e8e114d.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=en&metaSiteId=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=en&pageId=b948b8_d26cc4d2f221bb4d0512ca0c7b03c33a_5116.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=018382b4-10c8-4512-9e0b-fb81af19dfe8&siteRevision=5128&staticHTMLComponentUrl=https%3A%2F%2Fwww-doublebaydoctors-com.filesusr.com%2F&viewMode=desktop
-  https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.VerticalMenu_uiType_NativeMapper%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dom_store%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.imageEncodingAVIF%2C.isClassNameToRootEnabled%2C.motionTimeAnimationsCSS%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.removeDynamicModelTopologyFromSiteAssets%2C.shouldUseResponsiveImages%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Desktop&dfCk=6&dfVersion=1.5286.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.doublebaydoctors.com&fileId=427f9587.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=false&isPremiumDomain=true&isTrackClicksAnalyticsEnabled=false&isUrlMigrated=true&isWixCodeOnPage=true&isWixCodeOnSite=true&language=en&languageResolutionMethod=QueryParam&metaSiteId=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&module=thunderbolt-features&oneDocEnabled=true&originalLanguage=en&pageId=b948b8_d26cc4d2f221bb4d0512ca0c7b03c33a_5116.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=018382b4-10c8-4512-9e0b-fb81af19dfe8&siteRevision=5128&staticHTMLComponentUrl=https%3A%2F%2Fwww-doublebaydoctors-com.filesusr.com%2F&useSandboxInHTMLComp=false&viewMode=desktop
-  https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.isClassNameToRootEnabled%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&dfCk=6&dfVersion=1.5286.0&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.doublebaydoctors.com&fileId=9e8e114d.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isPremiumDomain=true&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=true&language=en&metaSiteId=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&module=thunderbolt-platform&oneDocEnabled=true&originalLanguage=en&pageId=b948b8_f37f71fe4815cb73014d5fa99dacee37_5128.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=018382b4-10c8-4512-9e0b-fb81af19dfe8&siteRevision=5128&staticHTMLComponentUrl=https%3A%2F%2Fwww-doublebaydoctors-com.filesusr.com%2F&viewMode=desktop
-  https://siteassets.parastorage.com/pages/pages/thunderbolt?appDefinitionIdToSiteRevision=%7B%2214271d6f-ba62-d045-549b-ab972ae1f70e%22%3A%2225%22%2C%2213d21c63-b5ec-5912-8397-c3a5ddb27a97%22%3A%22440%22%7D&beckyExperiments=.DatePickerPortal%2C.DisableDocumentScrollWhenLightBoxOpen%2C.EnableCustomCSSVarsForLoginSocialBar%2C.FreemiumBannerOdeditor%2C.LoginBarEnableLoggingInStateInSSR%2C.TextInputAutoFillFix%2C.UseLoginSocialBarCustomMenu%2C.UseNewLoginSocialBarCustomMenuPositioning%2C.UseNewLoginSocialBarElementStructure%2C.UseNewLoginSocialBarMemberInitialsAvatar%2C.VerticalMenu_uiType_NativeMapper%2C.WixFreeSiteBannerDesktop%2C.WixFreeSiteBannerMobile%2C.addIdAsClassName%2C.buttonUdp%2C.calculateCollapsibleTextLineHeightByFont%2C.disableBuilderWixComponents%2C.dom_store%2C.dynamicSlots%2C.fiveGridLineStudioSkins%2C.imageEncodingAVIF%2C.isClassNameToRootEnabled%2C.motionTimeAnimationsCSS%2C.propsCarmiMappersMigration1%2C.propsCarmiMappersMigration4%2C.propsCarmiMappersMigration5%2C.removeDynamicModelTopologyFromSiteAssets%2C.shouldUseResponsiveImages%2C.svgResolver_2%2C.takeAppDependenciesFromCSM%2C.updateRichTextSemanticClassNamesOnCorvid%2C.useClassnameInResponsiveAppWidget%2C.useImageAvifFormatInNativeProGallery%2C.useResponsiveImgClassicFixed%2C.useSvgLoaderFeature%2C.useSvgLoaderFeatureOnBuilderComps&blocksBuilderManifestGeneratorVersion=1.129.0&contentType=application%2Fjson&deviceType=Desktop&dfCk=6&dfVersion=1.5286.0&disableStaticPagesUrlHierarchy=false&editorName=Unknown&experiments=dm_bgScrubToMotionFixer%2Cdm_masterPageVariablesQueryFixer%2Cdm_migrateOldHoverBoxToNewFixer&externalBaseUrl=https%3A%2F%2Fwww.doublebaydoctors.com&fileId=427f9587.bundle.min&formFactor=desktop&hasTPAWorkerOnSite=false&hasUserDomainMedia=false&isBuilderComponentModel=false&isHttps=true&isInSeo=false&isMultilingualEnabled=false&isPremiumDomain=true&isTrackClicksAnalyticsEnabled=false&isUrlMigrated=true&isWixCodeOnPage=false&isWixCodeOnSite=true&language=en&languageResolutionMethod=QueryParam&metaSiteId=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&module=thunderbolt-features&oneDocEnabled=true&originalLanguage=en&pageId=b948b8_f37f71fe4815cb73014d5fa99dacee37_5128.json&pilerExperiments=specs.piler.useEditorReactComponents&quickActionsMenuEnabled=false&registryLibrariesTopology=%5B%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22wixui%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%2C%7B%22artifactId%22%3A%22editor-elements%22%2C%22namespace%22%3A%22dsgnsys%22%2C%22url%22%3A%22https%3A%2F%2Fstatic.parastorage.com%2Fservices%2Feditor-elements%2F1.14912.0%22%7D%5D&remoteWidgetStructureBuilderVersion=1.251.0&siteId=018382b4-10c8-4512-9e0b-fb81af19dfe8&siteRevision=5128&staticHTMLComponentUrl=https%3A%2F%2Fwww-doublebaydoctors-com.filesusr.com%2F&useSandboxInHTMLComp=false&viewMode=desktop
-  https://static.parastorage.com/services/auto-frontend-modules/1.6238.0/webworker/manifest-worker.min.json
-  https://static.parastorage.com/services/wix-thunderbolt/dist/Fallback.corvid.fe386542.chunk.min.js
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://static.parastorage.com/services/wix-thunderbolt/dist/AppController.corvid.26ce39c8.chunk.min.js
-  https://www.googletagmanager.com/gtag/js?id=G-5H20HTTW4N
-  blob:https://www.doublebaydoctors.com/a845989a-b587-489c-947d-922509312185
-  blob:https://www.doublebaydoctors.com/da83feaa-034d-4d18-9dfd-de18d255e4d1
-  https://www.googletagmanager.com/gtag/js?id=G-5H20HTTW4N&cx=c&gtm=4e62i1
-  https://connect.facebook.net/en_US/fbevents.js
-  https://frog.wix.com/bolt-performance
-  https://frog.wix.com/bolt-performance
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://static.parastorage.com/services/wix-thunderbolt/dist/error-handler-commonErrorsMapping.d74ac92e.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/feature-telemetry-wix-code-sdk.a30b9cdf.chunk.min.js
-  https://static.parastorage.com/services/wix-thunderbolt/dist/feature-data-wix-code-sdk.616f5e85.chunk.min.js
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://frog.wix.com/panorama?src=11&evid=114700&sessionId=2bb776bf-cee1-40b5-99ad-7c5de9c86bbc&platform=viewer&batchLength=25&batchSize=16938&batchItems=INFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_Container_DefaultAreaSkin+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_StylableButton_Default+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_DropDownMenu_SolidColorMenuButtonSkin+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_DropDownMenu_OverlineMenuButtonSkin+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_ClassicSection+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_WRichText+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_LinkBar_Classic+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_MasterPage+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_PagesContainer+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_PageGroup+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_BackgroundGroup+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_Anchor+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_VectorImage+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_WRichText+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_WPhoto_NoSkinPhoto+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_HeaderContainer_DefaultScreen+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_PageBackground+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_Page_TransparentPageSkin+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_Group+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadComponents-oqjq6+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+pageWillMount_PageReflector+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_SearchBox+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+Load_Component_Module%3A_tpaWidgetNative_14cefc05-d163-dbb7-e4ec-cd4f2c4d6ddd+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+loadComponents-masterPage+FINISH%2CINFO%7Ccom.wixpress.html-client.wix-thunderbolt%7Cthunderbolt%7CPanorama+pageWillMount_PageReflector+FINISH&_=1771637562988
-  https://connect.facebook.net/signals/config/255091665909473?v=2.9.268&r=stable&domain=www.doublebaydoctors.com&hme=8c09666b801027ec77ae6e3d39d3827f08833acc316174b73d9ec4ab26e1bdc3&ex_m=96%2C188%2C136%2C21%2C68%2C69%2C129%2C64%2C43%2C130%2C73%2C63%2C10%2C144%2C82%2C15%2C95%2C124%2C117%2C71%2C74%2C123%2C141%2C104%2C146%2C7%2C3%2C4%2C6%2C5%2C2%2C83%2C93%2C147%2C152%2C202%2C57%2C168%2C169%2C50%2C240%2C28%2C70%2C214%2C213%2C212%2C30%2C56%2C9%2C59%2C89%2C90%2C91%2C97%2C120%2C29%2C27%2C122%2C119%2C118%2C137%2C72%2C140%2C138%2C139%2C45%2C55%2C113%2C14%2C143%2C40%2C228%2C229%2C227%2C24%2C25%2C26%2C17%2C19%2C39%2C35%2C37%2C36%2C78%2C84%2C88%2C102%2C128%2C131%2C41%2C103%2C22%2C20%2C109%2C65%2C33%2C133%2C132%2C134%2C125%2C23%2C32%2C54%2C101%2C142%2C66%2C16%2C135%2C106%2C77%2C62%2C18%2C31%2C252%2C195%2C182%2C183%2C181%2C255%2C247%2C196%2C99%2C121%2C76%2C111%2C49%2C42%2C44%2C105%2C110%2C116%2C53%2C60%2C115%2C48%2C51%2C47%2C92%2C145%2C0%2C114%2C13%2C112%2C11%2C1%2C52%2C85%2C58%2C61%2C108%2C81%2C80%2C148%2C149%2C86%2C87%2C8%2C94%2C46%2C126%2C79%2C75%2C67%2C107%2C98%2C38%2C127%2C34%2C100%2C12%2C150
-  https://static.parastorage.com/services/wix-thunderbolt/dist/feature-elementory-support-wix-code-sdk.adf501f8.chunk.min.js
-  https://www.facebook.com/tr/?id=255091665909473&ev=PageView&dl=https%3A%2F%2Fwww.doublebaydoctors.com&rl=&if=false&ts=1771637563154&sw=1280&sh=720&cud[external_id]=%23%23%23%23%23**%23-*%23%23*-%23%23%23%23-**%23%23-%23%23*%23*%23%23*%23%23%23%23&ncud[external_id]=%23%23%23%23%23**%23-*%23%23*-%23%23%23%23-**%23%23-%23%23*%23*%23%23*%23%23%23%23&ud[external_id]=8a136cb971a0f59c6a92201d2be5037a9012033d89b58fda3b7841d92a33792c&aud[external_id]=8a136cb971a0f59c6a92201d2be5037a9012033d89b58fda3b7841d92a33792c&v=2.9.268&r=stable&a=plwix&ec=0&o=4124&fbp=fb.1.1771637563152.882210329544897697&cs_est=true&pm=1&hrl=a07569&ler=empty&plt=560.2999999970198&ups[pv]=%7B%7D&ups[rpv]=%7B%7D&it=1771637563077&coo=false&cs_cc=1&cas=2790102947757989%2C3216003195147455&dlc=1&expv2[0]=pl1&expv2[1]=el3&expv2[2]=bc1&expv2[3]=ra0&expv2[4]=rp0&expv2[5]=ct3&expv2[6]=hf1&rqm=GET
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://static.parastorage.com/services/editor-elements-library/dist/corvid/rb_wixui.corvid~core.faa2763b.bundle.min.js
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://static.parastorage.com/services/wix-thunderbolt/dist/common-errors_en-json.b4684745.chunk.min.js
-  https://frog.wix.com/bpm
-  https://frog.wix.com/bolt-performance
-  https://www.doublebaydoctors.com/_api/wix-code-app-registry-global/v1/public-code-config
-  https://bundler-velo.parastorage.com/v3_metaSiteId_517a07cf-ac97-470c-ba3e-e60b4d4eba0a/gridAppId_d8fe544d-7a9a-4ba6-aa22-6fb12dafdbf2/filePath_public_delimiter_pages_delimiter_oqjq6.js/fileType_js/compression_gzip/depToken_3938/bundlerRuntimeExperiments_bundlerTrafficToAws-typescriptListExportedFunctions/additionalOptions_?init-platform-api-provider=true&get-app-def-id-from-package-name=false&disable-yarn-pnp-mode=false
-  https://frog.wix.com/platform-viewer?_msid=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&vsi=2bb776bf-cee1-40b5-99ad-7c5de9c86bbc&_av=thunderbolt-1.16889.0&isb=true&isbr=webdriver&_siteOwnerId=b948b86b-7866-40f6-9f02-61b2da81ad92&_viewMode=site&_mt_instance=KCSYe1tNfkngEeCFX_m0enWJbi12Ay-gEpX_3VC2KK4.eyJpbnN0YW5jZUlkIjoiNTE3YTA3Y2YtYWM5Ny00NzBjLWJhM2UtZTYwYjRkNGViYTBhIiwiYXBwRGVmSWQiOiIyMmJlZjM0NS0zYzViLTRjMTgtYjc4Mi03NGQ0MDg1MTEyZmYiLCJtZXRhU2l0ZUlkIjoiNTE3YTA3Y2YtYWM5Ny00NzBjLWJhM2UtZTYwYjRkNGViYTBhIiwic2lnbkRhdGUiOiIyMDI2LTAyLTIxVDAxOjMyOjQyLjQyNFoiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjA4MDQ0YWI0LWUzMmItNDQ4NC1iZDk4LTk0ZTRmMzVkNDgwMSIsInNpdGVPd25lcklkIjoiYjk0OGI4NmItNzg2Ni00MGY2LTlmMDItNjFiMmRhODFhZDkyIiwiYnMiOiJfN2U2dm4yVEx4bXRiS1JwZ19EQnlrWXlWN2tmMnQzZE5ZXzZnMlFKWDY0Iiwic2NkIjoiMjAxOS0wNS0yOVQwMjozMTozNC41MDJaIiwic3MiOmZhbHNlfQ&rid=1771537980.388498218469083748543&_appId=675bbcef-18d8-41f5-800e-131ec9e08762&_instanceId=5dbfd7af-2dc0-499b-bb2b-1035e2e593ef&src=79&_brandId=wix&_siteBranchId=undefined&_ms=1300&_isHeadless=undefined&_hostingPlatform=VIEWER&_lv=2.0.985%7CC&_visitorId=08044ab4-e32b-4484-bd98-94e4f35d4801&_siteMemberId=undefined&bsi=6b4e72a0-17a0-440d-b145-662d9e445b00%7C1&evid=133&worker_id=oqjq6&_isca=1&_iscf=1&_ispd=0&_ise=0&_=17716375633130
-  https://static.parastorage.com/services/auto-frontend-modules/dist/webworker/auto-frontend-modules.68dbdc1c.umd.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/corvid/rb_wixui.corvid_bootstrap.ab485001.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/corvid/rb_wixui.corvid[DropDownMenu].954ee3cf.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/corvid/rb_wixui.corvid[SearchBox].46924044.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/corvid/rb_wixui.corvid[Container].19c7fe74.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/corvid/rb_wixui.corvid[VectorImage].54277100.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/corvid/rb_wixui.corvid[Masonry].f6be6520.bundle.min.js
-  https://static.parastorage.com/services/editor-elements-library/dist/corvid/rb_wixui.corvid[ClassicSection].e400cd3f.bundle.min.js
-  https://www.doublebaydoctors.com/_api/wix-code-app-registry-global/v1/public-code-config
-  https://www.doublebaydoctors.com/_api/app-settings-service/v1/settings/instances?state=PUBLISHED&host=VIEWER
-  https://frog.wix.com/platform-viewer?_msid=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&vsi=2bb776bf-cee1-40b5-99ad-7c5de9c86bbc&_av=thunderbolt-1.16889.0&isb=true&isbr=webdriver&_siteOwnerId=b948b86b-7866-40f6-9f02-61b2da81ad92&_viewMode=site&_mt_instance=KCSYe1tNfkngEeCFX_m0enWJbi12Ay-gEpX_3VC2KK4.eyJpbnN0YW5jZUlkIjoiNTE3YTA3Y2YtYWM5Ny00NzBjLWJhM2UtZTYwYjRkNGViYTBhIiwiYXBwRGVmSWQiOiIyMmJlZjM0NS0zYzViLTRjMTgtYjc4Mi03NGQ0MDg1MTEyZmYiLCJtZXRhU2l0ZUlkIjoiNTE3YTA3Y2YtYWM5Ny00NzBjLWJhM2UtZTYwYjRkNGViYTBhIiwic2lnbkRhdGUiOiIyMDI2LTAyLTIxVDAxOjMyOjQyLjQyNFoiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjA4MDQ0YWI0LWUzMmItNDQ4NC1iZDk4LTk0ZTRmMzVkNDgwMSIsInNpdGVPd25lcklkIjoiYjk0OGI4NmItNzg2Ni00MGY2LTlmMDItNjFiMmRhODFhZDkyIiwiYnMiOiJfN2U2dm4yVEx4bXRiS1JwZ19EQnlrWXlWN2tmMnQzZE5ZXzZnMlFKWDY0Iiwic2NkIjoiMjAxOS0wNS0yOVQwMjozMTozNC41MDJaIiwic3MiOmZhbHNlfQ&rid=1771537980.388498218469083748543&_appId=675bbcef-18d8-41f5-800e-131ec9e08762&_instanceId=5dbfd7af-2dc0-499b-bb2b-1035e2e593ef&src=79&_brandId=wix&_siteBranchId=undefined&_ms=1398&_isHeadless=undefined&_hostingPlatform=VIEWER&_lv=2.0.985%7CC&_visitorId=08044ab4-e32b-4484-bd98-94e4f35d4801&_siteMemberId=undefined&bsi=6b4e72a0-17a0-440d-b145-662d9e445b00%7C1&evid=136&worker_id=oqjq6&is_lightbox=undefined&isServerSide=false&pn=1&page_url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&tsn=1879&_isca=1&_iscf=1&_ispd=0&_ise=0&_=17716375634141
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://frog.wix.com/bolt-performance
-  https://frog.wix.com/bolt-performance
-  https://frog.wix.com/bolt-performance
-  https://frog.wix.com/bolt-performance
-  https://frog.wix.com/bolt-performance
-  https://frog.wix.com/platform-viewer?_msid=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&vsi=2bb776bf-cee1-40b5-99ad-7c5de9c86bbc&_av=thunderbolt-1.16889.0&isb=true&isbr=webdriver&_siteOwnerId=b948b86b-7866-40f6-9f02-61b2da81ad92&_viewMode=site&_mt_instance=KCSYe1tNfkngEeCFX_m0enWJbi12Ay-gEpX_3VC2KK4.eyJpbnN0YW5jZUlkIjoiNTE3YTA3Y2YtYWM5Ny00NzBjLWJhM2UtZTYwYjRkNGViYTBhIiwiYXBwRGVmSWQiOiIyMmJlZjM0NS0zYzViLTRjMTgtYjc4Mi03NGQ0MDg1MTEyZmYiLCJtZXRhU2l0ZUlkIjoiNTE3YTA3Y2YtYWM5Ny00NzBjLWJhM2UtZTYwYjRkNGViYTBhIiwic2lnbkRhdGUiOiIyMDI2LTAyLTIxVDAxOjMyOjQyLjQyNFoiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6IjA4MDQ0YWI0LWUzMmItNDQ4NC1iZDk4LTk0ZTRmMzVkNDgwMSIsInNpdGVPd25lcklkIjoiYjk0OGI4NmItNzg2Ni00MGY2LTlmMDItNjFiMmRhODFhZDkyIiwiYnMiOiJfN2U2dm4yVEx4bXRiS1JwZ19EQnlrWXlWN2tmMnQzZE5ZXzZnMlFKWDY0Iiwic2NkIjoiMjAxOS0wNS0yOVQwMjozMTozNC41MDJaIiwic3MiOmZhbHNlfQ&rid=1771537980.388498218469083748543&_appId=675bbcef-18d8-41f5-800e-131ec9e08762&_instanceId=5dbfd7af-2dc0-499b-bb2b-1035e2e593ef&src=79&_brandId=wix&_siteBranchId=undefined&_ms=1950&_isHeadless=undefined&_hostingPlatform=VIEWER&_lv=2.0.985%7CC&_visitorId=08044ab4-e32b-4484-bd98-94e4f35d4801&_siteMemberId=undefined&bsi=6b4e72a0-17a0-440d-b145-662d9e445b00%7C1&evid=272&msid=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&pageId=oqjq6&file_code=HOME%20page&page_url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&code_app_id=d8fe544d-7a9a-4ba6-aa22-6fb12dafdbf2&running_environment=site&tsn=2431&_isca=1&_iscf=1&_ispd=0&_ise=0&_=17716375639632
-  https://www.google.com/ccm/form-data/935607345?gtm=45be62i1v9180259474za200zd9180259474xec&gcs=G111&gcd=13t3t3t3t5l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&userId=08044ab4-e32b-4484-bd98-94e4f35d4801&did=dYzMzMD&gdid=dYzMzMD&npa=0&frm=0&pscdl=noapi&auid=326144456.1771637562&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&ec_mode=a&em=tv.1
-  https://googleads.g.doubleclick.net/pagead/viewthroughconversion/935607345/?random=1771637563996&cv=11&fst=1771637563996&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be62i1v9180259474za200zd9180259474xec&gcd=13t3t3t3t5l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&tiba=Double%20Bay%20Doctors&frm=0&userId=08044ab4-e32b-4484-bd98-94e4f35d4801&did=dYzMzMD&gdid=dYzMzMD&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=326144456.1771637562&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&data=event%3Dpage_view%3Bpage_path%3D%2F&rfmt=3&fmt=4
-  https://analytics.google.com/g/collect?v=2&tid=G-5H20HTTW4N&gtm=45je62i1v895786715za200zb9180259474zd9180259474&_p=1771637561767&_gaz=1&gcs=G111&gcd=13t3t3t3t5l1&npa=0&dma=0&gdid=dYzMzMD&cid=2125702659.1771637564&ul=en-us&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAACGA&_s=1&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938469~117416194~117455676~117455678&dp=%2F&dt=Double%20Bay%20Doctors&sid=1771637564&sct=1&seg=0&dl=https%3A%2F%2Fwww.doublebaydoctors.com%2F&uid=08044ab4-e32b-4484-bd98-94e4f35d4801&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&ep.anonymize_ip=true&tfd=2475
-  https://stats.g.doubleclick.net/g/collect?v=2&tid=G-5H20HTTW4N&cid=2125702659.1771637564&gtm=45je62i1v895786715za200zb9180259474zd9180259474&aip=1&uid=08044ab4-e32b-4484-bd98-94e4f35d4801&dma=0&gcs=G111&gcd=13t3t3t3t5l1&npa=0&frm=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938469~117416194~117455676~117455678
-  https://www.google.com/ccm/collect?frm=0&en=page_view&dl=https%3A%2F%2Fwww.doublebaydoctors.com%2F&scrsrc=www.googletagmanager.com&rnd=1761551681.1771637562&dt=Double%20Bay%20Doctors&auid=326144456.1771637562&navt=n&npa=0&ep.page_path=%2F&uid=08044ab4-e32b-4484-bd98-94e4f35d4801&did=dYzMzMD&gdid=dYzMzMD&gtm=45be62i1v9180259474za200zd9180259474xec&gcs=G111&gcd=13t3t3t3t5l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&apve=1&apvf=f&apvc=0&tids=AW-935607345&tid=AW-935607345&tft=1771637564008&tfd=2476
-  https://www.google.com/ccm/collect?frm=0&en=user_id_update&dl=https%3A%2F%2Fwww.doublebaydoctors.com%2F&scrsrc=www.googletagmanager.com&rnd=1761551681.1771637562&dt=Double%20Bay%20Doctors&auid=326144456.1771637562&navt=n&npa=0&ga_uid=G-5H20HTTW4N.08044ab4-e32b-4484-bd98-94e4f35d4801&gdid=dYzMzMD&gtm=45be62i1v9180259474za200zd9180259474xec&gcs=G111&gcd=13t3t3t3t5l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&apve=1&apvf=f&apvc=1&tids=AW-935607345&tid=AW-935607345&tft=1771637564008&tfd=2476
-  https://www.google.com.vn/ads/ga-audiences?v=1&t=sr&slf_rd=1&_r=4&tid=G-5H20HTTW4N&cid=2125702659.1771637564&gtm=45je62i1v895786715za200zb9180259474zd9180259474&aip=1&uid=08044ab4-e32b-4484-bd98-94e4f35d4801&dma=0&gcs=G111&gcd=13t3t3t3t5l1&npa=0&frm=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938469~117416194~117455676~117455678&z=1148482224
-  https://frog.wix.com/pa?_msid=517a07cf-ac97-470c-ba3e-e60b4d4eba0a&vsi=2bb776bf-cee1-40b5-99ad-7c5de9c86bbc&_av=thunderbolt-1.16889.0&isb=true&isbr=webdriver&_brandId=wix&_siteBranchId=undefined&_ms=2464&_isHeadless=undefined&_hostingPlatform=VIEWER&_lv=2.0.985%7CC&_visitorId=08044ab4-e32b-4484-bd98-94e4f35d4801&_siteMemberId=undefined&bsi=6b4e72a0-17a0-440d-b145-662d9e445b00%7C1&src=76&evid=1109&pid=oqjq6&pn=1&viewer=TB&pt=static&pa=editor&pti=oqjq6&uuid=b948b86b-7866-40f6-9f02-61b2da81ad92&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&ref=&bot=true&bl=en-US&pl=en-US&_isca=1&_iscf=1&_ispd=0&_ise=0&_=17716375640082
-  https://static.parastorage.com/services/fonts-data/dist/fonts.hz267ac7fkkfb3a18o8z.css
-  https://static.parastorage.com/services/fonts-data/dist/wixMadefor.j95mkaziqjnrn77aekr8.css
-  https://static.parastorage.com/services/fonts-data/dist/google.kuw5gk7jh0nwy00zmif1.css
-  https://static.wixstatic.com/media/b948b8_f40afdb937a44dd081c6f2b3eab50e28~mv2.png/v1/fill/w_242,h_242,al_c,q_80,usm_0.66_1.00_0.01/b948b8_f40afdb937a44dd081c6f2b3eab50e28~mv2.png
-  https://static.wixstatic.com/media/b948b8_9d6a4e2488ab486bb1217fb8bd3894dd~mv2.png/v1/fill/w_242,h_242,al_c,q_80,usm_0.66_1.00_0.01/b948b8_9d6a4e2488ab486bb1217fb8bd3894dd~mv2.png
-  https://static.wixstatic.com/media/b948b8_775d930f1f984b798431a09e68fe3ca8~mv2.png/v1/fill/w_242,h_242,al_c,q_80,usm_0.66_1.00_0.01/b948b8_775d930f1f984b798431a09e68fe3ca8~mv2.png
-  https://static.wixstatic.com/media/b948b8_b7edeab8dde84e409ba968394691866b~mv2.png/v1/fill/w_242,h_242,al_c,q_80,usm_0.66_1.00_0.01/b948b8_b7edeab8dde84e409ba968394691866b~mv2.png
-  https://static.wixstatic.com/media/b948b8_d777d9edd4504518a77d8064ac46ad9b~mv2.png/v1/fill/w_242,h_242,al_c,q_80,usm_0.66_1.00_0.01/b948b8_d777d9edd4504518a77d8064ac46ad9b~mv2.png
-  https://static.wixstatic.com/media/b948b8_e5ba2f5fd49a4e5e91fc8cf79c74ef38~mv2.png/v1/fill/w_242,h_242,al_c,q_80,usm_0.66_1.00_0.01/b948b8_e5ba2f5fd49a4e5e91fc8cf79c74ef38~mv2.png
-  https://static.wixstatic.com/media/b948b8_165e687bc5a84791a23db1f4edf2eded~mv2.png/v1/fill/w_242,h_242,al_c,q_80,usm_0.66_1.00_0.01/b948b8_165e687bc5a84791a23db1f4edf2eded~mv2.png
-  https://static.wixstatic.com/media/b948b8_a02ac275ef794508b573aad480c18f7e~mv2.png/v1/fill/w_242,h_242,al_c,q_80,usm_0.66_1.00_0.01/b948b8_a02ac275ef794508b573aad480c18f7e~mv2.png
-  https://www.google.com/pagead/1p-user-list/935607345/?random=1771637563996&cv=11&fst=1771635600000&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be62i1v9180259474za200zd9180259474xec&gcd=13t3t3t3t5l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&tiba=Double%20Bay%20Doctors&frm=0&userId=08044ab4-e32b-4484-bd98-94e4f35d4801&did=dYzMzMD&gdid=dYzMzMD&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=326144456.1771637562&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&data=event%3Dpage_view%3Bpage_path%3D%2F&rfmt=3&fmt=3&is_vtc=1&cid=CAQSmQEA56J1eWIe4vdMOt5ipPopDO3-O8LnQXhHAmRPOkCp-lcJ4nirZlJYZLUrtKR2fia-qczpbZ1BwZOfFYt9kRIdo3HGuKXLnR-f_OiBy80UqvkEX2ga4m01yyd8vJSw3HHvoGfjn_WhX5k2FgpWOc4PUOZ5OAknt4bimDIJYrsHwn4oIGiRrX2hxilwRyDso5ZtjhKu6_b3QUM&random=1190332966&rmt_tld=0&ipr=y
-  https://www.google.com.vn/pagead/1p-user-list/935607345/?random=1771637563996&cv=11&fst=1771635600000&bg=ffffff&guid=ON&async=1&en=page_view&gtm=45be62i1v9180259474za200zd9180259474xec&gcd=13t3t3t3t5l1&dma=0&tag_exp=103116026~103200004~104527907~104528500~104684208~104684211~115938466~115938468~117416194~117455676~117455678&u_w=1280&u_h=720&url=https%3A%2F%2Fwww.doublebaydoctors.com%2F&tiba=Double%20Bay%20Doctors&frm=0&userId=08044ab4-e32b-4484-bd98-94e4f35d4801&did=dYzMzMD&gdid=dYzMzMD&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=326144456.1771637562&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CHeadlessChrome%3B145.0.7632.6%7CChromium%3B145.0.7632.6&uamb=0&uam=&uap=macOS&uapv=10_15_7&uaw=0&data=event%3Dpage_view%3Bpage_path%3D%2F&rfmt=3&fmt=3&is_vtc=1&cid=CAQSmQEA56J1eWIe4vdMOt5ipPopDO3-O8LnQXhHAmRPOkCp-lcJ4nirZlJYZLUrtKR2fia-qczpbZ1BwZOfFYt9kRIdo3HGuKXLnR-f_OiBy80UqvkEX2ga4m01yyd8vJSw3HHvoGfjn_WhX5k2FgpWOc4PUOZ5OAknt4bimDIJYrsHwn4oIGiRrX2hxilwRyDso5ZtjhKu6_b3QUM&random=1190332966&rmt_tld=1&ipr=y
-  https://frog.wix.com/bolt-performance
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://panorama.wixapps.net/api/v1/bulklog
-  https://frog.wix.com/bolt-performance
-  https://frog.wix.com/
-  https://frog.wix.com/bolt-performance
-  https://www.doublebaydoctors.com/contact
-  https://frog.wix.com/
-  https://frog.wix.com/
-  https://static.parastorage.com/polyfill/v2/polyfill.min.js?features=default,es6,es7,es2017&flags=gated&unknown=polyfill&rum=0
-  https://static.parastorage.com/unpkg-semver/fedops-logger@5/fedops-logger.bundle.min.js
-  https://static.parastorage.com/unpkg-semver/header-footer-provider/app.bundle.min.js
-  https://static.parastorage.com/unpkg/react@18.2.0/umd/react.production.min.js
-  https://static.parastorage.com/unpkg/react-dom@18.2.0/umd/react-dom.production.min.js
-  https://static.parastorage.com/services/classic-error-pages-statics/1.84.0/app.min.css
-  https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforTextVF_W_Wght.8022447a.woff2
-  https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforDisplayVF_W_Wght.ab35e4df.woff2
-  https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madefor.min.css
-  https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madeforDisplay.min.css
-  https://static.parastorage.com/services/classic-error-pages-statics/1.84.0/app.bundle.min.js
-  https://frog.wix.com/fed?appName=classic-error-pages-statics&src=72&evid=14&session_id=5038e22a-e314-445e-8709-63fad132229d&_=0.27453020014841656&is_rollout=false
-  https://static.parastorage.com/services/classic-error-pages-statics/76f03b95134a5be73c112c65f57772d81bd669e5f10a3b3774837aeb/852.chunk.min.js
-  https://frog.wix.com/fed
-  https://www.doublebaydoctors.com/about
-  https://static.parastorage.com/polyfill/v2/polyfill.min.js?features=default,es6,es7,es2017&flags=gated&unknown=polyfill&rum=0
-  https://static.parastorage.com/unpkg-semver/fedops-logger@5/fedops-logger.bundle.min.js
-  https://static.parastorage.com/unpkg-semver/header-footer-provider/app.bundle.min.js
-  https://static.parastorage.com/unpkg/react@18.2.0/umd/react.production.min.js
-  https://static.parastorage.com/unpkg/react-dom@18.2.0/umd/react-dom.production.min.js
-  https://static.parastorage.com/services/classic-error-pages-statics/1.84.0/app.min.css
-  https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforTextVF_W_Wght.8022447a.woff2
-  https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/media/WixMadeforDisplayVF_W_Wght.ab35e4df.woff2
-  https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madefor.min.css
-  https://static.parastorage.com/unpkg/@wix/wix-fonts@1.14.0/madeforDisplay.min.css
-  https://static.parastorage.com/services/classic-error-pages-statics/1.84.0/app.bundle.min.js
-  https://frog.wix.com/fed?appName=classic-error-pages-statics&src=72&evid=14&session_id=5038e22a-e314-445e-8709-63fad132229d&_=0.6441034854645108&is_rollout=false
-  https://static.parastorage.com/services/classic-error-pages-statics/76f03b95134a5be73c112c65f57772d81bd669e5f10a3b3774837aeb/852.chunk.min.js
-  https://frog.wix.com/fed
+  http://www.talkitupbendigo.com/
+  https://www.talkitupbendigo.com/
+  https://cdn2.editmysite.com/css/sites.css?buildTime=1760628286
+  https://cdn2.editmysite.com/css/old/fancybox.css?1760628286
+  https://cdn2.editmysite.com/css/social-icons.css?buildtime=1760628286
+  https://www.talkitupbendigo.com/files/main_style.css?1761517539
+  https://cdn2.editmysite.com/fonts/Raleway/font.css?2
+  https://cdn2.editmysite.com/fonts/Lora/font.css?2
+  https://cdn2.editmysite.com/fonts/Lato/font.css?2
+  https://cdn2.editmysite.com/fonts/Saginaw/font.css?2
+  https://cdn2.editmysite.com/fonts/Montserrat/font.css?2
+  https://www.talkitupbendigo.com/files/templateArtifacts.js?1761517539
+  https://cdn2.editmysite.com/js/jquery-1.8.3.min.js
+  https://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1760628286&
+  https://cdn2.editmysite.com/js/site/main.js?buildTime=1760628286
+  https://www.talkitupbendigo.com/uploads/9/2/3/0/9230733/logo-1-green-with-pink-a-horizontal-1.png
+  https://www.talkitupbendigo.com/uploads/9/2/3/0/9230733/logo-mini_orig.png
+  https://www.talkitupbendigo.com/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js
+  https://www.talkitupbendigo.com/files/theme/plugins.js?1531150540
+  https://www.talkitupbendigo.com/files/theme/custom.js?1531150540
+  https://www.talkitupbendigo.com/files/theme/mobile.js?1531150540
+  https://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1760628286
+  https://cdn2.editmysite.com/images/editor/theme-background/stock/Kids-Circle.jpg
+  https://cdn2.editmysite.com/fonts/Montserrat/regular.woff2
+  https://cdn2.editmysite.com/fonts/Lato/bold.woff2
+  https://cdn2.editmysite.com/fonts/Lato/regular.woff2
+  https://cdn2.editmysite.com/fonts/Raleway/bold.woff2
+  https://cdn2.editmysite.com/fonts/Raleway/regular.woff2
+  https://cdn2.editmysite.com/fonts/Raleway/medium.woff2
+  https://ssl.google-analytics.com/ga.js
+  https://cdn2.editmysite.com/js/wsnbn/snowday262.js
+  https://www.talkitupbendigo.com/ajax/api/JsonRPC/CustomerAccounts/?CustomerAccounts[CustomerAccounts::getAccountDetails]
+  https://cdn3.editmysite.com/app/website/static/js/wsnbn/snowday262.js
+  https://ec.editmysite.com/com.snowplowanalytics.snowplow/tp2
+  http://www.talkitupbendigo.com/contact
+  https://www.talkitupbendigo.com/contact
+  https://www.talkitupbendigo.com/gdpr/gdprscript.js?buildTime=1771974631
+  https://cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-semibold/31AC96_2_0.woff
+  https://cdn2.editmysite.com/components/ui-framework/fonts/proxima-nova-regular/31AC96_1_0.woff
+  http://www.talkitupbendigo.com/about
+  https://www.talkitupbendigo.com/about
+  https://www.talkitupbendigo.com/about.html
+  https://cdn2.editmysite.com/css/sites.css?buildTime=1760628286
+  https://cdn2.editmysite.com/css/old/fancybox.css?1760628286
+  https://cdn2.editmysite.com/css/social-icons.css?buildtime=1760628286
+  https://www.talkitupbendigo.com/files/main_style.css?1761517539
+  https://cdn2.editmysite.com/fonts/Raleway/font.css?2
+  https://cdn2.editmysite.com/fonts/Lora/font.css?2
+  https://cdn2.editmysite.com/fonts/Lato/font.css?2
+  https://cdn2.editmysite.com/fonts/Saginaw/font.css?2
+  https://cdn2.editmysite.com/fonts/Montserrat/font.css?2
+  https://www.talkitupbendigo.com/files/templateArtifacts.js?1761517539
+  https://cdn2.editmysite.com/js/jquery-1.8.3.min.js
+  https://cdn2.editmysite.com/js/lang/en/stl.js?buildTime=1760628286&
+  https://cdn2.editmysite.com/js/site/main.js?buildTime=1760628286
+  https://www.talkitupbendigo.com/uploads/9/2/3/0/9230733/logo-1-green-with-pink-a-horizontal-1.png
+  https://www.talkitupbendigo.com/uploads/9/2/3/0/9230733/logo-mini_orig.png
+  https://www.talkitupbendigo.com/files/theme/plugins.js?1531150540
+  https://www.talkitupbendigo.com/files/theme/custom.js?1531150540
+  https://www.talkitupbendigo.com/files/theme/mobile.js?1531150540
+  https://cdn2.editmysite.com/js/site/main-customer-accounts-site.js?buildTime=1760628286
+  https://cdn2.editmysite.com/fonts/Raleway/regular.woff2
+  https://cdn2.editmysite.com/fonts/Raleway/medium.woff2
+  https://cdn2.editmysite.com/fonts/Raleway/bold.woff2
+  https://cdn2.editmysite.com/fonts/Lato/regular.woff2
+  https://cdn2.editmysite.com/fonts/Lato/bold.woff2
+  https://cdn2.editmysite.com/fonts/Montserrat/regular.woff2
+  https://cdn2.editmysite.com/images/editor/theme-background/stock/Woman-Library.jpg
+  https://ssl.google-analytics.com/ga.js
+  https://cdn2.editmysite.com/js/wsnbn/snowday262.js
+  https://www.talkitupbendigo.com/ajax/api/JsonRPC/CustomerAccounts/?CustomerAccounts[CustomerAccounts::getAccountDetails]
+  https://ec.editmysite.com/com.snowplowanalytics.snowplow/tp2
 
 ══════════════════════════════════════════════════════════════════════
   ✅ RAW DATA DUMP COMPLETE
